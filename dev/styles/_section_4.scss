@@ -1,0 +1,22 @@
+.section4 {
+    background-color: $white;
+    
+    .section-container4 {
+        box-shadow: 15px 13px 45.5px 4.5px lightgrey;
+    }
+
+    .twitter-icon,
+    .linked-in-icon, {
+        svg {
+            color: $white;
+        }
+    }
+
+    .git-icon svg {
+        color: black;
+    }
+
+    .icon-circle {
+        background-color: black;
+    }
+}

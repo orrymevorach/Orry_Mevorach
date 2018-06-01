@@ -1,0 +1,43 @@
+.section1 {
+    background-color: $darkRed;
+    
+    .section-container1 {
+        background-color: $lightRed;
+        background-image: url(../../images/red-dot-graphics.png);
+        background-size: 130%;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: 15px 13px 45.5px 4.5px rgba(182, 9, 46, 0.23);
+    }
+
+    .twitter-icon,
+    .linked-in-icon, {
+        svg {
+            color: $darkRed;
+        }
+    }
+
+    .git-icon svg {
+        color: $white;
+    }
+
+    .git-icon:after {
+        content: '';
+        height: 39px;
+        width: 39px;
+        position: absolute;
+        top: 11px;
+        left: 0;
+        border-radius: 50%;
+        z-index: -1;
+    }
+    
+    .twitter-icon svg:hover,
+    .linked-in-icon svg:hover {
+        color: $white;;
+    }
+    .icon-circle:hover {
+        background-color: $darkRed;
+    }
+
+}
