@@ -5,6 +5,10 @@
         box-shadow: 15px 13px 45.5px 4.5px rgb(160, 159, 159);
         background-color: $lightGrey;
         background-image: url(../../images/dot-graphics-grey.png);
+        @media (max-width: 700px) {
+            background-image: url(../../images/dot-graphics-grey-copy.png);
+            box-shadow: none;
+        }
     }
 
     .section-container nav a {
@@ -19,7 +23,7 @@
     .twitter-icon,
     .linked-in-icon, {
         svg {
-            color: $white;
+            color: $darkGrey;
         }
     }
 
@@ -28,6 +32,33 @@
     }
 
     .icon-circle {
+        background-color: black;
+    }
+
+    .twitter-icon svg:hover,
+    .linked-in-icon svg:hover {
+        color: black;
+    }
+    .icon-circle:hover {
+        background-color: $darkGrey;
+    }
+    .git-icon:after {
+        content: '';
+        background-color: $darkGrey;
+        height: 39px;
+        width: 39px;
+        position: absolute;
+        top: 12px;
+        left: 1px;
+        border-radius: 50%;
+        z-index: -1;
+    }
+
+    .git-icon svg:hover {
+        color: $darkGrey;
+    }
+
+    .git-icon:hover:after {
         background-color: black;
     }
 

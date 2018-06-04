@@ -355,10 +355,10 @@
         $(document).ready(() => {
             console.log('hello orry')
             // // Hamburger Menu
-            // $('.hamburger-menu').on("click", () => {
-            //     $('.hamburger-menu').css({right: '110px'})
-            //     $('nav').css({right: '0px'})
-            // })
+            $('.hamburger-menu').on('click', () => {
+                $('.section-container nav').css({display: 'block'});
+            })
+
             // nav-style-line animation === HOME SECTION ===
             $('.section-home .home-link').on('mouseover', () => {
                 $('.nav-style-line-home').css({ transform: 'rotate(90deg)'})

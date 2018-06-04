@@ -7,6 +7,10 @@
         background-color: $lightRed;
         background-image: url(../../images/red-dot-graphics.png);
         box-shadow: 15px 13px 45.5px 4.5px rgba(182, 9, 46, 0.23);
+        @media (max-width: 650px) {
+            background-image: url(../../images/red-dot-graphics-copy.png);
+            box-shadow: none;
+        }
     }
 
     // Header Customization
@@ -17,8 +21,8 @@
         top: 40%;
         left: 50%;
         transform: translateX(-50%);
-        @media (max-width: 700px) {
-            width: 700px;
+        @media (max-width: 650px) {
+            width: 720px;
         }
     }
 
@@ -69,21 +73,32 @@
 
     .git-icon:after {
         content: '';
+        background-color: $darkRed;
         height: 39px;
         width: 39px;
         position: absolute;
-        top: 11px;
-        left: 0;
+        top: 12px;
+        left: 1px;
         border-radius: 50%;
         z-index: -1;
+    }
+
+    .git-icon svg:hover {
+        color: $darkRed;
+    }
+
+    .git-icon:hover:after {
+        background-color: $white;
     }
     
     .twitter-icon svg:hover,
     .linked-in-icon svg:hover {
-        color: $white;;
+        color: $white;
     }
     .icon-circle:hover {
-        background-color: $darkRed;
+        background-color: $lightRed;
     }
+
+
 
 }

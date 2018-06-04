@@ -151,23 +151,23 @@ h3 {
   position: relative; }
 
 .section-container {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
   height: 82vh;
   width: 90vw;
   position: relative;
   margin: 0 auto;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100vw 100vh; }
+          transform: translateY(-50%); }
   @media (max-width: 1300px) {
     .section-container {
       width: 85vw; } }
   @media (max-width: 950px) {
     .section-container {
       width: 82vw; } }
-  @media (max-width: 700px) {
+  @media (max-width: 650px) {
     .section-container {
       height: 100vh;
       width: 100vw; }
@@ -228,13 +228,11 @@ h3 {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  left: 15px; }
+  left: 15px;
+  z-index: 20; }
   .social-media-container a {
     text-decoration: none;
     color: black; }
-  @media (max-width: 1000px) {
-    .social-media-container {
-      display: none; } }
 
 .twitter-container,
 .linked-in-container {
@@ -256,7 +254,7 @@ h3 {
   font-size: 35px; }
 
 .git-icon svg {
-  font-size: 40px; }
+  font-size: 42px; }
 
 .git-hub-container,
 .twitter-container,
@@ -264,19 +262,54 @@ h3 {
   margin: 10px 0; }
 
 .hamburger-menu {
-  display: none;
-  position: absolute;
-  top: 5px;
-  right: 15px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s; }
-  .hamburger-menu .fa-bars {
-    color: white;
-    font-size: 40px; }
+  display: none; }
 
-@media (max-width: 1000px) {
-  .section-container nav {
+@media (max-width: 700px) {
+  .nav-style-line {
     display: none; } }
+
+@media (max-width: 650px) {
+  .section-container nav {
+    display: none; }
+    .section-container nav ul {
+      width: 100vw; }
+      .section-container nav ul li {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+        text-align: center;
+        text-shadow: none; }
+        .section-container nav ul li a {
+          color: #ffffff; }
+        .section-container nav ul li:hover {
+          -webkit-transform: rotate(0deg);
+                  transform: rotate(0deg); }
+  .social-media-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    top: auto;
+    -webkit-transform: none;
+            transform: none;
+    bottom: 5px; }
+    .social-media-container .git-hub-container,
+    .social-media-container .twitter-container,
+    .social-media-container .linked-in-container {
+      margin: 5px; }
+  .hamburger-menu {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    z-index: 200; }
+    .hamburger-menu .fa-bars {
+      color: white;
+      font-size: 40px; } }
 
 .section-home {
   background-color: #e8103f; }
@@ -285,6 +318,11 @@ h3 {
     background-image: url(../../images/red-dot-graphics.png);
     -webkit-box-shadow: 15px 13px 45.5px 4.5px rgba(182, 9, 46, 0.23);
             box-shadow: 15px 13px 45.5px 4.5px rgba(182, 9, 46, 0.23); }
+    @media (max-width: 650px) {
+      .section-home .section-home-container {
+        background-image: url(../../images/red-dot-graphics-copy.png);
+        -webkit-box-shadow: none;
+                box-shadow: none; } }
   .section-home .content-container {
     position: relative;
     width: 500px;
@@ -292,9 +330,9 @@ h3 {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%); }
-    @media (max-width: 700px) {
+    @media (max-width: 650px) {
       .section-home .content-container {
-        width: 700px; } }
+        width: 720px; } }
   .section-home h1 {
     text-shadow: 4px 12px 3px #af0429;
     margin: 0;
@@ -325,18 +363,23 @@ h3 {
     color: #ffffff; }
   .section-home .git-icon:after {
     content: '';
+    background-color: #e8103f;
     height: 39px;
     width: 39px;
     position: absolute;
-    top: 11px;
-    left: 0;
+    top: 12px;
+    left: 1px;
     border-radius: 50%;
     z-index: -1; }
+  .section-home .git-icon svg:hover {
+    color: #e8103f; }
+  .section-home .git-icon:hover:after {
+    background-color: #ffffff; }
   .section-home .twitter-icon svg:hover,
   .section-home .linked-in-icon svg:hover {
     color: #ffffff; }
   .section-home .icon-circle:hover {
-    background-color: #e8103f; }
+    background-color: #ec1645; }
 
 .section-about {
   background-color: #c7c6c6; }
@@ -375,10 +418,29 @@ h3 {
       line-height: 1.6; }
   .section-about .twitter-icon svg,
   .section-about .linked-in-icon svg {
-    color: #ffffff; }
+    color: #c7c6c6; }
   .section-about .git-icon svg {
     color: black; }
   .section-about .icon-circle {
+    background-color: black; }
+  .section-about .twitter-icon svg:hover,
+  .section-about .linked-in-icon svg:hover {
+    color: black; }
+  .section-about .icon-circle:hover {
+    background-color: #c7c6c6; }
+  .section-about .git-icon:after {
+    content: '';
+    background-color: #c7c6c6;
+    height: 39px;
+    width: 39px;
+    position: absolute;
+    top: 12px;
+    left: 1px;
+    border-radius: 50%;
+    z-index: -1; }
+  .section-about .git-icon svg:hover {
+    color: #c7c6c6; }
+  .section-about .git-icon:hover:after {
     background-color: black; }
   @media (max-width: 700px) {
     .section-about {
@@ -386,7 +448,9 @@ h3 {
       .section-about .section-about-container {
         width: 100vw;
         height: 150vh;
-        background-image: none; }
+        background-image: none;
+        -webkit-box-shadow: none;
+                box-shadow: none; }
       .section-about .content-container {
         position: relative;
         display: block; }
@@ -426,6 +490,25 @@ h3 {
     color: #7134db; }
   .section-skills .git-icon svg {
     color: white; }
+  .section-skills .twitter-icon svg:hover,
+  .section-skills .linked-in-icon svg:hover {
+    color: #ffffff; }
+  .section-skills .icon-circle:hover {
+    background-color: #7134db; }
+  .section-skills .git-icon:after {
+    content: '';
+    background-color: #7134db;
+    height: 39px;
+    width: 39px;
+    position: absolute;
+    top: 12px;
+    left: 1px;
+    border-radius: 50%;
+    z-index: -1; }
+  .section-skills .git-icon svg:hover {
+    color: #7134db; }
+  .section-skills .git-icon:hover:after {
+    background-color: #ffffff; }
   .section-skills .skills-icon-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -468,6 +551,11 @@ h3 {
         -webkit-box-direction: reverse;
             -ms-flex-direction: column-reverse;
                 flex-direction: column-reverse; } }
+  @media (max-width: 700px) {
+    .section-skills .section-skills-container {
+      background-image: url(../../images/purple-dot-graphics-copy.png);
+      -webkit-box-shadow: none;
+              box-shadow: none; } }
   @media (max-width: 750px) {
     .section-skills h3 {
       font-size: 14px;
@@ -495,6 +583,11 @@ h3 {
             box-shadow: 15px 13px 45.5px 4.5px #a09f9f;
     background-color: #ececec;
     background-image: url(../../images/dot-graphics-grey.png); }
+    @media (max-width: 700px) {
+      .section-portfolio .section-portfolio-container {
+        background-image: url(../../images/dot-graphics-grey-copy.png);
+        -webkit-box-shadow: none;
+                box-shadow: none; } }
   .section-portfolio .section-container nav a {
     color: black; }
   .section-portfolio .nav-style-line {
@@ -502,10 +595,29 @@ h3 {
     left: 247px; }
   .section-portfolio .twitter-icon svg,
   .section-portfolio .linked-in-icon svg {
-    color: #ffffff; }
+    color: #c7c6c6; }
   .section-portfolio .git-icon svg {
     color: black; }
   .section-portfolio .icon-circle {
+    background-color: black; }
+  .section-portfolio .twitter-icon svg:hover,
+  .section-portfolio .linked-in-icon svg:hover {
+    color: black; }
+  .section-portfolio .icon-circle:hover {
+    background-color: #c7c6c6; }
+  .section-portfolio .git-icon:after {
+    content: '';
+    background-color: #c7c6c6;
+    height: 39px;
+    width: 39px;
+    position: absolute;
+    top: 12px;
+    left: 1px;
+    border-radius: 50%;
+    z-index: -1; }
+  .section-portfolio .git-icon svg:hover {
+    color: #c7c6c6; }
+  .section-portfolio .git-icon:hover:after {
     background-color: black; }
   .section-portfolio h2 {
     color: black;
@@ -724,6 +836,25 @@ h3 {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; }
+  .section-contact .twitter-icon svg:hover,
+  .section-contact .linked-in-icon svg:hover {
+    color: #ffffff; }
+  .section-contact .icon-circle:hover {
+    background-color: #236fff; }
+  .section-contact .git-icon:after {
+    content: '';
+    background-color: #236fff;
+    height: 39px;
+    width: 39px;
+    position: absolute;
+    top: 12px;
+    left: 1px;
+    border-radius: 50%;
+    z-index: -1; }
+  .section-contact .git-icon svg:hover {
+    color: #236fff; }
+  .section-contact .git-icon:hover:after {
+    background-color: #ffffff; }
   @media (max-width: 1140px) {
     .section-contact form {
       left: 55%;
@@ -747,6 +878,10 @@ h3 {
       .section-contact form textarea {
         height: 150px; } }
   @media (max-width: 700px) {
+    .section-contact .section-contact-container {
+      background-image: url(../../images/blue-dot-graphics-copy.png);
+      -webkit-box-shadow: none;
+              box-shadow: none; }
     .section-contact .content-container {
       position: fixed;
       text-align: center;

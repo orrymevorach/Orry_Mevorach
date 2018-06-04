@@ -5,15 +5,23 @@
 }
 
 .section-container {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
     height: 82vh;
     width: 90vw;
+    position: relative;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    
     @media (max-width: 1300px) {
         width: 85vw;
     }
     @media (max-width: 950px) {
         width: 82vw;
     }
-    @media (max-width: 700px) {
+    @media (max-width: 650px) {
         height: 100vh;
         width: 100vw;
         h1 {
@@ -22,15 +30,6 @@
             transform: translateX(-50%);
         }
     }
-    position: relative;
-    // horizontal center
-    margin: 0 auto;
-    // veritical center
-    top: 50%;
-    transform: translateY(-50%);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100vw 100vh;
 }
 
 .section-container nav {
@@ -77,12 +76,10 @@
     top: 50%;
     transform: translateY(-50%);
     left: 15px;
+    z-index: 20;
     a {
         text-decoration: none;
         color: black;
-    }
-    @media (max-width: 1000px) {
-        display: none;
     }
 }
 
@@ -110,7 +107,7 @@
 }
 
 .git-icon svg {
-    font-size: 40px;
+    font-size: 42px;
 }
 
 .git-hub-container,
@@ -121,54 +118,66 @@
 
 .hamburger-menu {
     display: none;
-    position: absolute;
-    top: 5px;
-    right: 15px;
-    transition: 0.3s;
-    .fa-bars {
-        color: white;
-        font-size: 40px;
-    }
 }
 
-@media (max-width: 1000px) {
-    .section-container nav {
+@media (max-width: 700px) {
+    .nav-style-line {
         display: none;
     }
 }
-// @media (max-width: 1000px) {
-//     .section-container nav {
-//         position: absolute;
-//         top: 0;
-//         right: -500px;
-//         z-index: 100;
-//         transition: 0.3s;
-//         background-color: rgba(0,0,0,0.7);
-//         ul {
-//             flex-direction: column;
-//             li {
-//                 font-size: 14px;
-//                 width: 100%;
-//                 padding: 10px;
-//                 transform: rotate(0deg);
-//                 border-bottom: 1px solid white;
-//                 &:last-of-type {
-//                     border-bottom: none;
-//                 }
-//                 &:hover {
-//                     transform: rotate(0deg);
-//                 }
-//             }
-//         }
-//     }
-//     .nav-style-line {
-//         display: none;
-//     }
-//     .hamburger-menu {
-//         display: block;
-//         position: absolute;
-//     }
-// }
+@media (max-width: 650px) {
+    .section-container nav {
+        display: none;
+        ul {
+            width: 100vw;
+            li {
+                transform: rotate(0deg);
+                text-align: center;
+                text-shadow: none;
+                a {
+                    color: $white;
+                }
+                &:hover {
+                    transform: rotate(0deg);
+                }
+            }
+        } 
+    }
+    
+    .social-media-container {
+        display: flex;
+        flex-direction: row;
+        top: auto;
+        transform: none;
+        bottom: 5px;
+        .git-hub-container,
+        .twitter-container,
+        .linked-in-container {
+            margin: 5px;
+        }
+    }
+
+    .hamburger-menu {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        transition: 0.3s;
+        z-index: 200;
+        .fa-bars {
+            color: white;
+            font-size: 40px;
+        }
+    }
+}
+
+.section-contact {
+    // border: 1px solid red;
+}
+
+.section-portfolio {
+    // border: 1px solid green;
+}
 
 
 

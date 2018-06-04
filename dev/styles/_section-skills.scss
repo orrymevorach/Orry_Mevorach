@@ -33,6 +33,33 @@
     .git-icon svg {
         color: white;
     }
+    
+    .twitter-icon svg:hover,
+    .linked-in-icon svg:hover {
+        color: $white;
+    }
+    .icon-circle:hover {
+        background-color: $darkPurple;
+    }
+    .git-icon:after {
+        content: '';
+        background-color: $darkPurple;
+        height: 39px;
+        width: 39px;
+        position: absolute;
+        top: 12px;
+        left: 1px;
+        border-radius: 50%;
+        z-index: -1;
+    }
+
+    .git-icon svg:hover {
+        color: $darkPurple;
+    }
+
+    .git-icon:hover:after {
+        background-color: $white;
+    }
 
     .skills-icon-container {
         display: flex;
@@ -72,6 +99,12 @@
                 flex-direction: column-reverse;
             }
         }
+    }
+    @media (max-width: 700px) {
+        .section-skills-container {
+            background-image: url(../../images/purple-dot-graphics-copy.png);
+            box-shadow: none;
+        }    
     }
 
     @media (max-width: 750px) {

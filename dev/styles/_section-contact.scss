@@ -93,6 +93,34 @@
             display: flex;
         }
     }
+
+    .twitter-icon svg:hover,
+    .linked-in-icon svg:hover {
+        color: $white;
+    }
+    .icon-circle:hover {
+        background-color: $darkBlue;
+    }
+    .git-icon:after {
+        content: '';
+        background-color: $darkBlue;
+        height: 39px;
+        width: 39px;
+        position: absolute;
+        top: 12px;
+        left: 1px;
+        border-radius: 50%;
+        z-index: -1;
+    }
+
+    .git-icon svg:hover {
+        color: $darkBlue;
+    }
+
+    .git-icon:hover:after {
+        background-color: $white;
+    }
+
     @media (max-width: 1140px) {
         form {
             left: 55%;
@@ -130,6 +158,10 @@
     }
 
     @media (max-width: 700px) {
+        .section-contact-container {
+            background-image: url(../../images/blue-dot-graphics-copy.png);
+            box-shadow: none;
+        }
         .content-container {
             position: fixed;
             text-align: center;
