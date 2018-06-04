@@ -354,9 +354,10 @@
     
         $(document).ready(() => {
             console.log('hello orry')
+            
             // // Hamburger Menu
             $('.hamburger-menu').on('click', () => {
-                $('.section-container nav').css({display: 'block'});
+                $('.section-container nav').toggle({display: 'block'});
             })
 
             // nav-style-line animation === HOME SECTION ===

@@ -133,7 +133,8 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 h1 {
   color: #ffffff;
   font-family: 'Kaushan Script', cursive;
-  font-size: 70px; }
+  font-size: 70px;
+  margin: 0; }
 
 h2 {
   color: #ffffff;
@@ -143,7 +144,8 @@ h2 {
 
 h3 {
   color: white;
-  font-size: 16px; }
+  font-size: 16px;
+  margin: 0; }
 
 .section-general {
   height: 100vh;
@@ -170,12 +172,7 @@ h3 {
   @media (max-width: 650px) {
     .section-container {
       height: 100vh;
-      width: 100vw; }
-      .section-container h1 {
-        font-size: 55px;
-        left: 50%;
-        -webkit-transform: translateX(-50%);
-                transform: translateX(-50%); } }
+      width: 100vw; } }
 
 .section-container nav {
   position: absolute;
@@ -325,35 +322,50 @@ h3 {
                 box-shadow: none; } }
   .section-home .content-container {
     position: relative;
-    width: 500px;
+    width: 473px;
     top: 40%;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%); }
     @media (max-width: 650px) {
       .section-home .content-container {
-        width: 720px; } }
+        width: 370px; } }
+    @media (max-width: 400px) {
+      .section-home .content-container {
+        width: 287px; } }
   .section-home h1 {
     text-shadow: 4px 12px 3px #af0429;
     margin: 0;
     position: absolute;
-    top: 0; }
+    top: 0;
+    width: 473px; }
+    @media (max-width: 650px) {
+      .section-home h1 {
+        font-size: 55px;
+        width: 370px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%); } }
     @media (max-width: 400px) {
       .section-home h1 {
-        width: 360px; } }
+        font-size: 45px;
+        width: 287px; } }
   .section-home h3 {
     text-transform: uppercase;
     text-shadow: 4px 5px 3px #af0429;
     position: absolute;
-    top: 85px;
-    left: 215px; }
-    @media (max-width: 700px) {
+    top: 88px;
+    left: 220px;
+    width: 240px; }
+    @media (max-width: 650px) {
       .section-home h3 {
+        top: 80px;
+        left: 110px; } }
+    @media (max-width: 400px) {
+      .section-home h3 {
+        font-size: 14px;
         top: 65px;
-        left: 310px; } }
-    @media (max-width: 420px) {
-      .section-home h3 {
-        font-size: 14px; } }
+        left: 90px; } }
   .section-home nav li {
     text-shadow: 3px 3px 3px #7a021c; }
   .section-home .twitter-icon svg,
@@ -410,9 +422,9 @@ h3 {
     bottom: 0; }
   .section-about .text-container {
     position: absolute;
-    left: 35%;
+    right: 50px;
     top: 25%;
-    max-width: 500px;
+    max-width: 50%;
     margin: 0; }
     .section-about .text-container p {
       line-height: 1.6; }
@@ -867,7 +879,7 @@ h3 {
       top: 8%; }
     .section-contact form {
       left: 50%;
-      bottom: 70px; }
+      bottom: 2%; }
       .section-contact form .form-top-row,
       .section-contact form .form-bottom-row {
         display: block; }
@@ -881,14 +893,7 @@ h3 {
     .section-contact .section-contact-container {
       background-image: url(../../images/blue-dot-graphics-copy.png);
       -webkit-box-shadow: none;
-              box-shadow: none; }
-    .section-contact .content-container {
-      position: fixed;
-      text-align: center;
-      -webkit-transform: none;
-              transform: none;
-      width: 360px;
-      top: 8%; } }
+              box-shadow: none; } }
   @media (max-width: 570px) {
     .section-contact form input[type=text],
     .section-contact form input[type=email],
