@@ -1,0 +1,172 @@
+.section-portfolio {
+    background-color: $darkGrey;
+    
+    .section-portfolio-container {
+        box-shadow: 15px 13px 45.5px 4.5px rgb(160, 159, 159);
+        background-color: $lightGrey;
+        background-image: url(../../images/dot-graphics-grey.png);
+    }
+
+    .section-container nav a {
+        color: black;
+    }
+
+    .nav-style-line {
+        background: black;
+        left: 247px;
+    }
+
+    .twitter-icon,
+    .linked-in-icon, {
+        svg {
+            color: $white;
+        }
+    }
+
+    .git-icon svg {
+        color: black;
+    }
+
+    .icon-circle {
+        background-color: black;
+    }
+
+    h2 {
+        color: black;
+        text-shadow: 3px 3px 3px grey;
+        position: absolute;
+        top: 5%;
+        left: 5%;
+    }
+    
+    .portfolio-container {
+        max-width: 95%;
+        display: flex;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .portfolio-container-top-row,
+    .portfolio-container-bottom-row {
+        display: flex;
+    }
+    
+    .portfolio-piece {
+        margin: 5px 35px;
+        position: relative;
+        // Styling the initial appearance of the image prior to hover
+        img {
+            max-height: 190px;
+            box-shadow: 18px 24px 30px 0px rgb(95, 94, 94);
+            opacity: 0.8;
+            filter: grayscale(100%) blur(1px);
+            -webkit-filter: grayscale(100%) blur(1px); /* Safari 6.0 - 9.0 
+            */
+            transition: all 0.3s;
+        }
+        // Styling the Portfolio-mask
+        .portfolio-mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            text-align: center;
+            padding-top: 30%;
+            transition: all 0.5s;
+        }
+        // While hovering on portfolio-piece, make portfolio mask dissapear
+        &:hover > a > .portfolio-mask {
+            animation: fadeOut 0.3s linear;
+            opacity: 0;
+        }
+        // While hovering on portfolio-piece, animate the image
+        &:hover > img {
+            animation: color 0.3s linear;
+            opacity: 1;
+            filter: grayscale(0%) blur(0);
+            -webkit-filter: grayscale(0%) blur(0); /* Safari 6.0 - 9.0 */
+            transform: scale(1.3);
+        }
+    }
+
+    // Animation adding color to the image, triggered on hover
+    @keyframes color {
+        0% {
+            -webkit-filter: grayscale(100%) blur(1px); /* Safari 6.0 - 9.0 */
+            filter: grayscale(100%) blur(1px);
+            opacity: 0.8;
+        }
+        100% {
+            -webkit-filter: grayscale(0%) blur(0); /* Safari 6.0 - 9.0 */
+            filter: grayscale(0%) blur(0);
+            opacity: 1;
+        }
+    }
+
+    // Animation fading out portfolio-mask, triggered on hover
+    @keyframes fadeOut {
+        from {
+            opacity: 1;
+            transform: scale(1)
+        }
+
+        to {
+            opacity: 0;
+            transform: scale(1.6)
+        }
+    }
+
+    // ***** MEDIA QUERIES
+
+    // Shrink image size and margins
+    @media (max-width: 1370px) {
+        .portfolio-piece {
+            margin: 5px 20px;
+            & img {
+                max-height: 150px;
+            }
+        }
+    }
+
+    // Display portfolio-container as grid rather than row
+    // Movie portfolio-container closer to top
+    // Shrink image size and margins
+    @media (max-width: 1100px) {
+        .portfolio-container {
+            top: 30%;
+        }
+        
+        .portfolio-piece {
+            margin: 0 35px 22px 35px;
+            & img {
+                max-height: 140px;
+            }
+        }
+        .portfolio-container-top-row,
+        .portfolio-container-bottom-row {
+            display: block;
+        }
+    }
+
+    // Shrink image size and margins
+    @media (max-width: 750px) {
+        .portfolio-piece {
+            margin: 0 25px 22px 25px;
+            & img {
+                max-height: 120px;
+            }
+        }
+    }
+
+    // Shrink margins
+    @media (max-width: 570px) {
+        .portfolio-piece {
+            margin: 0 15px 22px 15px;
+        }
+    }
+}
