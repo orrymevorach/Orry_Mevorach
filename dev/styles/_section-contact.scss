@@ -29,7 +29,7 @@
 
     .content-container {
         position: relative;
-        top: 40%;
+        top: 23%;
         left: 50%;
         transform: translateX(-50%);
         h1 {
@@ -70,7 +70,7 @@
             width: 250px;
         }
         textarea {
-            width: 420px;
+            width: 380px;
             padding-top: 13px;
         }
         input[type=text]:focus,
@@ -81,8 +81,9 @@
         input[type=submit] {
             background-color: rgba(255,255,255,0.9);
             color: rgb(7, 89, 241);
-            padding: 0 10px;
+            padding: 0 25px;
             font-size: 18px;
+            line-height: 1;
             &:hover {
                 background-color: rgb(7, 89, 241);
                 color: $white;
@@ -102,15 +103,7 @@
         background-color: $darkBlue;
     }
     .git-icon:after {
-        content: '';
         background-color: $darkBlue;
-        height: 39px;
-        width: 39px;
-        position: absolute;
-        top: 12px;
-        left: 1px;
-        border-radius: 50%;
-        z-index: -1;
     }
 
     .git-icon svg:hover {
@@ -123,33 +116,32 @@
 
     @media (max-width: 1140px) {
         form {
-            left: 55%;
+            left: 50%;
             display: block;
             text-align: center;
-            textarea {
-                width: 440px;
+            & .form-top-row,
+            & .form-bottom-row {
+                display: block;
+            }
+            & input[type=text],
+            & input[type=email],
+            & textarea {
+                width: 450px;
             }
         }       
     }
 
-    @media (max-width: 850px) {
+    @media (max-width: 800px) {
         .content-container {
             top: 8%;
         }
         form {
-            left: 50%;
             bottom: 2%;
             & .form-top-row,
             & .form-bottom-row {
                 display: block;
             }
     
-            & input[type=text],
-            & input[type=email],
-            & textarea {
-                width: 450px;
-            }
-
             & textarea {
                 height: 150px;
             }

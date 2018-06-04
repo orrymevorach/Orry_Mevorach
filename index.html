@@ -12,6 +12,33 @@
 </head>
 <body>
 
+    <div class="responsive-nav-container">
+        <div class="responsive-background"></div>
+        <nav class="responsive-nav">
+            
+            <ul>
+                <li class="home-link">
+                    <a href="#home">Home</a>
+                </li>
+                <li class="about-link">
+                    <a href="#about">About</a>
+                </li>
+                <li class="skills-link">
+                    <a href="#skills">Skills</a>
+                </li>
+                <li class="portfolio-link">
+                    <a href="#portfolio">Portfolio</a>
+                </li>
+                <li class="contact-link">
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+            <!-- Hamburger Menu -->
+        </nav>
+        <div class="hamburger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
     <!-- Opening Home Section -->
     <section class="section-general section-home" id="home">
         <div class="social-media-container">
@@ -38,10 +65,6 @@
         </div>
         <!-- Opening Section Home Container -->
         <div class="section-container section-home-container">
-            <!-- Hamburger Menu -->
-            <div class="hamburger-menu">
-                <i class="fas fa-bars"></i>
-            </div>
             <nav>
                 <div class="nav-style-line nav-style-line-home"></div>
                 <ul>
@@ -107,6 +130,38 @@
             </div>
         </div> <!-- Closing Section About Container -->
     </section> <!-- Closing About Me Section -->
+
+    <!-- Opening Section Responsive About Text -->
+    <div class="section-responsive-about-text">
+        <div class="wrapper">
+            <h2>About Me</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo deleniti voluptates possimus, obcaecati quis laboriosam veniamatque! Quam amet eligendi numquam asperiores possimus, esse consectetur atque enim excepturi quas vero?</p>
+        </div>
+        
+        <div class="social-media-container">
+            <div class="git-hub-container">
+                <a href="https://github.com/orrymevorach" class="git-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <div class="twitter-container">
+                <div class="icon-circle">
+                    <a href="https://twitter.com/orrymevorach" class="twitter-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        
+            <div class="linked-in-container">
+                <div class="icon-circle">
+                    <a href="https://www.linkedin.com/in/orrymevorach/" class="linked-in-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+            
+    </div>
 
     <!-- Opening Skills Section -->
     <section class="section-general section-skills" id="skills">
@@ -249,13 +304,13 @@
                         <div class="portfolio-piece portfolio-piece1">
                             <img src="images/portfolio-piece1.png" alt="Portfolio Piece 1">
                             <a href="http://www.orrymevorach.com/dj_button_mash/">
-                                <div class="portfolio-mask">jQuery</div>
+                                <div class="portfolio-mask"><h3>jQuery</h3></div>
                             </a>
                         </div>
                         <div class="portfolio-piece portfolio-piece2">
                             <img src="images/portfolio-piece2.png" alt="Portfolio Piece 2">
                             <a href="http://www.orrymevorach/lisbon/">
-                                <div class="portfolio-mask">PSD Conversion</div>
+                                <div class="portfolio-mask"><h3>PSD Conversion</h3></div>
                             </a> 
                         </div>
                     </div>
@@ -264,8 +319,8 @@
                             <img src="images/portfolio-piece3.png" alt="Portfolio Piece 3">
                             <a href="https://kithub-aa9f5.firebaseapp.com/">
                                 <div class="portfolio-mask">
-                                    <div>jQuery</div>
-                                    <div>API Project</div>
+                                    <div><h3>React.JS</h3></div>
+                                    <div><h3>API Project</h3></div>
                                 </div>
                             </a>
                         </div>
@@ -273,8 +328,8 @@
                             <img src="images/portfolio-piece4.png" alt="Portfolio Piece #4">
                             <a href="http://www.orrymevorach.com/nba_player_cards/">
                                 <div class="portfolio-mask">
-                                    <div>React.JS</div>
-                                    <div>API Project</div>
+                                    <div><h3>jQuery</h3></div>
+                                    <div><h3>API Project</h3></div>
                                 </div>
                             </a>
                         </div>
@@ -357,7 +412,9 @@
             
             // // Hamburger Menu
             $('.hamburger-menu').on('click', () => {
-                $('.section-container nav').toggle({display: 'block'});
+                $('.responsive-nav').toggle({display: 'flex'});
+                $('.responsive-background').toggle({display: 'block'})
+
             })
 
             // nav-style-line animation === HOME SECTION ===

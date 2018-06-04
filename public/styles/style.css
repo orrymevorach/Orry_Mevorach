@@ -174,6 +174,9 @@ h3 {
       height: 100vh;
       width: 100vw; } }
 
+.responsive-nav-container {
+  display: none; }
+
 .section-container nav {
   position: absolute;
   top: 0;
@@ -252,34 +255,93 @@ h3 {
 
 .git-icon svg {
   font-size: 42px; }
+  @media (max-width: 650px) {
+    .git-icon svg {
+      font-size: 40px; } }
+
+.git-icon:after {
+  content: '';
+  height: 39px;
+  width: 39px;
+  position: absolute;
+  top: 12px;
+  left: 1px;
+  border-radius: 50%;
+  z-index: -1; }
+  @media (max-width: 750px) {
+    .git-icon:after {
+      height: 37px;
+      width: 37px;
+      top: 6px;
+      left: 6px; } }
 
 .git-hub-container,
 .twitter-container,
 .linked-in-container {
   margin: 10px 0; }
 
-.hamburger-menu {
-  display: none; }
+@media (max-width: 900px) {
+  .section-container nav ul li {
+    font-size: 12px;
+    padding: 40px 10px; } }
 
-@media (max-width: 700px) {
-  .nav-style-line {
-    display: none; } }
-
-@media (max-width: 650px) {
+@media (max-width: 800px) {
   .section-container nav {
     display: none; }
-    .section-container nav ul {
-      width: 100vw; }
-      .section-container nav ul li {
-        -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-        text-align: center;
-        text-shadow: none; }
-        .section-container nav ul li a {
-          color: #ffffff; }
-        .section-container nav ul li:hover {
-          -webkit-transform: rotate(0deg);
-                  transform: rotate(0deg); }
+  .responsive-nav-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 60px;
+    z-index: 100; }
+    .responsive-nav-container .responsive-background {
+      display: none;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 60px;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-bottom: 2px solid white; }
+  .responsive-nav {
+    display: none;
+    width: 100vw;
+    text-shadow: 2px 2px 3px #000;
+    z-index: 201; }
+    .responsive-nav ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      width: 85vw; }
+      .responsive-nav ul li {
+        padding: 20px 0; }
+        .responsive-nav ul li a {
+          list-style: none;
+          text-decoration: none;
+          color: white; }
+  .hamburger-menu {
+    width: 10vw;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+    z-index: 300;
+    padding: 7px 0 0 0px;
+    position: absolute;
+    right: 5px; }
+    .hamburger-menu .fa-bars {
+      color: white;
+      font-size: 40px; }
+  .nav-style-line {
+    display: none; }
   .social-media-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -295,18 +357,7 @@ h3 {
     .social-media-container .git-hub-container,
     .social-media-container .twitter-container,
     .social-media-container .linked-in-container {
-      margin: 5px; }
-  .hamburger-menu {
-    display: block;
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    z-index: 200; }
-    .hamburger-menu .fa-bars {
-      color: white;
-      font-size: 40px; } }
+      margin: 5px; } }
 
 .section-home {
   background-color: #e8103f; }
@@ -348,7 +399,7 @@ h3 {
                 transform: translateX(-50%); } }
     @media (max-width: 400px) {
       .section-home h1 {
-        font-size: 45px;
+        font-size: 40px;
         width: 287px; } }
   .section-home h3 {
     text-transform: uppercase;
@@ -365,7 +416,7 @@ h3 {
       .section-home h3 {
         font-size: 14px;
         top: 65px;
-        left: 90px; } }
+        left: 63px; } }
   .section-home nav li {
     text-shadow: 3px 3px 3px #7a021c; }
   .section-home .twitter-icon svg,
@@ -374,15 +425,7 @@ h3 {
   .section-home .git-icon svg {
     color: #ffffff; }
   .section-home .git-icon:after {
-    content: '';
-    background-color: #e8103f;
-    height: 39px;
-    width: 39px;
-    position: absolute;
-    top: 12px;
-    left: 1px;
-    border-radius: 50%;
-    z-index: -1; }
+    background-color: #e8103f; }
   .section-home .git-icon svg:hover {
     color: #e8103f; }
   .section-home .git-icon:hover:after {
@@ -394,91 +437,125 @@ h3 {
     background-color: #ec1645; }
 
 .section-about {
-  background-color: #c7c6c6; }
+  background-color: #ececec; }
   .section-about .section-about-container {
-    -webkit-box-shadow: 15px 13px 45.5px 4.5px #a09f9f;
-            box-shadow: 15px 13px 45.5px 4.5px #a09f9f;
+    -webkit-box-shadow: 15px 13px 45.5px 4.5px #cac8c8;
+            box-shadow: 15px 13px 45.5px 4.5px #cac8c8;
     background-color: #ececec;
-    background-image: url(../../images/dot-graphics-grey.png); }
+    background-image: url(../../images/dot-graphics-grey.png);
+    padding-right: 25px; }
   .section-about .section-container a {
     color: black; }
   .section-about .nav-style-line {
     background: black;
     left: 95px; }
   .section-about .content-container {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
     .section-about .content-container h2 {
-      color: black; }
+      color: black;
+      text-shadow: 3px 3px 3px #c7c6c6; }
   .section-about .headshot-container img {
     max-height: 85vh;
-    position: absolute;
-    bottom: 0; }
+    position: relative;
+    bottom: 3vh; }
   .section-about .text-container {
-    position: absolute;
-    right: 50px;
-    top: 25%;
-    max-width: 50%;
-    margin: 0; }
+    position: relative;
+    margin: 30px 0 0 50px; }
     .section-about .text-container p {
-      line-height: 1.6; }
-  .section-about .twitter-icon svg,
-  .section-about .linked-in-icon svg {
-    color: #c7c6c6; }
-  .section-about .git-icon svg {
-    color: black; }
-  .section-about .icon-circle {
-    background-color: black; }
-  .section-about .twitter-icon svg:hover,
-  .section-about .linked-in-icon svg:hover {
-    color: black; }
-  .section-about .icon-circle:hover {
-    background-color: #c7c6c6; }
-  .section-about .git-icon:after {
-    content: '';
-    background-color: #c7c6c6;
-    height: 39px;
-    width: 39px;
-    position: absolute;
-    top: 12px;
-    left: 1px;
-    border-radius: 50%;
-    z-index: -1; }
-  .section-about .git-icon svg:hover {
-    color: #c7c6c6; }
-  .section-about .git-icon:hover:after {
-    background-color: black; }
-  @media (max-width: 700px) {
+      line-height: 1.5; }
+  @media (max-width: 800px) {
     .section-about {
-      height: 150vh; }
+      height: 75vh; }
       .section-about .section-about-container {
         width: 100vw;
-        height: 150vh;
+        height: 75vh;
         background-image: none;
         -webkit-box-shadow: none;
-                box-shadow: none; }
-      .section-about .content-container {
-        position: relative;
-        display: block; }
-      .section-about .headshot-container img,
-      .section-about .text-container {
-        position: relative; }
+                box-shadow: none;
+        overflow: hidden; }
+        .section-about .section-about-container nav {
+          display: none; }
       .section-about .headshot-container img {
         max-height: none;
         max-width: 100vw;
         top: 0; }
       .section-about .text-container {
-        top: 0;
-        left: 50%;
-        -webkit-transform: translateX(-50%);
-                transform: translateX(-50%);
-        width: 300px; } }
+        display: none; }
+      .section-about .social-media-container {
+        display: none; } }
+
+.section-responsive-about-text {
+  display: none;
+  position: relative; }
+  .section-responsive-about-text .wrapper {
+    max-width: 500px;
+    margin: 0 auto; }
+  @media (max-width: 800px) {
+    .section-responsive-about-text {
+      display: block;
+      border-top: 3px solid white;
+      background: #ececec;
+      background-image: url(../../images/dot-graphics-grey-copy.png);
+      height: 75vh;
+      padding: 20px; }
+      .section-responsive-about-text h2 {
+        color: black;
+        text-shadow: 3px 3px 3px #c7c6c6; }
+      .section-responsive-about-text p {
+        line-height: 1.5; }
+      .section-responsive-about-text .social-media-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-transform: none;
+                transform: none;
+        position: absolute;
+        bottom: 10px; } }
+
+.section-about .twitter-icon svg,
+.section-about .linked-in-icon svg,
+.section-responsive-about-text .twitter-icon svg,
+.section-responsive-about-text .linked-in-icon svg {
+  color: #ececec; }
+
+.section-about .git-icon svg,
+.section-responsive-about-text .git-icon svg {
+  color: black; }
+
+.section-about .icon-circle,
+.section-responsive-about-text .icon-circle {
+  background-color: black; }
+
+.section-about .twitter-icon svg:hover,
+.section-about .linked-in-icon svg:hover,
+.section-responsive-about-text .twitter-icon svg:hover,
+.section-responsive-about-text .linked-in-icon svg:hover {
+  color: black; }
+
+.section-about .icon-circle:hover,
+.section-responsive-about-text .icon-circle:hover {
+  background-color: #ececec; }
+
+.section-about .git-icon:after,
+.section-responsive-about-text .git-icon:after {
+  background-color: #ececec; }
+
+.section-about .git-icon svg:hover,
+.section-responsive-about-text .git-icon svg:hover {
+  color: #ececec; }
+
+.section-about .git-icon:hover:after,
+.section-responsive-about-text .git-icon:hover:after {
+  background-color: black; }
 
 .section-skills {
   background-color: #7134db; }
@@ -508,15 +585,7 @@ h3 {
   .section-skills .icon-circle:hover {
     background-color: #7134db; }
   .section-skills .git-icon:after {
-    content: '';
-    background-color: #7134db;
-    height: 39px;
-    width: 39px;
-    position: absolute;
-    top: 12px;
-    left: 1px;
-    border-radius: 50%;
-    z-index: -1; }
+    background-color: #7134db; }
   .section-skills .git-icon svg:hover {
     color: #7134db; }
   .section-skills .git-icon:hover:after {
@@ -589,51 +658,43 @@ h3 {
       height: 45px; } }
 
 .section-portfolio {
-  background-color: #c7c6c6; }
+  background-color: #fbca3d; }
   .section-portfolio .section-portfolio-container {
-    -webkit-box-shadow: 15px 13px 45.5px 4.5px #a09f9f;
-            box-shadow: 15px 13px 45.5px 4.5px #a09f9f;
-    background-color: #ececec;
-    background-image: url(../../images/dot-graphics-grey.png); }
+    -webkit-box-shadow: 15px 13px 45.5px 4.5px #d19b07;
+            box-shadow: 15px 13px 45.5px 4.5px #d19b07;
+    background-color: #fdd050;
+    background-image: url(../../images/yellow-dot-graphics.png); }
     @media (max-width: 700px) {
       .section-portfolio .section-portfolio-container {
-        background-image: url(../../images/dot-graphics-grey-copy.png);
+        background-image: url(../../images/yellow-dot-graphics-copy.png);
         -webkit-box-shadow: none;
                 box-shadow: none; } }
   .section-portfolio .section-container nav a {
-    color: black; }
+    color: #ffffff;
+    text-shadow: 3px 3px 3px #d19b07; }
   .section-portfolio .nav-style-line {
-    background: black;
     left: 247px; }
   .section-portfolio .twitter-icon svg,
   .section-portfolio .linked-in-icon svg {
-    color: #c7c6c6; }
+    color: #fbca3d; }
   .section-portfolio .git-icon svg {
-    color: black; }
+    color: #ffffff; }
   .section-portfolio .icon-circle {
-    background-color: black; }
+    background-color: #ffffff; }
   .section-portfolio .twitter-icon svg:hover,
   .section-portfolio .linked-in-icon svg:hover {
-    color: black; }
+    color: #ffffff; }
   .section-portfolio .icon-circle:hover {
-    background-color: #c7c6c6; }
+    background-color: #fbca3d; }
   .section-portfolio .git-icon:after {
-    content: '';
-    background-color: #c7c6c6;
-    height: 39px;
-    width: 39px;
-    position: absolute;
-    top: 12px;
-    left: 1px;
-    border-radius: 50%;
-    z-index: -1; }
+    background-color: #fbca3d; }
   .section-portfolio .git-icon svg:hover {
-    color: #c7c6c6; }
+    color: #fbca3d; }
   .section-portfolio .git-icon:hover:after {
-    background-color: black; }
+    background-color: #ffffff; }
   .section-portfolio h2 {
-    color: black;
-    text-shadow: 3px 3px 3px grey;
+    color: #ffffff;
+    text-shadow: 3px 3px 3px #d19b07;
     position: absolute;
     top: 5%;
     left: 5%; }
@@ -657,27 +718,31 @@ h3 {
     position: relative; }
     .section-portfolio .portfolio-piece img {
       max-height: 190px;
-      -webkit-box-shadow: 18px 24px 30px 0px #5f5e5e;
-              box-shadow: 18px 24px 30px 0px #5f5e5e;
       opacity: 0.8;
       filter: grayscale(100%) blur(1px);
       -webkit-filter: grayscale(100%) blur(1px);
       /* Safari 6.0 - 9.0 
             */
       -webkit-transition: all 0.3s;
-      transition: all 0.3s; }
+      transition: all 0.3s;
+      display: block; }
     .section-portfolio .portfolio-piece .portfolio-mask {
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.5);
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background-color: #fbca3d;
+      opacity: 0.9;
+      -webkit-box-shadow: 18px 24px 30px 0px #d19b07;
+              box-shadow: 18px 24px 30px 0px #d19b07;
       color: white;
       text-align: center;
       padding-top: 30%;
       -webkit-transition: all 0.5s;
       transition: all 0.5s; }
+      .section-portfolio .portfolio-piece .portfolio-mask p {
+        opacity: 1; }
     .section-portfolio .portfolio-piece:hover > a > .portfolio-mask {
       -webkit-animation: fadeOut 0.3s linear;
               animation: fadeOut 0.3s linear;
@@ -777,7 +842,7 @@ h3 {
     color: white; }
   .section-contact .content-container {
     position: relative;
-    top: 40%;
+    top: 23%;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%); }
@@ -829,7 +894,7 @@ h3 {
     .section-contact form input[type=email] {
       width: 250px; }
     .section-contact form textarea {
-      width: 420px;
+      width: 380px;
       padding-top: 13px; }
     .section-contact form input[type=text]:focus,
     .section-contact form input[type=email]:focus,
@@ -838,8 +903,9 @@ h3 {
     .section-contact form input[type=submit] {
       background-color: rgba(255, 255, 255, 0.9);
       color: #0759f1;
-      padding: 0 10px;
-      font-size: 18px; }
+      padding: 0 25px;
+      font-size: 18px;
+      line-height: 1; }
       .section-contact form input[type=submit]:hover {
         background-color: #0759f1;
         color: #ffffff; }
@@ -854,39 +920,31 @@ h3 {
   .section-contact .icon-circle:hover {
     background-color: #236fff; }
   .section-contact .git-icon:after {
-    content: '';
-    background-color: #236fff;
-    height: 39px;
-    width: 39px;
-    position: absolute;
-    top: 12px;
-    left: 1px;
-    border-radius: 50%;
-    z-index: -1; }
+    background-color: #236fff; }
   .section-contact .git-icon svg:hover {
     color: #236fff; }
   .section-contact .git-icon:hover:after {
     background-color: #ffffff; }
   @media (max-width: 1140px) {
     .section-contact form {
-      left: 55%;
+      left: 50%;
       display: block;
       text-align: center; }
-      .section-contact form textarea {
-        width: 440px; } }
-  @media (max-width: 850px) {
-    .section-contact .content-container {
-      top: 8%; }
-    .section-contact form {
-      left: 50%;
-      bottom: 2%; }
       .section-contact form .form-top-row,
       .section-contact form .form-bottom-row {
         display: block; }
       .section-contact form input[type=text],
       .section-contact form input[type=email],
       .section-contact form textarea {
-        width: 450px; }
+        width: 450px; } }
+  @media (max-width: 800px) {
+    .section-contact .content-container {
+      top: 8%; }
+    .section-contact form {
+      bottom: 2%; }
+      .section-contact form .form-top-row,
+      .section-contact form .form-bottom-row {
+        display: block; }
       .section-contact form textarea {
         height: 150px; } }
   @media (max-width: 700px) {

@@ -42,15 +42,7 @@
         background-color: $darkPurple;
     }
     .git-icon:after {
-        content: '';
         background-color: $darkPurple;
-        height: 39px;
-        width: 39px;
-        position: absolute;
-        top: 12px;
-        left: 1px;
-        border-radius: 50%;
-        z-index: -1;
     }
 
     .git-icon svg:hover {

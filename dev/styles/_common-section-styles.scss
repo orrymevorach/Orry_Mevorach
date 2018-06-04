@@ -27,6 +27,10 @@
     }
 }
 
+.responsive-nav-container {
+    display: none;
+}
+
 .section-container nav {
     position: absolute;
     top: 0;
@@ -103,7 +107,27 @@
 
 .git-icon svg {
     font-size: 42px;
+    @media (max-width: 650px) {
+        font-size: 40px;
+    }
 }
+
+.git-icon:after {
+        content: '';
+        height: 39px;
+        width: 39px;
+        position: absolute;
+        top: 12px;
+        left: 1px;
+        border-radius: 50%;
+        z-index: -1;
+        @media (max-width: 750px) {
+            height: 37px;
+            width: 37px;
+            top: 6px;
+            left: 6px;
+        }
+    }
 
 .git-hub-container,
 .twitter-container,
@@ -111,34 +135,85 @@
     margin: 10px 0;
 }
 
-.hamburger-menu {
-    display: none;
+@media (max-width: 900px) {
+    .section-container nav ul li {
+        font-size: 12px;
+        padding: 40px 10px;
+    }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
+    // hiding non-responsive navs
+    .section-container nav {
+        display: none;
+    }
+    // displaying responsive-nav-container on shrink
+    .responsive-nav-container {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 60px;
+        // background-color: rgba(255,255,255,0.4);
+        z-index: 100;
+        .responsive-background {
+            display: none;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 60px;
+            background-color: rgba(255,255,255,0.7);
+            border-bottom: 2px solid white;
+        }
+    }
+    
+    // styling the nav within the container
+    .responsive-nav {
+        display: none;
+        width: 100vw;
+        text-shadow: 2px 2px 3px #000;
+        z-index: 201;
+        ul {
+            display: flex;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            width: 85vw;
+            li {
+                padding: 20px 0;
+                a {
+                    list-style: none;
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    // styling and positiong hamburger menu
+    .hamburger-menu {
+        width: 10vw;
+        transition: 0.1s;
+        z-index: 300;
+        padding: 7px 0 0 0px;
+        position: absolute;
+        right: 5px;
+        .fa-bars {
+            color: white;
+            font-size: 40px;
+        }
+    }
+
+    // hiding the nav-style-line when the screen shrinks
     .nav-style-line {
         display: none;
     }
-}
-@media (max-width: 650px) {
-    .section-container nav {
-        display: none;
-        ul {
-            width: 100vw;
-            li {
-                transform: rotate(0deg);
-                text-align: center;
-                text-shadow: none;
-                a {
-                    color: $white;
-                }
-                &:hover {
-                    transform: rotate(0deg);
-                }
-            }
-        } 
-    }
     
+    // relocating social media container
     .social-media-container {
         display: flex;
         flex-direction: row;
@@ -149,19 +224,6 @@
         .twitter-container,
         .linked-in-container {
             margin: 5px;
-        }
-    }
-
-    .hamburger-menu {
-        display: block;
-        position: absolute;
-        top: 25px;
-        right: 25px;
-        transition: 0.3s;
-        z-index: 200;
-        .fa-bars {
-            color: white;
-            font-size: 40px;
         }
     }
 }

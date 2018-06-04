@@ -42,7 +42,7 @@
             transform: translateX(-50%);
         }
         @media (max-width: 400px) {
-            font-size: 45px;
+            font-size: 40px;
             width: 287px;
         }
     }
@@ -61,7 +61,7 @@
         @media (max-width: 400px) {
             font-size: 14px;
             top: 65px;
-            left: 90px;
+            left: 63px;
         }
     }
 
@@ -86,15 +86,7 @@
     }
 
     .git-icon:after {
-        content: '';
         background-color: $darkRed;
-        height: 39px;
-        width: 39px;
-        position: absolute;
-        top: 12px;
-        left: 1px;
-        border-radius: 50%;
-        z-index: -1;
     }
 
     .git-icon svg:hover {
