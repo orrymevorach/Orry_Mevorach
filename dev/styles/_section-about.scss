@@ -6,10 +6,8 @@
         box-shadow: 15px 13px 45.5px 4.5px rgb(202, 200, 200);
         background-color: $lightGrey;
         background-image: url(../../images/dot-graphics-grey.png);
-        padding-right: 25px;
+        padding: 0 25px 25px 0;
     }
-    
-    
 
     // Nav text to black
     .section-container a {
@@ -43,16 +41,28 @@
     // Text Container
     .text-container {
         position: relative;
-        margin: 30px 0 0 50px;
+        margin: 90px 0 0 50px;
         p {
             line-height: 1.5;
         }
     }
 
-    
-    
-    
+    // Shrinking text at 900px
+    @media (max-width: 900px) {
+        .section-about-container p {
+            font-size: 14px;
+        }
+    }
+
+    // Raising text container at 800px which is when nav turns to hamburger menu
     @media (max-width: 800px) {
+        .text-container {
+            margin: 20px 0 0 50px;
+        }
+    }
+    
+    // layout of about section changes to column at 760px
+    @media (max-width: 760px) {
         height: 75vh;
         .section-about-container {
             width: 100vw;
@@ -78,28 +88,33 @@
     }
 
 }
+// responsive text container layout and styling - appears at 760px when layout of about section changes to column
 .section-responsive-about-text {
     display: none;
-    position: relative;
-    .wrapper {
-        max-width: 500px;
-        margin: 0 auto;
-    }
-    @media (max-width: 800px) {
+    
+    @media (max-width: 760px) {
         display: block;
+        position: relative;
+        height: 75vh;
+        padding: 20px;
         border-top: 3px solid white;
         background: $lightGrey;
         background-image: url(../../images/dot-graphics-grey-copy.png);
+        .wrapper {
+            max-width: 500px;
+            margin: 0 auto;
+        }
         h2 {
             color: black;
             text-shadow: 3px 3px 3px $darkGrey;
         }
         p {
             line-height: 1.5;
+            @media (max-width: 400px) {
+                font-size: 14px;
+            }
         }
-        height: 75vh;
-        padding: 20px;
-        
+        // making social media container responsive
         .social-media-container {
             display: flex;
             flex-direction: row;

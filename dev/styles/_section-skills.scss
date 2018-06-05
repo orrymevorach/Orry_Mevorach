@@ -66,7 +66,7 @@
             display: flex;
         }
         .skills-icon-top-row {
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
         svg, 
         i {
@@ -86,7 +86,7 @@
     @media (max-width: 1400px) {
         .skills-icon-container {
             display: block;
-            top: 32%;
+            top: 40%;
             .bottom-row-icon {
                 flex-direction: column-reverse;
             }
