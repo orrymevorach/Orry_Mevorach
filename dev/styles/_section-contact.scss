@@ -17,7 +17,8 @@
     }
 
     .twitter-icon,
-    .linked-in-icon, {
+    .linked-in-icon, 
+    .email-icon {
         svg {
             color: $darkBlue;
         }
@@ -29,7 +30,7 @@
 
     .content-container {
         position: relative;
-        top: 23%;
+        top: 20%;
         left: 50%;
         transform: translateX(-50%);
         h1 {
@@ -43,7 +44,7 @@
         bottom: 15px;
         left: 50%;
         transform: translateX(-50%);
-        display: flex;
+        text-align: center;
         input[type=text],
         input[type=email],
         textarea,
@@ -57,28 +58,33 @@
             padding-left: 15px;
             border-radius: none;
         }
+        
+        input[type=text],
+        input[type=email],
+        textarea {
+                width: 500px;
+        }
+
         input[type=text]::placeholder,
         input[type=email]::placeholder,
         textarea::placeholder {
             color: white;
             opacity: 0.9;
         }
-        input[type=text] {
-            width: 180px;
-        }
-
-        input[type=email] {
-            width: 250px;
-        }
-        textarea {
-            width: 380px;
-            padding-top: 13px;
-        }
+        
         input[type=text]:focus,
         input[type=email]:focus,
         textarea:focus {
             border: 2px solid $white;
         }
+        
+        textarea {
+            width: 500px;
+            height: 100px;
+            padding-top: 13px;
+            resize: none;
+        }
+
         input[type=submit] {
             background-color: rgba(255,255,255,0.9);
             color: rgb(7, 89, 241);
@@ -90,14 +96,11 @@
                 color: $white;
             }
         }
-        .form-top-row,
-        .form-bottom-row {
-            display: flex;
-        }
     }
 
     .twitter-icon svg:hover,
-    .linked-in-icon svg:hover {
+    .linked-in-icon svg:hover,
+    .email-icon svg:hover {
         color: $white;
     }
     .icon-circle:hover {
@@ -115,18 +118,17 @@
         background-color: $white;
     }
 
+    .footer-email-sent-paragraph {
+        color: white;
+        text-align: center;
+        text-shadow: 3px 3px 8px darkBlue;
+    }
+
     @media (max-width: 1140px) {
         form {
-            left: 50%;
-            display: block;
-            text-align: center;
-            & .form-top-row,
-            & .form-bottom-row {
-                display: block;
-            }
-            & input[type=text],
-            & input[type=email],
-            & textarea {
+            input[type=text],
+            input[type=email],
+            textarea {
                 width: 450px;
             }
         }       
@@ -138,22 +140,19 @@
         }
         form {
             bottom: 2%;
-            & .form-top-row,
-            & .form-bottom-row {
-                display: block;
-            }
-    
             & textarea {
                 height: 150px;
             }
-
         }
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 650px) {
         .section-contact-container {
             background-image: url(../../images/blue-dot-graphics-copy.png);
             box-shadow: none;
+        }
+        form {
+            bottom: 80px;    
         }
     }
 

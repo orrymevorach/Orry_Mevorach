@@ -21,7 +21,8 @@
     }
 
     .twitter-icon,
-    .linked-in-icon, {
+    .linked-in-icon,
+    .email-icon {
         svg {
             color: $darkYellow;
         }
@@ -36,7 +37,8 @@
     }
 
     .twitter-icon svg:hover,
-    .linked-in-icon svg:hover {
+    .linked-in-icon svg:hover,
+    .email-icon svg:hover {
         color: $white;
 
     }
@@ -90,6 +92,23 @@
             transition: all 0.3s;
             display: block;
         }
+        .mask-text {
+            color: white;
+            text-shadow: 3px 3px 5px black;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            z-index: 10;
+            text-align: center;
+        }
+
+        .mask-text-top {
+            top: 17%;
+        }
+        .mask-text-bottom {
+            top: 31%;
+        }
         // Styling the Portfolio-mask
         .portfolio-mask {
             position: absolute;
@@ -98,7 +117,7 @@
             right: -2px;
             bottom: -2px;
             background-color: rgb(251,202,61);
-            opacity: 0.9;
+            opacity: 0.7;
             box-shadow: 18px 24px 30px 0px $shadowYellow;
             color: white;
             text-align: center;
@@ -120,6 +139,9 @@
             filter: grayscale(0%) blur(0);
             -webkit-filter: grayscale(0%) blur(0); /* Safari 6.0 - 9.0 */
             transform: scale(1.3);
+        }
+        &:hover > a > p {
+            display: none;
         }
     }
 

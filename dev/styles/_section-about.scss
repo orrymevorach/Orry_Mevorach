@@ -131,7 +131,8 @@
 .section-responsive-about-text {
     
     .twitter-icon,
-    .linked-in-icon, {
+    .linked-in-icon,
+    .email-icon {
         svg {
             color: $lightGrey;
         }
@@ -146,7 +147,8 @@
     }
 
     .twitter-icon svg:hover,
-    .linked-in-icon svg:hover {
+    .linked-in-icon svg:hover,
+    .email-icon svg:hover {
         color: black;
     }
 

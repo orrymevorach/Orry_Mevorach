@@ -75,7 +75,8 @@
     // Icon Customization
 
     .twitter-icon,
-    .linked-in-icon, {
+    .linked-in-icon,
+    .email-icon {
         svg {
             color: $darkRed;
         }
@@ -98,13 +99,12 @@
     }
     
     .twitter-icon svg:hover,
-    .linked-in-icon svg:hover {
+    .linked-in-icon svg:hover,
+    .email-icon svg:hover {
         color: $white;
     }
     .icon-circle:hover {
         background-color: $lightRed;
     }
-
-
 
 }

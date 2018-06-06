@@ -83,7 +83,8 @@
 }
 
 .twitter-container,
-.linked-in-container {
+.linked-in-container,
+.email-container {
     position: relative;
 }
 
@@ -105,8 +106,13 @@
     font-size: 35px;
 }
 
+.email-icon svg {
+    padding: 7px 0 0 6px;
+    font-size: 30px;
+}
+
 .git-icon svg {
-    font-size: 42px;
+    font-size: 40px;
     @media (max-width: 650px) {
         font-size: 40px;
     }
@@ -114,8 +120,8 @@
 
 .git-icon:after {
         content: '';
-        height: 39px;
-        width: 39px;
+        height: 37px;
+        width: 37px;
         position: absolute;
         top: 12px;
         left: 1px;
@@ -131,7 +137,8 @@
 
 .git-hub-container,
 .twitter-container,
-.linked-in-container {
+.linked-in-container,
+.email-container {
     margin: 10px 0;
 }
 
@@ -140,6 +147,7 @@
         font-size: 12px;
         padding: 40px 10px;
     }
+    
 }
 
 @media (max-width: 800px) {
@@ -147,7 +155,7 @@
     .section-container nav {
         display: none;
     }
-    // displaying responsive-nav-container on shrink
+    // displaying responsive-nav-container on screen-shrink
     .responsive-nav-container {
         display: flex;
         position: fixed;
@@ -165,7 +173,7 @@
             left: 0;
             width: 100vw;
             height: 60px;
-            background-color: rgba(255,255,255,0.7);
+            background-color: rgba(255,255,255,0.1);
             border-bottom: 2px solid white;
         }
     }
@@ -222,7 +230,8 @@
         bottom: 5px;
         .git-hub-container,
         .twitter-container,
-        .linked-in-container {
+        .linked-in-container,
+        .email-container {
             margin: 5px;
         }
     }
