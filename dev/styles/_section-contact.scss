@@ -96,6 +96,11 @@
                 color: $white;
             }
         }
+        .form-bottom-row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     .twitter-icon svg:hover,

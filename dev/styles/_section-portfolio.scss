@@ -92,23 +92,72 @@
             transition: all 0.3s;
             display: block;
         }
-        .mask-text {
+        
+        .mask-text,
+        .mask-text-title {
             color: white;
-            text-shadow: 3px 3px 5px black;
+            text-shadow: 3px 3px 3px rgb(133, 113, 0);
+            width: 150px;
             position: absolute;
-            top: 20%;
-            left: 50%;
-            transform: translate(-50%, 50%);
             z-index: 10;
             text-align: center;
         }
-
+        
+        // title
+        .mask-text-title {
+            left: 50%;
+            transform: translate(-50%, 50%);
+            font-family: 'Kaushan Script', cursive;
+            top: 20%;
+            transform: translate(-50%, 0);
+            font-size: 29px;
+            width: 225px;
+        }
+        
+        // client conversion, jquery right
         .mask-text-top {
-            top: 17%;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 40px;
         }
-        .mask-text-bottom {
-            top: 31%;
+
+        // react.js
+        .mask-text-bottom-left {
+            left: -5px;
+            bottom: 20px;
         }
+
+        // line after react.js
+        .mask-text-bottom-left:after {
+            content: '';
+            position: absolute;
+            right: 31px;
+            height: 15px;
+            width: 2px;
+            background-color: white;
+        }
+
+        // API Project Left
+        .mask-text-bottom-right {
+            bottom: 20px;
+            right: -5px;
+        }
+
+        // jquery left, psd conversion
+        .mask-text-middle {
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        // API Project Right
+        .mask-text-bottom-middle {
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 20px;
+        }
+
+
         // Styling the Portfolio-mask
         .portfolio-mask {
             position: absolute;
@@ -117,7 +166,7 @@
             right: -2px;
             bottom: -2px;
             background-color: rgb(251,202,61);
-            opacity: 0.7;
+            opacity: 0.9;
             box-shadow: 18px 24px 30px 0px $shadowYellow;
             color: white;
             text-align: center;
@@ -181,6 +230,64 @@
             & img {
                 max-height: 150px;
             }
+            .mask-text,
+            .mask-text-title {
+                width: 130px;
+            }
+
+            .mask-text {
+                font-size: 14px;
+            }
+            
+            // title
+            .mask-text-title {
+                top: 10%;
+                font-size: 22px;
+                width: 170px;
+            }
+            
+            // client conversion, jquery right
+            .mask-text-top {
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 20px;
+            }
+
+            // react.js
+            .mask-text-bottom-left {
+                left: -20px;
+                bottom: 0px;
+            }
+
+            // line after react.js
+            .mask-text-bottom-left:after {
+                content: '';
+                position: absolute;
+                right: 21px;
+                height: 15px;
+                width: 2px;
+                background-color: white;
+            }
+
+            // API Project Left
+            .mask-text-bottom-right {
+                bottom: 0px;
+                right: -20px;
+            }
+
+            // jquery left, psd conversion
+            .mask-text-middle {
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            // API Project Right
+            .mask-text-bottom-middle {
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 0px;
+            }
         }
     }
 
@@ -210,6 +317,42 @@
             margin: 0 25px 22px 25px;
             & img {
                 max-height: 120px;
+            }
+            .mask-text,
+            .mask-text-title {
+                width: 130px;
+            }
+
+            .mask-text {
+                font-size: 12px;
+            }
+            
+            // title
+            .mask-text-title {
+                font-size: 18px;
+                width: 170px;
+            }
+            
+            // react.js
+            .mask-text-bottom-left {
+                left: -30px;
+                bottom: 0px;
+            }
+
+            // line after react.js
+            .mask-text-bottom-left:after {
+                content: '';
+                position: absolute;
+                right: 28px;
+                height: 12px;
+                width: 2px;
+                background-color: white;
+            }
+
+            // API Project Left
+            .mask-text-bottom-right {
+                bottom: 0px;
+                right: -30px;
             }
         }
     }
