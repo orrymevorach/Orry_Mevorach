@@ -18,7 +18,9 @@
     .nav-style-line {
         background: black;
         left: 95px;
-
+        @media (max-width: 900px) {
+            left: 85px;
+        }
     }
 
     // Content Container Style

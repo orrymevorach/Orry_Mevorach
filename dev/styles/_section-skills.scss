@@ -21,6 +21,9 @@
 
     .nav-style-line {
         left: 163px;
+        @media (max-width: 900px) {
+            left: 148px;
+        }
     }
 
     .twitter-icon,

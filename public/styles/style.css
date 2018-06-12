@@ -149,7 +149,6 @@ h3 {
 
 .section-general {
   height: 100vh;
-  width: 100vw;
   position: relative; }
 
 .section-container {
@@ -215,6 +214,9 @@ h3 {
   width: 2px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s; }
+  @media (max-width: 900px) {
+    .nav-style-line {
+      left: 27px; } }
 
 .social-media-container {
   display: -webkit-box;
@@ -259,7 +261,7 @@ h3 {
   font-size: 30px; }
 
 .git-icon svg {
-  font-size: 40px; }
+  font-size: 41px; }
   @media (max-width: 650px) {
     .git-icon svg {
       font-size: 40px; } }
@@ -458,6 +460,9 @@ h3 {
   .section-about .nav-style-line {
     background: black;
     left: 95px; }
+    @media (max-width: 900px) {
+      .section-about .nav-style-line {
+        left: 85px; } }
   .section-about .content-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -597,6 +602,9 @@ h3 {
     text-shadow: 3px 3px 3px #2f165a; }
   .section-skills .nav-style-line {
     left: 163px; }
+    @media (max-width: 900px) {
+      .section-skills .nav-style-line {
+        left: 148px; } }
   .section-skills .twitter-icon svg,
   .section-skills .linked-in-icon svg,
   .section-skills .email-icon svg {
@@ -699,6 +707,9 @@ h3 {
     text-shadow: 3px 3px 3px #d19b07; }
   .section-portfolio .nav-style-line {
     left: 247px; }
+    @media (max-width: 900px) {
+      .section-portfolio .nav-style-line {
+        left: 222px; } }
   .section-portfolio .twitter-icon svg,
   .section-portfolio .linked-in-icon svg,
   .section-portfolio .email-icon svg {
@@ -968,6 +979,9 @@ h3 {
     text-shadow: 1px 1px 1px darkblue; }
   .section-contact nav .nav-style-line {
     left: 340px; }
+    @media (max-width: 900px) {
+      .section-contact nav .nav-style-line {
+        left: 305px; } }
   .section-contact .twitter-icon svg,
   .section-contact .linked-in-icon svg,
   .section-contact .email-icon svg {
@@ -1070,7 +1084,8 @@ h3 {
   .section-contact .footer-email-sent-paragraph {
     color: white;
     text-align: center;
-    text-shadow: 3px 3px 8px darkBlue; }
+    text-shadow: 3px 3px 8px darkBlue;
+    top: 30%; }
   @media (max-width: 1140px) {
     .section-contact form input[type=text],
     .section-contact form input[type=email],

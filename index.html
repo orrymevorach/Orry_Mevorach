@@ -141,11 +141,11 @@
                 </div>
                 <div class="text-container">
                     <h2>About Me</h2>
-                    <p>Hello! My name is Orry Mevorach. I am a web developer and a problem solver. I love tackling problems, I love to
-                    learn, and I love making people laugh.</p>
-                    <p>I have a a keen eye for colours and animations, and am famously critical of the User Experience. I
-                        appreciate anything that blends practicality, efficiency, and a strong aesthetic. In other words, I appreciate anything
-                        that is easy to use, nice to look at, fun to click on, and all-around funky fresh!</p>
+                    <p>Hello! My name is Orry Mevorach and I am a front-end web developer. I love tackling problems, and especially love learning
+                        multiple ways to tackle a problem.</p>
+                    <p>I have a a keen eye for colours and animations, and am famously critical of the User Experience. I appreciate anything that
+                        blends practicality, efficiency, and a strong aesthetic. In other words, I appreciate anything that is easy to use, nice
+                        to look at, fun to click on, and all-around funky fresh!</p>
                 </div>
             </div>
         </div> <!-- Closing Section About Container -->
@@ -155,7 +155,7 @@
     <div class="section-responsive-about-text">
         <div class="wrapper">
             <h2>About Me</h2>
-            <p>Hello! My name is Orry Mevorach. I am a web developer, a problem solver, and a joker. I love tackling problems, I love to learn, and I love making people laugh.</p>
+            <p>Hello! My name is Orry Mevorach and I am a front-end web developer. I love tackling problems, and especially love learning multiple ways to tackle a problem.</p>
             <p>I have a a keen eye for colours and animations, and am famously critical of the User Experience. I appreciate anything that blends practicality, efficiency, and a strong aesthetic. In other words, I appreciate anything that is easy to use, nice to look at, fun to click on, and all-around funky fresh!</p>
         </div>
         
@@ -365,11 +365,9 @@
                             <img src="images/portfolio-piece3.png" alt="Portfolio Piece 3">
                             <a href="https://kithub-aa9f5.firebaseapp.com/">
                                 <p class="mask-text-title">KitHub</p>
-                                <div class="mask-text-container">
                                     <p class="mask-text mask-text-top">Client Conversion</p>
                                     <p class="mask-text mask-text-bottom-left">React.JS</p>
                                     <p class="mask-text mask-text-bottom-right">API Project</p>
-                                </div>
                                 <div class="portfolio-mask"></div>
                             </a>
                         </div>
@@ -414,7 +412,6 @@
             <div class="email-container">
                 <div class="icon-circle">
                     <a href="mailto:orry.mevorach@gmail.com" class="email-icon">
-                        <i class="fas fa-envelope"></i>
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
@@ -462,252 +459,8 @@
 
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
 
-    <script>
-    
-        $(document).ready(() => {
-            console.log('hello orry')
-            
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
-
-            $('input[type=submit]').on('click', function () {
-                console.log('submit click works')
-                $('form').css({display: 'none'})
-                $('.footer-text-to-hide').hide();
-                $('.footer-text').append(`<h1>Thank You!</h1>`)
-                $('.footer-text').append(`<p class="footer-email-sent-paragraph">I look forward to chatting with you.</p>`)
-                $('.footer-text').css({top: '30%'})
-            })
+    <script src="dev/scripts/app.js"></script>
 
 
-            // // Hamburger Menu
-            $('.hamburger-menu').on('click', () => {
-                $('.responsive-nav').toggle({display: 'flex'});
-                $('.responsive-background').toggle({display: 'block'})
-            });
-
-            // nav-style-line animation === HOME SECTION ===
-            $('.section-home .home-link').on('mouseover', () => {
-                $('.nav-style-line-home').css({ transform: 'rotate(90deg)'})
-            })
-
-            $('.section-home .home-link').on('mouseleave', () => {
-                $('.nav-style-line-home').css({ transform: 'rotate(0deg)' })
-            })
-
-            $('.section-home .about-link').on('mouseover', () => {
-                $('.nav-style-line-home').css({ transform: 'rotate(90deg)', left: '95px' })
-            })
-
-            $('.section-home .about-link').on('mouseleave', () => {
-                $('.nav-style-line-home').css({ transform: 'rotate(0deg)', left: '30px' })
-            })
-
-            $('.section-home .skills-link').on('mouseover', () => {
-                $('.nav-style-line-home').css({ transform: 'rotate(90deg)', left: '165px' })
-            })
-
-            $('.section-home .skills-link').on('mouseleave', () => {
-                $('.nav-style-line-home').css({ transform: 'rotate(0deg)', left: '30px' })
-            })
-
-            $('.section-home .portfolio-link').on('mouseover', () => {
-                $('.nav-style-line-home').css({ transform: 'rotate(90deg)', left: '247px' })
-            })
-
-            $('.section-home .portfolio-link').on('mouseleave', () => {
-                $('.nav-style-line-home').css({ transform: 'rotate(0deg)', left: '30px' })
-            })
-
-            $('.section-home .contact-link').on('mouseover', () => {
-                $('.nav-style-line-home').css({ transform: 'rotate(90deg)', left: '343px' })
-            })
-
-            $('.section-home .contact-link').on('mouseleave', () => {
-                $('.nav-style-line-home').css({ transform: 'rotate(0deg)', left: '30px' })
-            })
-
-            // nav-style-line animation === ABOUT SECTION ===
-            $('.section-about .home-link').on('mouseover', () => {
-                $('.nav-style-line-about').css({ transform: 'rotate(90deg)', left: '35px'})
-            })
-
-            $('.section-about .home-link').on('mouseleave', () => {
-                $('.nav-style-line-about').css({ transform: 'rotate(0deg)', left: '95px' })
-            })
-
-            $('.section-about .about-link').on('mouseover', () => {
-                $('.nav-style-line-about').css({ transform: 'rotate(90deg)' })
-            })
-
-            $('.section-about .about-link').on('mouseleave', () => {
-                $('.nav-style-line-about').css({ transform: 'rotate(0deg)' })
-            })
-
-            $('.section-about .skills-link').on('mouseover', () => {
-                $('.nav-style-line-about').css({ transform: 'rotate(90deg)', left: '165px' })
-            })
-
-            $('.section-about .skills-link').on('mouseleave', () => {
-                $('.nav-style-line-about').css({ transform: 'rotate(0deg)', left: '95px' })
-            })
-
-            $('.section-about .portfolio-link').on('mouseover', () => {
-                $('.nav-style-line-about').css({ transform: 'rotate(90deg)', left: '247px' })
-            })
-
-            $('.section-about .portfolio-link').on('mouseleave', () => {
-                $('.nav-style-line-about').css({ transform: 'rotate(0deg)', left: '95px' })
-            })
-
-            $('.section-about .contact-link').on('mouseover', () => {
-                $('.nav-style-line-about').css({ transform: 'rotate(90deg)', left: '343px' })
-            })
-
-            $('.section-about .contact-link').on('mouseleave', () => {
-                $('.nav-style-line-about').css({ transform: 'rotate(0deg)', left: '95px' })
-            })
-
-            // nav-style-line animation === SKILLS SECTION ===
-            $('.section-skills .home-link').on('mouseover', () => {
-                $('.nav-style-line-skills').css({ transform: 'rotate(90deg)', left: '35px' })
-            })
-
-            $('.section-skills .home-link').on('mouseleave', () => {
-                $('.nav-style-line-skills').css({ transform: 'rotate(0deg)', left: '165px' })
-            })
-
-            $('.section-skills .about-link').on('mouseover', () => {
-                $('.nav-style-line-skills').css({ transform: 'rotate(90deg)', left: '95px' })
-            })
-
-            $('.section-skills .about-link').on('mouseleave', () => {
-                $('.nav-style-line-skills').css({ transform: 'rotate(0deg)', left: '165px'})
-            })
-
-            $('.section-skills .skills-link').on('mouseover', () => {
-                $('.nav-style-line-skills').css({ transform: 'rotate(90deg)'})
-            })
-
-            $('.section-skills .skills-link').on('mouseleave', () => {
-                $('.nav-style-line-skills').css({ transform: 'rotate(0deg)'})
-            })
-
-            $('.section-skills .portfolio-link').on('mouseover', () => {
-                $('.nav-style-line-skills').css({ transform: 'rotate(90deg)', left: '247px' })
-            })
-
-            $('.section-skills .portfolio-link').on('mouseleave', () => {
-                $('.nav-style-line-skills').css({ transform: 'rotate(0deg)', left: '165px' })
-            })
-
-            $('.section-skills .contact-link').on('mouseover', () => {
-                $('.nav-style-line-skills').css({ transform: 'rotate(90deg)', left: '343px' })
-            })
-
-            $('.section-skills .contact-link').on('mouseleave', () => {
-                $('.nav-style-line-skills').css({ transform: 'rotate(0deg)', left: '165px' })
-            })
-
-            // nav-style-line animation === PORTFOLIO SECTION ===
-            $('.section-portfolio .home-link').on('mouseover', () => {
-                $('.nav-style-line-portfolio').css({ transform: 'rotate(90deg)', left: '35px' })
-            })
-
-            $('.section-portfolio .home-link').on('mouseleave', () => {
-                $('.nav-style-line-portfolio').css({ transform: 'rotate(0deg)', left: '247px' })
-            })
-
-            $('.section-portfolio .about-link').on('mouseover', () => {
-                $('.nav-style-line-portfolio').css({ transform: 'rotate(90deg)', left: '95px' })
-            })
-
-            $('.section-portfolio .about-link').on('mouseleave', () => {
-                $('.nav-style-line-portfolio').css({ transform: 'rotate(0deg)', left: '247px' })
-            })
-
-            $('.section-portfolio .skills-link').on('mouseover', () => {
-                $('.nav-style-line-portfolio').css({ transform: 'rotate(90deg)', left: '165px' })
-            })
-
-            $('.section-portfolio .skills-link').on('mouseleave', () => {
-                $('.nav-style-line-portfolio').css({ transform: 'rotate(0deg)', left: '247px' })
-            })
-
-            $('.section-portfolio .portfolio-link').on('mouseover', () => {
-                $('.nav-style-line-portfolio').css({ transform: 'rotate(90deg)'})
-            })
-
-            $('.section-portfolio .portfolio-link').on('mouseleave', () => {
-                $('.nav-style-line-portfolio').css({ transform: 'rotate(0deg)'})
-            })
-
-            $('.section-portfolio .contact-link').on('mouseover', () => {
-                $('.nav-style-line-portfolio').css({ transform: 'rotate(90deg)', left: '343px' })
-            })
-
-            $('.section-portfolio .contact-link').on('mouseleave', () => {
-                $('.nav-style-line-portfolio').css({ transform: 'rotate(0deg)', left: '247px' })
-            })
-
-            // nav-style-line animation === CONTACT SECTION ===
-            $('.section-contact .home-link').on('mouseover', () => {
-                $('.nav-style-line-contact').css({ transform: 'rotate(90deg)', left: '35px' })
-            })
-
-            $('.section-contact .home-link').on('mouseleave', () => {
-                $('.nav-style-line-contact').css({ transform: 'rotate(0deg)', left: '343px' })
-            })
-
-            $('.section-contact .about-link').on('mouseover', () => {
-                $('.nav-style-line-contact').css({ transform: 'rotate(90deg)', left: '95px' })
-            })
-
-            $('.section-contact .about-link').on('mouseleave', () => {
-                $('.nav-style-line-contact').css({ transform: 'rotate(0deg)', left: '343px' })
-            })
-
-            $('.section-contact .skills-link').on('mouseover', () => {
-                $('.nav-style-line-contact').css({ transform: 'rotate(90deg)', left: '165px' })
-            })
-
-            $('.section-contact .skills-link').on('mouseleave', () => {
-                $('.nav-style-line-contact').css({ transform: 'rotate(0deg)', left: '343px' })
-            })
-
-            $('.section-contact .portfolio-link').on('mouseover', () => {
-                $('.nav-style-line-contact').css({ transform: 'rotate(90deg)', left: '247px' })
-            })
-
-            $('.section-contact .portfolio-link').on('mouseleave', () => {
-                $('.nav-style-line-contact').css({ transform: 'rotate(0deg)', left: '343px' })
-            })
-
-            $('.section-contact .contact-link').on('mouseover', () => {
-                $('.nav-style-line-contact').css({ transform: 'rotate(90deg)'})
-            })
-
-            $('.section-contact .contact-link').on('mouseleave', () => {
-                $('.nav-style-line-contact').css({ transform: 'rotate(0deg)'})
-            })
-
-            
-
-
-            
-            
-
-        });
-        
-
-
-    </script>
 </body>
 </html>
