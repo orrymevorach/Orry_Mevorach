@@ -5,7 +5,7 @@
 
     .section-home-container {
         background-color: $lightRed;
-        background-image: url(../../images/red-dot-graphics.png);
+        // background-image: url(../../images/red-dot-graphics.png);
         box-shadow: 15px 13px 45.5px 4.5px rgba(182, 9, 46, 0.23);
         @media (max-width: 650px) {
             background-image: url(../../images/red-dot-graphics-copy.png);

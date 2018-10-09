@@ -94,9 +94,11 @@
             padding: 0 25px;
             font-size: 18px;
             line-height: 1;
+            transition: 0.3s;
             &:hover {
                 background-color: rgb(7, 89, 241);
                 color: $white;
+                border: 1px solid white;
             }
         }
         .form-bottom-row {

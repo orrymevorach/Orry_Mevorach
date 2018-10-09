@@ -446,18 +446,20 @@ app.navLine = function () {
     }
 }
 
+// if window gets resized, call app.navline function again so that it doesn't look funny
+app.resize = function() {
+    $(window).resize(function () {
+        app.navLine();
+    })
+}
+
 app.init = function () {
     console.log('hello orry')
     app.smoothScroll();
     app.onSubmit();
     app.hamburgerMenu();
     app.navLine();
-    app.iconHover();
-    app.circles();
-    // if window gets resized, call app.navline function again so that it doesn't look funny
-    $(window).resize(function(){
-        app.navLine();
-    })
+    app.resize();
 }
 
 

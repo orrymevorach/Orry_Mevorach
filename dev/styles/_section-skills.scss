@@ -73,6 +73,11 @@
         .skills-icon-top-row {
             margin-bottom: 40px;
         }
+        .skills-icon-top-row h3, 
+        .skills-icon-bottom-row h3 {
+            margin-bottom: 10px;
+        }
+
         svg, 
         i {
             font-size: 60px;
@@ -95,6 +100,9 @@
             .bottom-row-icon {
                 flex-direction: column-reverse;
             }
+            .skills-icon-bottom-row h3 {
+                margin-top: 10px;
+            }
         }
     }
     @media (max-width: 700px) {
@@ -102,6 +110,7 @@
             background-image: url(../../images/purple-dot-graphics-copy.png);
             box-shadow: none;
         }    
+        
     }
 
     @media (max-width: 750px) {

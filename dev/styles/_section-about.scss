@@ -47,6 +47,8 @@
         p {
             line-height: 1.5;
         }
+        border: 1px solid rgba(0,0,0,0.2);
+        padding: 20px;
     }
 
     // Shrinking text at 900px
@@ -88,8 +90,8 @@
             display: none;
         }
     }
-
 }
+
 // responsive text container layout and styling - appears at 760px when layout of about section changes to column
 .section-responsive-about-text {
     display: none;
@@ -168,6 +170,11 @@
 
     .git-icon:hover:after {
         background-color: black;
+    }
+
+    .funky-fresh {
+        font-family: 'Kaushan Script', cursive;
+        font-size: 18px;
     }
 }
 

@@ -67,7 +67,7 @@
         top: 5%;
         left: 5%;
     }
-    
+
     .portfolio-container {
         max-width: 95%;
         display: flex;
@@ -77,18 +77,32 @@
         transform: translateX(-50%);
     }
 
-    .portfolio-container-top-row,
-    .portfolio-container-bottom-row {
+    .first-row,
+    .middle-row {
         display: flex;
     }
     
+    .middle-row {
+        margin: 0 auto;
+    }
+
+    .bottom-row {
+        display: none;
+    }
+
+    .portfolio-piece6 {
+        width: 180px;
+        background-color: transparent;
+    }
+    
     .portfolio-piece {
-        margin: 5px 35px;
+        margin: 20px;
         position: relative;
         // Styling the initial appearance of the image prior to hover
         img {
-            max-height: 190px;
-            opacity: 0.7;
+            // width: 230px;
+            width: 180px;
+            opacity: 0.75;
             filter: grayscale(100%) blur(1px);
             -webkit-filter: grayscale(100%) blur(1px); /* Safari 6.0 - 9.0 
             */
@@ -99,29 +113,34 @@
         .mask-text,
         .mask-text-title {
             color: white;
-            text-shadow: 3px 3px 3px rgb(133, 113, 0);
-            width: 150px;
+            text-shadow: 3px 3px 3px rgba(133, 113, 0, 0.6);
+            width: 130px;
             position: absolute;
             z-index: 10;
             text-align: center;
+        }
+        
+        .mask-text {
+            font-size: 14px;
         }
         
         // title
         .mask-text-title {
             left: 50%;
             transform: translate(-50%, 50%);
-            font-family: 'Kaushan Script', cursive;
-            top: 20%;
+            // font-family: 'Kaushan Script', cursive;
+            top: 30%;
             transform: translate(-50%, 0);
-            font-size: 29px;
-            width: 225px;
+            // font-size: 26px;
+            font-size: 20px;
+            width: 170px;
         }
         
         // client conversion, jquery right
         .mask-text-top {
             left: 50%;
             transform: translateX(-50%);
-            bottom: 40px;
+            bottom: 0px;
         }
 
         // react.js
@@ -148,7 +167,7 @@
 
         // jquery left, psd conversion
         .mask-text-middle {
-            bottom: 30px;
+            bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
         }
@@ -179,6 +198,7 @@
                 opacity: 1;
             }
         }
+
         // While hovering on portfolio-piece, make portfolio mask dissapear
         &:hover > a > .portfolio-mask {
             animation: fadeOut 0.3s linear;
@@ -226,100 +246,37 @@
 
     // ***** MEDIA QUERIES
 
-    // Shrink image size and margins
-    @media (max-width: 1370px) {
-        .portfolio-piece {
-            margin: 5px 20px;
-            & img {
-                max-height: 150px;
-            }
-            .mask-text,
-            .mask-text-title {
-                width: 130px;
-            }
-
-            .mask-text {
-                font-size: 14px;
-            }
-            
-            // title
-            .mask-text-title {
-                top: 10%;
-                font-size: 22px;
-                width: 170px;
-            }
-            
-            // client conversion, jquery right
-            .mask-text-top {
-                left: 50%;
-                transform: translateX(-50%);
-                bottom: 20px;
-            }
-
-            // react.js
-            .mask-text-bottom-left {
-                left: -20px;
-                bottom: 0px;
-            }
-
-            // line after react.js
-            .mask-text-bottom-left:after {
-                content: '';
-                position: absolute;
-                right: 21px;
-                height: 15px;
-                width: 2px;
-                background-color: white;
-            }
-
-            // API Project Left
-            .mask-text-bottom-right {
-                bottom: 0px;
-                right: -20px;
-            }
-
-            // jquery left, psd conversion
-            .mask-text-middle {
-                bottom: 10px;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-            
-            // API Project Right
-            .mask-text-bottom-middle {
-                left: 50%;
-                transform: translateX(-50%);
-                bottom: 0px;
-            }
-        }
-    }
-
     // Display portfolio-container as grid rather than row
     // Movie portfolio-container closer to top
     // Shrink image size and margins
-    @media (max-width: 1100px) {
+    @media (max-width: 1500px) {
         .portfolio-container {
-            top: 30%;
+            top: 20%;
+            display: flex;
+            flex-direction: column;
         }
         
         .portfolio-piece {
-            margin: 0 35px 22px 35px;
+            margin: 20px;
             & img {
                 max-height: 140px;
             }
         }
-        .portfolio-container-top-row,
-        .portfolio-container-bottom-row {
-            display: block;
-        }
+
     }
 
     // Shrink image size and margins
-    @media (max-width: 750px) {
+    @media (max-width: 850px) {
+        .portfolio-container {
+            top: 30%;
+        }
+
+        .portfolio-piece6 {
+            width: 120px;
+        }
         .portfolio-piece {
-            margin: 0 25px 22px 25px;
             & img {
-                max-height: 120px;
+                width: 120px;
             }
             .mask-text,
             .mask-text-title {
@@ -327,26 +284,39 @@
             }
 
             .mask-text {
-                font-size: 12px;
+                font-size: 11px;
             }
             
             // title
             .mask-text-title {
-                font-size: 18px;
-                width: 170px;
+                font-size: 14px;
+                width: 130px;
+                top: 25%;
+            }
+
+            // client conversion, jquery right
+            .mask-text-top {
+                left: 50%;
+                transform: translateX(-50%);
+                top: 65%;
+            }
+
+            // DJ jquery, SplitTheBill React, Lisbon PSD
+            .mask-text-middle {
+                top: 50%;
             }
             
             // react.js
             .mask-text-bottom-left {
                 left: -30px;
-                bottom: 0px;
+                top: 50%;
             }
 
             // line after react.js
             .mask-text-bottom-left:after {
                 content: '';
                 position: absolute;
-                right: 28px;
+                right: 35px;
                 height: 12px;
                 width: 2px;
                 background-color: white;
@@ -354,16 +324,26 @@
 
             // API Project Left
             .mask-text-bottom-right {
-                bottom: 0px;
+                top: 50%;
                 right: -30px;
             }
         }
     }
 
     // Shrink margins
-    @media (max-width: 570px) {
+    @media (max-width: 650px) {
+        .hide-on-resize {
+            display: none;
+        }
+        .portfolio-container {
+            top: 125px;
+        }
         .portfolio-piece {
-            margin: 0 15px 22px 15px;
+            margin: 15px;
+        }
+        .bottom-row {
+            display: flex;
+            margin-top: 0;
         }
     }
 }
