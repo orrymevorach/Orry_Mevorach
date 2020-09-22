@@ -1,0 +1,179 @@
+.section-contact {
+  background-color: $darkBlue;
+
+  .section-contact-container {
+    background-image: url("https://orry-mevorach.s3.ca-central-1.amazonaws.com/blue-dot-graphics.png");
+    background-color: $lightBlue;
+    box-shadow: 15px 13px 45.5px 4.5px rgba(11, 86, 228, 0.23);
+  }
+
+  nav {
+    li {
+      text-shadow: 1px 1px 1px darkblue;
+    }
+    .nav-style-line {
+      left: 340px;
+      @media (max-width: 900px) {
+        left: 305px;
+      }
+    }
+  }
+
+  .twitter-icon,
+  .linked-in-icon,
+  .email-icon {
+    svg {
+      color: $darkBlue;
+    }
+  }
+
+  .git-icon svg {
+    color: white;
+  }
+
+  .content-container {
+    position: relative;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    h1 {
+      text-shadow: 4px 12px 3px rgb(7, 89, 241);
+      text-align: center;
+    }
+  }
+
+  form {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    input[type="submit"] {
+      color: $white;
+      font-weight: normal;
+      background-color: rgb(7, 89, 241);
+      border: none;
+      height: 43px;
+      margin: 5px;
+      padding-left: 15px;
+      border-radius: none;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 500px;
+    }
+
+    input[type="text"]::placeholder,
+    input[type="email"]::placeholder,
+    textarea::placeholder {
+      color: white;
+      opacity: 0.9;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      border: 2px solid $white;
+    }
+
+    textarea {
+      width: 500px;
+      height: 100px;
+      padding-top: 13px;
+      resize: none;
+    }
+
+    input[type="submit"] {
+      background-color: rgba(255, 255, 255, 0.9);
+      color: rgb(7, 89, 241);
+      padding: 0 25px;
+      font-size: 18px;
+      line-height: 1;
+      transition: 0.3s;
+      &:hover {
+        background-color: rgb(7, 89, 241);
+        color: $white;
+        border: 1px solid white;
+      }
+    }
+    .form-bottom-row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .twitter-icon svg:hover,
+  .linked-in-icon svg:hover,
+  .email-icon svg:hover {
+    color: $white;
+  }
+  .icon-circle:hover {
+    background-color: $darkBlue;
+  }
+  .git-icon:after {
+    background-color: $darkBlue;
+  }
+
+  .git-icon svg:hover {
+    color: $darkBlue;
+  }
+
+  .git-icon:hover:after {
+    background-color: $white;
+  }
+
+  .footer-email-sent-paragraph {
+    color: white;
+    text-align: center;
+    text-shadow: 3px 3px 8px darkBlue;
+    top: 30%;
+  }
+
+  @media (max-width: 1140px) {
+    form {
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 450px;
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    .content-container {
+      top: 8%;
+    }
+    form {
+      bottom: 2%;
+      & textarea {
+        height: 150px;
+      }
+    }
+  }
+
+  @media (max-width: 650px) {
+    .section-contact-container {
+      background-image: url("https://orry-mevorach.s3.ca-central-1.amazonaws.com/blue-dot-graphics-copy.png");
+      box-shadow: none;
+    }
+    form {
+      bottom: 80px;
+    }
+  }
+
+  @media (max-width: 570px) {
+    form {
+      & input[type="text"],
+      & input[type="email"],
+      & textarea {
+        width: 350px;
+      }
+    }
+  }
+}
