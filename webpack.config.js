@@ -1,16 +1,16 @@
-const path = require("path");
+const path = require('path');
 
 module.exports = {
-  mode: "production",
-  entry: ["./src/scripts/app.js", "./src/styles/styles.scss"],
+  mode: 'production',
+  entry: ['./src/scripts/app.js', './src/styles/styles.scss'],
   devServer: {
-    contentBase: path.join(__dirname, "./"),
+    contentBase: path.join(__dirname, './'),
     port: 9000,
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "app.js",
-    publicPath: "/",
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'app.js',
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -18,9 +18,9 @@ module.exports = {
         test: /\.js$/,
         exclude: /(node_modules)/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
-            presets: ["@babel/preset-env"],
+            presets: ['@babel/preset-env'],
           },
         },
       },
@@ -29,10 +29,10 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: "file-loader",
-            options: { name: "styles.css" },
+            loader: 'file-loader',
+            options: { name: 'styles.css' },
           },
-          "sass-loader",
+          'sass-loader',
         ],
       },
     ],

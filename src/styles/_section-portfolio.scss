@@ -4,16 +4,21 @@
   .section-portfolio-container {
     box-shadow: 15px 13px 45.5px 4.5px $shadowYellow;
     background-color: $lightYellow;
-    background-image: url("https://orry-mevorach.s3.ca-central-1.amazonaws.com/yellow-dot-graphics.png");
+    background-image: url('https://orry-mevorach.s3.ca-central-1.amazonaws.com/yellow-dot-graphics.png');
     @media (max-width: 700px) {
-      background-image: url("https://orry-mevorach.s3.ca-central-1.amazonaws.com/yellow-dot-graphics-copy.png");
+      background-image: url('https://orry-mevorach.s3.ca-central-1.amazonaws.com/yellow-dot-graphics-copy.png');
       box-shadow: none;
     }
   }
 
-  .section-container nav a {
-    color: $white;
-    text-shadow: 3px 3px 3px $shadowYellow;
+  .section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    nav a {
+      color: $white;
+      text-shadow: 3px 3px 3px $shadowYellow;
+    }
   }
 
   .nav-style-line {
@@ -67,280 +72,10 @@
     left: 5%;
   }
 
-  .portfolio-container {
-    max-width: 95%;
-    display: flex;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .first-row,
-  .middle-row {
-    display: flex;
-  }
-
-  .middle-row {
-    margin: 0 auto;
-  }
-
-  .bottom-row {
-    display: none;
-  }
-
-  .portfolio-piece6 {
-    width: 180px;
-    background-color: transparent;
-  }
-
-  .portfolio-piece {
-    margin: 20px;
-    position: relative;
-    // Styling the initial appearance of the image prior to hover
-    img {
-      // width: 230px;
-      width: 180px;
-      opacity: 0.75;
-      filter: grayscale(100%) blur(1px);
-      -webkit-filter: grayscale(100%) blur(1px); /* Safari 6.0 - 9.0 
-            */
-      transition: all 0.3s;
-      display: block;
-    }
-
-    .mask-text,
-    .mask-text-title {
-      color: white;
-      text-shadow: 3px 3px 3px rgba(133, 113, 0, 0.6);
-      width: 130px;
-      position: absolute;
-      z-index: 10;
-      text-align: center;
-    }
-
-    .mask-text {
-      font-size: 14px;
-    }
-
-    // title
-    .mask-text-title {
-      left: 50%;
-      transform: translate(-50%, 50%);
-      // font-family: 'Kaushan Script', cursive;
-      top: 30%;
-      transform: translate(-50%, 0);
-      // font-size: 26px;
-      font-size: 20px;
-      width: 170px;
-    }
-
-    // client conversion, jquery right
-    .mask-text-top {
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 0px;
-    }
-
-    // react.js
-    .mask-text-bottom-left {
-      left: -5px;
-      bottom: 20px;
-    }
-
-    // line after react.js
-    .mask-text-bottom-left:after {
-      content: "";
-      position: absolute;
-      right: 31px;
-      height: 15px;
-      width: 2px;
-      background-color: white;
-    }
-
-    // API Project Left
-    .mask-text-bottom-right {
-      bottom: 20px;
-      right: -5px;
-    }
-
-    // jquery left, psd conversion
-    .mask-text-middle {
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    // API Project Right
-    .mask-text-bottom-middle {
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 20px;
-    }
-
-    // Styling the Portfolio-mask
-    .portfolio-mask {
-      position: absolute;
-      top: -2px;
-      left: -2px;
-      right: -2px;
-      bottom: -2px;
-      background-color: rgb(251, 202, 61);
-      opacity: 0.9;
-      box-shadow: 18px 24px 30px 0px $shadowYellow;
-      color: white;
-      text-align: center;
-      padding-top: 30%;
-      transition: all 0.5s;
-      p {
-        opacity: 1;
-      }
-    }
-
-    // While hovering on portfolio-piece, make portfolio mask dissapear
-    &:hover > a > .portfolio-mask {
-      animation: fadeOut 0.3s linear;
-      opacity: 0;
-    }
-    // While hovering on portfolio-piece, animate the image
-    &:hover > img {
-      animation: color 0.3s linear;
-      opacity: 1;
-      filter: grayscale(0%) blur(0);
-      -webkit-filter: grayscale(0%) blur(0); /* Safari 6.0 - 9.0 */
-      transform: scale(1.3);
-    }
-    &:hover > a > p {
-      display: none;
-    }
-  }
-
-  // Animation adding color to the image, triggered on hover
-  @keyframes color {
-    0% {
-      -webkit-filter: grayscale(100%) blur(1px); /* Safari 6.0 - 9.0 */
-      filter: grayscale(100%) blur(1px);
-      opacity: 0.8;
-    }
-    100% {
-      -webkit-filter: grayscale(0%) blur(0); /* Safari 6.0 - 9.0 */
-      filter: grayscale(0%) blur(0);
-      opacity: 1;
-    }
-  }
-
-  // Animation fading out portfolio-mask, triggered on hover
-  @keyframes fadeOut {
-    from {
-      opacity: 1;
-      transform: scale(1);
-    }
-
-    to {
-      opacity: 0;
-      transform: scale(1.6);
-    }
-  }
-
-  // ***** MEDIA QUERIES
-
-  // Display portfolio-container as grid rather than row
-  // Movie portfolio-container closer to top
-  // Shrink image size and margins
-  @media (max-width: 1500px) {
-    .portfolio-container {
-      top: 20%;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .portfolio-piece {
-      margin: 20px;
-      & img {
-        max-height: 140px;
-      }
-    }
-  }
-
-  // Shrink image size and margins
-  @media (max-width: 850px) {
-    .portfolio-container {
-      top: 30%;
-    }
-
-    .portfolio-piece6 {
-      width: 120px;
-    }
-    .portfolio-piece {
-      & img {
-        width: 120px;
-      }
-      .mask-text,
-      .mask-text-title {
-        width: 130px;
-      }
-
-      .mask-text {
-        font-size: 11px;
-      }
-
-      // title
-      .mask-text-title {
-        font-size: 14px;
-        width: 130px;
-        top: 25%;
-      }
-
-      // client conversion, jquery right
-      .mask-text-top {
-        left: 50%;
-        transform: translateX(-50%);
-        top: 65%;
-      }
-
-      // DJ jquery, SplitTheBill React, Lisbon PSD
-      .mask-text-middle {
-        top: 50%;
-      }
-
-      // react.js
-      .mask-text-bottom-left {
-        left: -30px;
-        top: 50%;
-      }
-
-      // line after react.js
-      .mask-text-bottom-left:after {
-        content: "";
-        position: absolute;
-        right: 35px;
-        height: 12px;
-        width: 2px;
-        background-color: white;
-      }
-
-      // API Project Left
-      .mask-text-bottom-right {
-        top: 50%;
-        right: -30px;
-      }
-    }
-  }
-
-  // Shrink margins
-  @media (max-width: 650px) {
-    .hide-on-resize {
-      display: none;
-    }
-    .portfolio-container {
-      top: 125px;
-    }
-    .portfolio-piece {
-      margin: 15px;
-    }
-    .bottom-row {
-      display: flex;
-      margin-top: 0;
-    }
+  .see-projects {
+    text-decoration: none;
+    color: $white;
+    text-shadow: 3px 3px 3px $shadowYellow;
+    font-size: 30px;
   }
 }
