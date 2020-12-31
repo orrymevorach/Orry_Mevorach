@@ -6,7 +6,6 @@
   "dependencies": {
     "animate.css": "^3.6.1",
     "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.24.4"
   },
   "devDependencies": {
@@ -21,8 +20,8 @@
     "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
-    "start": "webpack-dev-server",
-    "build": "webpack --config webpack.config.js"
+    "start": "webpack-dev-server --config webpack.config.js",
+    "build": "webpack --config webpack.prod.js --watch"
   },
   "author": "",
   "license": "ISC"

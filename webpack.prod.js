@@ -1,12 +1,8 @@
 const path = require('path');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: ['./src/scripts/app.js', './src/styles/styles.scss'],
-  devServer: {
-    contentBase: path.join(__dirname, './'),
-    port: 9000,
-  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'app.js',
@@ -37,5 +33,4 @@ module.exports = {
       },
     ],
   },
-  devtool: 'eval-source-map',
 };
