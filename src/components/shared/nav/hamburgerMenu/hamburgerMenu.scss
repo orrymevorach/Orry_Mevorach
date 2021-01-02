@@ -1,0 +1,14 @@
+.hamburger-menu {
+  width: 10vw;
+  transition: 0.1s;
+  z-index: 300;
+  padding: 7px 0 0 0px;
+  position: fixed;
+  right: 5px;
+  border: none;
+  background: none;
+  .fa-bars {
+    color: white;
+    font-size: 40px;
+  }
+}

@@ -1,0 +1,179 @@
+@import '@styles/global.scss';
+
+.section-about {
+  background-color: $lightGrey;
+
+  // Container Customization
+  .section-about-container {
+    box-shadow: 15px 13px 45.5px 4.5px rgb(202, 200, 200);
+    background-color: $lightGrey;
+    background-image: url('https://orry-mevorach.s3.ca-central-1.amazonaws.com/dot-graphics-grey.png');
+    padding: 0 25px 25px 0;
+  }
+
+  // Nav text to black
+  .section-container a {
+    color: black;
+  }
+
+  // Nav style line to black
+  .nav-style-line {
+    background: black;
+    left: 95px;
+    @media (max-width: 900px) {
+      left: 85px;
+    }
+  }
+
+  // Content Container Style
+  .content-container {
+    display: flex;
+    align-items: center;
+    h2 {
+      color: black;
+      text-shadow: 3px 3px 3px $darkGrey;
+    }
+  }
+
+  // Headshot Container
+  .headshot-container img {
+    max-height: 85vh;
+    position: relative;
+    bottom: 3vh;
+  }
+
+  // Text Container
+  .text-container {
+    position: relative;
+    margin: 90px 0 0 50px;
+    p {
+      line-height: 1.5;
+    }
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 20px;
+  }
+
+  // Shrinking text at 900px
+  @media (max-width: 900px) {
+    .section-about-container p {
+      font-size: 14px;
+    }
+  }
+
+  // Raising text container at 800px which is when nav turns to hamburger menu
+  @media (max-width: 800px) {
+    .text-container {
+      margin: 20px 0 0 50px;
+    }
+  }
+
+  // layout of about section changes to column at 760px
+  @media (max-width: 760px) {
+    height: 75vh;
+    .section-about-container {
+      width: 100vw;
+      height: 75vh;
+      background-image: none;
+      box-shadow: none;
+      overflow: hidden;
+      nav {
+        display: none;
+      }
+    }
+    .headshot-container img {
+      max-height: none;
+      max-width: 100vw;
+      top: 0;
+    }
+    .text-container {
+      display: none;
+    }
+    .social-media-container {
+      display: none;
+    }
+  }
+}
+
+// responsive text container layout and styling - appears at 760px when layout of about section changes to column
+.section-responsive-about-text {
+  display: none;
+
+  @media (max-width: 760px) {
+    display: block;
+    position: relative;
+    height: 75vh;
+    padding: 20px;
+    border-top: 3px solid white;
+    background: $lightGrey;
+    background-image: url('https://orry-mevorach.s3.ca-central-1.amazonaws.com/dot-graphics-grey-copy.png');
+    .wrapper {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    h2 {
+      color: black;
+      text-shadow: 3px 3px 3px $darkGrey;
+    }
+    p {
+      line-height: 1.5;
+      @media (max-width: 400px) {
+        font-size: 14px;
+      }
+    }
+    // making social media container responsive
+    .social-media-container {
+      display: flex;
+      flex-direction: row;
+      transform: none;
+      position: absolute;
+      bottom: 10px;
+    }
+  }
+}
+
+// Social Media Icon Customization for section-about and section-responsive-about-text
+.section-about,
+.section-responsive-about-text {
+  .twitter-icon,
+  .linked-in-icon,
+  .email-icon {
+    svg {
+      color: $lightGrey;
+    }
+  }
+
+  .git-icon svg {
+    color: black;
+  }
+
+  .icon-circle {
+    background-color: black;
+  }
+
+  .twitter-icon svg:hover,
+  .linked-in-icon svg:hover,
+  .email-icon svg:hover {
+    color: black;
+  }
+
+  .icon-circle:hover {
+    background-color: $lightGrey;
+  }
+
+  .git-icon:after {
+    background-color: $lightGrey;
+  }
+
+  .git-icon svg:hover {
+    color: $lightGrey;
+  }
+
+  .git-icon:hover:after {
+    background-color: black;
+  }
+
+  .funky-fresh {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 18px;
+  }
+}
