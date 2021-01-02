@@ -1,10 +1,11 @@
 import React from 'react';
 import './sidebar.scss';
+import clsx from 'clsx';
 
-export default function Sidebar() {
+export default function Sidebar({ section }) {
   return (
-    // <section className="section-general section-home" id="home">
-    <div className="social-media-container">
+    // <section className="outer-container section-home" id="home">
+    <div className={clsx('social-media-container', section)}>
       <div className="git-hub-container">
         <a href="https://github.com/orrymevorach" className="git-icon">
           <i className="fab fa-github"></i>

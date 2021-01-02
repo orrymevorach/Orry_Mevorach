@@ -5,11 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default function Portfolio() {
   return (
-    <Section
-      classNames="section-general section-portfolio"
-      id="portfolio"
-      innerContainerClassNames="section-container section-portfolio-container"
-    >
+    <Section section="portfolio">
       <h2>Portfolio</h2>
       <Link to="/portfolio" className="see-projects">
         Click here to see my past projects

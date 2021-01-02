@@ -1,3 +1,40 @@
+@import '@styles/variables.scss';
+
+@mixin themedIcons($primary, $secondary) {
+  .twitter-icon,
+  .linked-in-icon,
+  .email-icon {
+    svg {
+      color: $primary;
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+
+  .icon-circle {
+    background-color: $secondary;
+    &:hover {
+      background-color: $primary;
+    }
+  }
+
+  .git-icon {
+    &:after {
+      background-color: $primary;
+    }
+    svg:hover {
+      color: $primary;
+    }
+    svg {
+      color: $secondary;
+    }
+    &:hover:after {
+      background-color: $secondary;
+    }
+  }
+}
+
 .social-media-container {
   display: flex;
   flex-direction: column;
@@ -10,6 +47,21 @@
     text-decoration: none;
     color: black;
   }
+  &.home {
+    @include themedIcons($darkRed, $white);
+  }
+  &.about {
+    @include themedIcons($lightGrey, black);
+  }
+  &.skills {
+    @include themedIcons($darkPurple, $white);
+  }
+  &.portfolio {
+    @include themedIcons($darkYellow, $white);
+  }
+  &.contact {
+    @include themedIcons($darkBlue, $white);
+  }
 }
 
 .twitter-container,
@@ -19,7 +71,6 @@
 }
 
 .icon-circle {
-  background-color: white;
   height: 37px;
   width: 37px;
   border-radius: 50%;

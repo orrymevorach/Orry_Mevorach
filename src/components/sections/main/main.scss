@@ -1,9 +1,11 @@
 @import '@styles/global.scss';
 
-.section-home {
-  background-color: $darkRed;
+.home {
+  &.outer-container {
+    background-color: $darkRed;
+  }
 
-  .section-home-container {
+  .inner-container {
     background-color: $lightRed;
     box-shadow: 15px 13px 45.5px 4.5px rgba(182, 9, 46, 0.23);
     @media (max-width: 650px) {
@@ -26,10 +28,13 @@
     }
   }
 
-  h1 {
+  .heading {
+    color: $white;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 70px;
     text-shadow: 4px 12px 3px rgb(175, 4, 41);
-    margin: 0;
     position: absolute;
+    margin: 0;
     top: 0;
     width: 473px;
     @media (max-width: 650px) {
@@ -44,13 +49,16 @@
     }
   }
 
-  h3 {
+  .job-title {
     text-transform: uppercase;
     text-shadow: 4px 5px 3px rgb(175, 4, 41);
     position: absolute;
     top: 88px;
     left: 220px;
     width: 240px;
+    color: white;
+    font-size: 16px;
+    margin: 0;
     @media (max-width: 650px) {
       top: 80px;
       left: 110px;
@@ -69,37 +77,4 @@
   }
 
   // Icon Customization
-
-  .twitter-icon,
-  .linked-in-icon,
-  .email-icon {
-    svg {
-      color: $darkRed;
-    }
-  }
-
-  .git-icon svg {
-    color: $white;
-  }
-
-  .git-icon:after {
-    background-color: $darkRed;
-  }
-
-  .git-icon svg:hover {
-    color: $darkRed;
-  }
-
-  .git-icon:hover:after {
-    background-color: $white;
-  }
-
-  .twitter-icon svg:hover,
-  .linked-in-icon svg:hover,
-  .email-icon svg:hover {
-    color: $white;
-  }
-  .icon-circle:hover {
-    background-color: $lightRed;
-  }
 }

@@ -3,21 +3,17 @@ import Nav from '@components/shared/nav';
 import Sidebar from '@components/shared/sidebar';
 import './section.scss';
 import { ScreenWidthContext } from '@root/context/screenWidthContext';
+import clsx from 'clsx';
 
-export default function Section({
-  children,
-  classNames,
-  id,
-  innerContainerClassNames,
-}) {
+export default function Section({ children, section }) {
   const { isMobile } = useContext(ScreenWidthContext);
   return (
-    <section className={classNames} id={id}>
-      <div className={innerContainerClassNames}>
+    <section className={clsx('outer-container', section)} id={section}>
+      <div className="inner-container">
         {!isMobile && <Nav />}
         {children}
       </div>
-      <Sidebar />
+      <Sidebar section={section} />
     </section>
   );
 }

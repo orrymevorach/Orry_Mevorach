@@ -25,10 +25,7 @@
       }
     }
   }
-}
-
-@media (max-width: 800px) {
-  .navigation {
+  @media (max-width: 800px) {
     position: fixed;
     display: flex;
     top: 0;
@@ -56,16 +53,3 @@
     }
   }
 }
-
-// .nav-style-line {
-//   position: absolute;
-//   left: 30px;
-//   top: -9vh;
-//   height: 9vh;
-//   background: white;
-//   width: 2px;
-//   transition: all 0.2s;
-//   @media (max-width: 900px) {
-//     left: 27px;
-//   }
-// }

@@ -1,9 +1,11 @@
 @import '@styles/global.scss';
 
-.section-skills {
-  background-color: $darkPurple;
+.skills {
+  &.outer-container {
+    background-color: $darkPurple;
+  }
 
-  .section-skills-container {
+  .inner-container {
     background-image: url('https://orry-mevorach.s3.ca-central-1.amazonaws.com/purple-dot-graphics.png');
     background-color: $lightPurple;
     box-shadow: 15px 13px 45.5px 4.5px rgba(68, 11, 166, 0.23);
@@ -28,45 +30,6 @@
   .icon h3,
   nav a {
     text-shadow: 3px 3px 3px rgb(47, 22, 90);
-  }
-
-  .nav-style-line {
-    left: 163px;
-    @media (max-width: 900px) {
-      left: 148px;
-    }
-  }
-
-  .twitter-icon,
-  .linked-in-icon,
-  .email-icon {
-    svg {
-      color: $darkPurple;
-    }
-  }
-
-  .git-icon svg {
-    color: white;
-  }
-
-  .twitter-icon svg:hover,
-  .linked-in-icon svg:hover,
-  .email-icon svg:hover {
-    color: $white;
-  }
-  .icon-circle:hover {
-    background-color: $darkPurple;
-  }
-  .git-icon:after {
-    background-color: $darkPurple;
-  }
-
-  .git-icon svg:hover {
-    color: $darkPurple;
-  }
-
-  .git-icon:hover:after {
-    background-color: $white;
   }
 
   .skills-icon-container {
@@ -99,13 +62,6 @@
     }
   }
 
-  @media (max-width: 700px) {
-    .section-skills-container {
-      background-image: url('https://orry-mevorach.s3.ca-central-1.amazonaws.com/purple-dot-graphics-copy.png');
-      box-shadow: none;
-    }
-  }
-
   @media (max-width: 965px) {
     .icon {
       height: 60px;
@@ -131,6 +87,14 @@
       top: 20%;
     }
   }
+
+  @media (max-width: 700px) {
+    .inner-container {
+      background-image: url('https://orry-mevorach.s3.ca-central-1.amazonaws.com/purple-dot-graphics-copy.png');
+      box-shadow: none;
+    }
+  }
+
   @media (max-width: 550px) {
     .icon {
       height: 20px;

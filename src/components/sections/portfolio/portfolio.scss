@@ -1,83 +1,39 @@
 @import '@styles/global.scss';
 
-.section-portfolio {
-  background-color: $darkYellow;
+.portfolio {
+  &.outer-container {
+    background-color: $darkYellow;
 
-  .section-portfolio-container {
-    box-shadow: 15px 13px 45.5px 4.5px $shadowYellow;
-    background-color: $lightYellow;
-    background-image: url('https://orry-mevorach.s3.ca-central-1.amazonaws.com/yellow-dot-graphics.png');
-    @media (max-width: 700px) {
-      background-image: url('https://orry-mevorach.s3.ca-central-1.amazonaws.com/yellow-dot-graphics-copy.png');
-      box-shadow: none;
+    .inner-container {
+      box-shadow: 15px 13px 45.5px 4.5px $shadowYellow;
+      background-color: $lightYellow;
+      background-image: url('https://orry-mevorach.s3.ca-central-1.amazonaws.com/yellow-dot-graphics.png');
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      nav a {
+        color: $white;
+        text-shadow: 3px 3px 3px $shadowYellow;
+      }
+      @media (max-width: 700px) {
+        background-image: url('https://orry-mevorach.s3.ca-central-1.amazonaws.com/yellow-dot-graphics-copy.png');
+        box-shadow: none;
+      }
     }
-  }
 
-  .section-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    nav a {
+    h2 {
       color: $white;
       text-shadow: 3px 3px 3px $shadowYellow;
+      position: absolute;
+      top: 5%;
+      left: 5%;
     }
-  }
 
-  .nav-style-line {
-    left: 247px;
-    @media (max-width: 900px) {
-      left: 222px;
+    .see-projects {
+      text-decoration: none;
+      color: $white;
+      text-shadow: 3px 3px 3px $shadowYellow;
+      font-size: 30px;
     }
-  }
-
-  .twitter-icon,
-  .linked-in-icon,
-  .email-icon {
-    svg {
-      color: $darkYellow;
-    }
-  }
-
-  .git-icon svg {
-    color: $white;
-  }
-
-  .icon-circle {
-    background-color: $white;
-  }
-
-  .twitter-icon svg:hover,
-  .linked-in-icon svg:hover,
-  .email-icon svg:hover {
-    color: $white;
-  }
-  .icon-circle:hover {
-    background-color: $darkYellow;
-  }
-  .git-icon:after {
-    background-color: $darkYellow;
-  }
-
-  .git-icon svg:hover {
-    color: $darkYellow;
-  }
-
-  .git-icon:hover:after {
-    background-color: $white;
-  }
-
-  h2 {
-    color: $white;
-    text-shadow: 3px 3px 3px $shadowYellow;
-    position: absolute;
-    top: 5%;
-    left: 5%;
-  }
-
-  .see-projects {
-    text-decoration: none;
-    color: $white;
-    text-shadow: 3px 3px 3px $shadowYellow;
-    font-size: 30px;
   }
 }

@@ -10,11 +10,7 @@ export default function Contact() {
   }
 
   return (
-    <Section
-      classNames="section-general section-contact"
-      id="contact"
-      innerContainerClassNames="section-container section-contact-container"
-    >
+    <Section section="contact">
       {hasSubmitted ? (
         <div className="footer-text content-container">
           <h1>Thank You!</h1>

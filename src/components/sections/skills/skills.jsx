@@ -4,11 +4,7 @@ import './skills.scss';
 
 export default function Skills() {
   return (
-    <Section
-      classNames="section-general section-skills"
-      id="skills"
-      innerContainerClassNames="section-container section-skills-container"
-    >
+    <Section section="skills">
       <h2>Skills</h2>
       <div className="skills-icon-container">
         <div className="icon">

@@ -52,7 +52,17 @@ export default function ParticlesContainer() {
               enable: true,
               mode: 'push',
             },
+            onhover: {
+              enable: true,
+              mode: 'repulse',
+            },
             resize: true,
+          },
+          modes: {
+            repulse: {
+              distance: 50,
+              duration: 0.4,
+            },
           },
         },
         retina_detect: true,
