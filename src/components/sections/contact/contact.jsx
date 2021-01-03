@@ -23,7 +23,7 @@ export default function Contact() {
           <h2 className="heading">Let's Chat!</h2>
           <div className="contact-form">
             <form
-              action="http://www.focuspocus.io/magic/3d5ee69d3208fee340b0a65fa74b4bfd"
+              action="https://formspree.io/f/xjvppqdg"
               method="POST"
               onSubmit={e => handleSubmit(e)}
             >
@@ -39,18 +39,14 @@ export default function Contact() {
                 <div className="form-top-bottom">
                   <input
                     type="email"
-                    name="email"
+                    name="_replyto"
                     placeholder="Enter email address"
                     required
                   />
                 </div>
               </div>
               <div className="form-bottom-row">
-                <textarea
-                  name="comments"
-                  placeholder="Enter message"
-                  required
-                ></textarea>
+                <textarea name="message" placeholder="Enter message" required />
                 <input type="submit" value="Submit" />
               </div>
             </form>
