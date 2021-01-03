@@ -4,8 +4,7 @@ import './skills.scss';
 
 export default function Skills() {
   return (
-    <Section section="skills">
-      <h2>Skills</h2>
+    <Section section="skills" title="Skills">
       <div className="skills-icon-container">
         <div className="icon">
           <h3>JavaScript</h3>
