@@ -14,7 +14,7 @@
       text-shadow: 1px 1px 1px darkblue;
     }
 
-    .lets-chat {
+    .heading {
       position: relative;
       top: 20%;
       left: 50%;
@@ -109,7 +109,8 @@
 
     @media (max-width: 800px) {
       .content-container {
-        top: 8%;
+        position: relative;
+        top: 20%;
       }
       form {
         bottom: 2%;

@@ -13,14 +13,14 @@ export default function Contact() {
     <Section section="contact">
       {hasSubmitted ? (
         <div className="footer-text content-container">
-          <h1>Thank You!</h1>
-          <p class="footer-email-sent-paragraph">
+          <h2 className="heading">Thank You!</h2>
+          <p className="footer-email-sent-paragraph">
             I look forward to chatting with you.
           </p>
         </div>
       ) : (
         <>
-          <h1 className="lets-chat">Let's Chat!</h1>
+          <h2 className="heading">Let's Chat!</h2>
           <div className="contact-form">
             <form
               action="http://www.focuspocus.io/magic/3d5ee69d3208fee340b0a65fa74b4bfd"

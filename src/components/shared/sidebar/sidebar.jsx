@@ -4,7 +4,6 @@ import clsx from 'clsx';
 
 export default function Sidebar({ section }) {
   return (
-    // <section className="outer-container section-home" id="home">
     <div className={clsx('social-media-container', section)}>
       <div className="git-hub-container">
         <a href="https://github.com/orrymevorach" className="git-icon">
@@ -38,6 +37,5 @@ export default function Sidebar({ section }) {
         </div>
       </div>
     </div>
-    // {/* </section> */}
   );
 }

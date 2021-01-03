@@ -1,0 +1,49 @@
+@import '@styles/variables.scss';
+
+@mixin themedLine($lineColor: $white, $left: '0px') {
+  position: absolute;
+  top: -9vh;
+  left: $left;
+  height: 9vh;
+  width: 2px;
+  background-color: $lineColor;
+  transition: all 0.2s;
+  &:hover {
+    transform: rotate(90deg);
+  }
+}
+
+@mixin themedIcons($primary, $secondary: $white) {
+  .twitter-icon,
+  .linked-in-icon,
+  .email-icon {
+    svg {
+      color: $primary;
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+
+  .icon-circle {
+    background-color: $secondary;
+    &:hover {
+      background-color: $primary;
+    }
+  }
+
+  .git-icon {
+    &:after {
+      background-color: $primary;
+    }
+    svg:hover {
+      color: $primary;
+    }
+    svg {
+      color: $secondary;
+    }
+    &:hover:after {
+      background-color: $secondary;
+    }
+  }
+}

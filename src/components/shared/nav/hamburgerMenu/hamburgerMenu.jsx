@@ -9,7 +9,12 @@ export default function HamburgerMenu() {
       className="hamburger-menu"
       onClick={() => setIsNavShowing(!isNavShowing)}
     >
-      <i className="fas fa-bars"></i>
+      <div id="nav-icon" className={isNavShowing ? 'open' : ''}>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </button>
   );
 }

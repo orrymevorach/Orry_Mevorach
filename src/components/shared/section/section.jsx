@@ -10,7 +10,7 @@ export default function Section({ children, section }) {
   return (
     <section className={clsx('outer-container', section)} id={section}>
       <div className="inner-container">
-        {!isMobile && <Nav />}
+        {!isMobile && <Nav section={section} />}
         {children}
       </div>
       <Sidebar section={section} />
