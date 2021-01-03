@@ -38,6 +38,12 @@ const portfolioPieceData = [
     href: 'https://wrepit.com',
   },
   {
+    title: 'DJ Button Bash',
+    src: `${s3}/dj.png`,
+    alt: 'DJ Button Bash App',
+    href: 'https://dj-button-bash.netlify.app/',
+  },
+  {
     title: 'Fantasy Golf App',
     src: `${s3}/fantasy.png`,
     alt: 'Fantasy Golf App',
