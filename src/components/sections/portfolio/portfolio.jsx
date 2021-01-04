@@ -26,28 +26,28 @@ const portfolioPieceData = [
     href: 'https://headandheartsk.com/',
   },
   {
-    title: 'Breadbox Bakery',
-    src: `${s3}/breadbox.png`,
-    alt: 'Breadbox Bakery',
-    href: 'https://breadboxbakery.ca',
-  },
-  {
-    title: 'Wrepit',
-    src: `${s3}/wrepit.png`,
-    alt: 'Wrepit website',
-    href: 'https://wrepit.com',
-  },
-  {
     title: 'DJ Button Bash',
     src: `${s3}/dj.png`,
     alt: 'DJ Button Bash App',
     href: 'https://dj-button-bash.netlify.app/',
   },
   {
+    title: 'Breadbox Bakery',
+    src: `${s3}/breadbox.png`,
+    alt: 'Breadbox Bakery',
+    href: 'https://breadboxbakery.ca',
+  },
+  {
     title: 'Fantasy Golf App',
     src: `${s3}/fantasy.png`,
     alt: 'Fantasy Golf App',
     href: 'https://fantasy-golf.netlify.app/',
+  },
+  {
+    title: 'Wrepit',
+    src: `${s3}/wrepit.png`,
+    alt: 'Wrepit website',
+    href: 'https://wrepit.com',
   },
 ];
 
