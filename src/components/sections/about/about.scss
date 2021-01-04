@@ -1,18 +1,10 @@
 @import '@styles/global.scss';
 
 .about {
-  &.outer-container {
-    background-color: $lightGrey;
-  }
-
   .inner-container {
-    background-color: $lightGrey;
-    box-shadow: 15px 13px 45.5px 4.5px rgb(202, 200, 200);
-    background-color: $lightGrey;
     background-image: url('https://orry-mevorach.s3.ca-central-1.amazonaws.com/whistler-8.png');
     background-size: cover;
     background-position: center;
-    padding: 0 25px 25px 0;
   }
 
   .content-container {

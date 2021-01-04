@@ -17,7 +17,15 @@
   &.home {
     @include sectionTheme(
       $outerContainer: $darkRed,
-      $innerContainer: $lightRed
+      $innerContainer: $lightRed,
+      $boxShadow: 15px 13px 45.5px 4.5px rgba(182, 9, 46, 0.23)
+    );
+  }
+  &.about {
+    @include sectionTheme(
+      $outerContainer: $lightGrey,
+      $innerContainer: $lightGrey,
+      $boxShadow: 15px 13px 45.5px 4.5px rgb(202, 200, 200)
     );
   }
 }
