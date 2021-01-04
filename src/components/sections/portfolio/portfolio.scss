@@ -57,8 +57,10 @@
       margin-top: 20px;
       padding-bottom: 50px;
     }
+  }
+  @media (max-width: 650px) {
     &.outer-container {
-      padding-top: 0;
+      padding: 0;
     }
   }
 }
