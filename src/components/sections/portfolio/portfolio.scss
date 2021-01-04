@@ -2,18 +2,18 @@
 
 .portfolio {
   &.outer-container {
-    background-color: $darkYellow;
+    background-color: $darkGreen;
     height: 100%;
     padding-top: 9vh;
   }
   h2 {
-    text-shadow: 3px 3px 3px $shadowYellow;
+    text-shadow: 3px 3px 3px $shadowGreen;
   }
 
   .inner-container {
-    box-shadow: 15px 13px 45.5px 4.5px $shadowYellow;
-    background-color: $lightYellow;
-    background-image: url('https://orry-mevorach.s3.ca-central-1.amazonaws.com/backgrounds/yellow-dot-graphics-copy.png');
+    box-shadow: 15px 13px 45.5px 4.5px $shadowGreen;
+    background-color: $lightGreen;
+    background-image: url('https://orry-mevorach.s3.ca-central-1.amazonaws.com/backgrounds/green-dot-graphics.png');
     background-position: bottom;
     background-size: 100%;
     height: 100%;
@@ -22,14 +22,14 @@
     top: auto;
     transform: translateY(0);
     nav a {
-      text-shadow: 3px 3px 3px $shadowYellow;
+      text-shadow: 3px 3px 3px $shadowGreen;
     }
   }
 
   .see-projects {
     text-decoration: none;
     color: $white;
-    text-shadow: 3px 3px 3px $shadowYellow;
+    text-shadow: 3px 3px 3px $shadowGreen;
     font-size: 30px;
     margin-left: 5%;
     a {
@@ -55,6 +55,10 @@
     }
     .portfolio-container {
       margin-top: 20px;
+      padding-bottom: 50px;
+    }
+    &.outer-container {
+      padding-top: 0;
     }
   }
 }

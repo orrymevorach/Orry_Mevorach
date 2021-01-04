@@ -9,7 +9,9 @@
     background-color: $lightGrey;
     box-shadow: 15px 13px 45.5px 4.5px rgb(202, 200, 200);
     background-color: $lightGrey;
-    background-image: url('https://orry-mevorach.s3.ca-central-1.amazonaws.com/backgrounds/dot-graphics-grey.png');
+    background-image: url('https://orry-mevorach.s3.ca-central-1.amazonaws.com/whistler-7.png');
+    background-size: cover;
+    background-position: 0;
     padding: 0 25px 25px 0;
   }
 
@@ -28,26 +30,33 @@
   }
 
   //   // Headshot Container
-  .headshot-container img {
-    max-height: 85vh;
-    position: relative;
-    bottom: 3vh;
+  .headshot-container {
+    height: 100%;
+
+    img {
+      height: 100%;
+      position: relative;
+      bottom: 3vh;
+    }
   }
 
   //   // Text Container
   .text-container {
-    position: relative;
+    position: absolute;
     margin: 90px 0 0 50px;
-    padding: 20px;
-    //   p {
-    //     line-height: 1.5;
-    //     @media (max-width: 900px) {
-    //       font-size: 14px;
-    //     }
-    //   }
+    padding: 30px;
+    right: 100px;
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 500px;
     .funky-fresh {
       font-family: 'Kaushan Script', cursive;
       font-size: 18px;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .text-container {
+      max-width: 45%;
+      right: 5%;
     }
   }
   @media (max-width: 760px) {
@@ -59,6 +68,8 @@
       top: auto;
       transform: translateY(0);
       width: 100%;
+      min-height: 900px;
+      background-position: -150px -100px;
     }
     .content-container {
       flex-direction: column;
@@ -72,11 +83,12 @@
     .text-container {
       margin: 20px 0 0 50px;
       background-color: $lightGrey;
-      position: absolute;
       bottom: 0;
       left: 0;
       margin: 0;
       padding-bottom: 70px;
+      width: 100%;
+      max-width: 100%;
     }
   }
 }

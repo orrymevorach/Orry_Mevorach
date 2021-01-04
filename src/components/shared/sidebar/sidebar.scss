@@ -23,7 +23,7 @@
     @include themedIcons($darkPurple, $white);
   }
   &.portfolio {
-    @include themedIcons($darkYellow, $white);
+    @include themedIcons($darkGreen, $white);
   }
   &.contact {
     @include themedIcons($darkBlue, $white);

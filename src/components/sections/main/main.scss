@@ -1,13 +1,7 @@
 @import '@styles/global.scss';
 
 .home {
-  &.outer-container {
-    background-color: $darkRed;
-  }
-
   .inner-container {
-    background-color: $lightRed;
-    box-shadow: 15px 13px 45.5px 4.5px rgba(182, 9, 46, 0.23);
     @media (max-width: 650px) {
       background-image: url('https://orry-mevorach.s3.ca-central-1.amazonaws.com/backgrounds/red-dot-graphics-copy.png');
       box-shadow: none;
@@ -58,7 +52,7 @@
     width: 240px;
     color: white;
     font-size: 16px;
-    margin: 0;
+    margin: 10px 0 0;
     @media (max-width: 650px) {
       top: 80px;
       left: 110px;

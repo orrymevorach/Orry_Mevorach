@@ -1,6 +1,25 @@
+@import '@styles/variables.scss';
+
+@mixin sectionTheme($outerContainer: '', $innerContainer: '', $boxShadow: '') {
+  &.outer-container {
+    background-color: $outerContainer;
+  }
+  .inner-container {
+    background-color: $innerContainer;
+    box-shadow: $boxShadow;
+  }
+}
+
 .outer-container {
   height: 100vh;
   position: relative;
+
+  &.home {
+    @include sectionTheme(
+      $outerContainer: $darkRed,
+      $innerContainer: $lightRed
+    );
+  }
 }
 
 .inner-container {

@@ -1,16 +1,18 @@
 import React from 'react';
 import Section from '@components/shared/section';
 import './about.scss';
-
+import Particles from '@components/sections/main/particles';
 export default function About() {
   return (
     <Section section="about">
       <div className="content-container">
+        <Particles opacity={1} />
         <div className="headshot-container">
-          <img
-            src="https://orry-mevorach.s3.ca-central-1.amazonaws.com/headshot.png"
+          {/* <img
+            // src="https://orry-mevorach.s3.ca-central-1.amazonaws.com/headshot.png"
+            src="https://orry-mevorach.s3.ca-central-1.amazonaws.com/or+and+cor-1.jpg"
             alt="Orry Mevorach Headshot"
-          />
+          /> */}
         </div>
         <div className="text-container">
           <h2>About Me</h2>

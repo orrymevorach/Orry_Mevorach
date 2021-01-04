@@ -54,13 +54,13 @@ const portfolioPieceData = [
 export default function Portfolio() {
   return (
     <Section section="portfolio" title="Portfolio">
-      <p className="see-projects">
+      {/* <p className="see-projects">
         Click on a project below, or
         <span>
           <Link to="/portfolio"> click here</Link>
         </span>{' '}
         to see a technical summary my past projects
-      </p>
+      </p> */}
 
       <ul className="portfolio-container">
         {portfolioPieceData.map(({ title, src, alt, href }) => (
