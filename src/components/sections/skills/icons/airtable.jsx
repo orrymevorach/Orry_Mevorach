@@ -5,6 +5,7 @@ const AirtableIcon = () => (
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 1.865999999999996 690.6474357837582 146.96900000000002"
     shapeRendering="geometricPrecision"
+    style={{ transform: 'scale(4)', marginLeft: '62px' }}
   >
     <path
       fill="#FFF"
