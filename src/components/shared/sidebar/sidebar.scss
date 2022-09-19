@@ -1,5 +1,6 @@
 @import '@styles/variables.scss';
 @import '@styles/mixins.scss';
+@import '@styles/mixins.scss';
 
 .social-media-container {
   display: flex;
@@ -17,7 +18,7 @@
     @include themedIcons($darkRed, $white);
   }
   &.about {
-    @include themedIcons($lightGrey, black);
+    @include themedIcons($white, $charcoal);
   }
   &.skills {
     @include themedIcons($darkPurple, $white);
