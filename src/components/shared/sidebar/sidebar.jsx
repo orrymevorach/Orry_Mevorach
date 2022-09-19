@@ -10,13 +10,6 @@ export default function Sidebar({ section }) {
           <i className="fab fa-github"></i>
         </a>
       </div>
-      <div className="twitter-container">
-        <div className="icon-circle">
-          <a href="https://twitter.com/orrymevorach" className="twitter-icon">
-            <i className="fab fa-twitter"></i>
-          </a>
-        </div>
-      </div>
 
       <div className="linked-in-container">
         <div className="icon-circle">

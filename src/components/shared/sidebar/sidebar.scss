@@ -31,7 +31,6 @@
   }
 }
 
-.twitter-container,
 .linked-in-container,
 .email-container {
   position: relative;
@@ -42,11 +41,6 @@
   width: 37px;
   border-radius: 50%;
   position: relative;
-}
-
-.twitter-icon svg {
-  padding: 5px 0 0 4px;
-  font-size: 33px;
 }
 
 .linked-in-icon svg {
@@ -84,7 +78,6 @@
 }
 
 .git-hub-container,
-.twitter-container,
 .linked-in-container,
 .email-container {
   margin: 10px 0;
@@ -95,7 +88,6 @@
 }
 
 .git-icon svg:hover,
-.twitter-icon svg:hover,
 .linked-in-icon svg:hover,
 .email-icon svg:hover {
   transition: 0.3s;
@@ -109,7 +101,6 @@
     transform: none;
     bottom: 5px;
     .git-hub-container,
-    .twitter-container,
     .linked-in-container,
     .email-container {
       margin: 5px;
