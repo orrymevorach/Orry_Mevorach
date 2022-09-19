@@ -19,7 +19,7 @@ export default function Home() {
       <Main />
       <About />
       <Skills />
-      <Portfolio />
+      {/* <Portfolio /> */}
       <Contact />
     </>
   );

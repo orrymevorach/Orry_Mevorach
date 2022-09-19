@@ -6,7 +6,7 @@ export default function ParticlesContainer({ opacity = 0.4 }) {
   const { isSectionMobile } = useContext(ScreenWidthContext);
   return (
     <Particles
-      height={isSectionMobile ? '100vh' : '82vh'}
+      height="100vh"
       params={{
         particles: {
           number: {
