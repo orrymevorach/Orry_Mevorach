@@ -2,8 +2,9 @@
 
 @mixin themedLine($lineColor: $white, $left: '0px') {
   position: absolute;
+  top: -9vh;
   left: $left;
-  height: 30px;
+  height: 9vh;
   width: 2px;
   background-color: $lineColor;
   transition: all 0.2s;
