@@ -1,44 +1,19 @@
 @import '@styles/variables.scss';
 
 @mixin sectionTheme($outerContainer: '', $innerContainer: '', $boxShadow: '') {
-  &.outer-container {
-    background-color: $outerContainer;
-  }
-  .inner-container {
+  .section-container {
     background-color: $innerContainer;
     box-shadow: $boxShadow;
   }
 }
 
-.outer-container {
-  height: 100vh;
-  position: relative;
-
-  &.home {
-    @include sectionTheme(
-      $outerContainer: $darkRed,
-      $innerContainer: $lightRed,
-      $boxShadow: 15px 13px 45.5px 4.5px rgba(182, 9, 46, 0.23)
-    );
-  }
-  &.about {
-    @include sectionTheme(
-      $outerContainer: $lightGrey,
-      $innerContainer: $lightGrey,
-      $boxShadow: 15px 13px 45.5px 4.5px rgb(202, 200, 200)
-    );
-  }
-}
-
-.inner-container {
+.section-container {
   background-position: center;
   background-repeat: no-repeat;
-  height: 82%;
-  width: 90%;
+  height: 100vh;
+  width: 100vw;
   position: relative;
   margin: 0 auto;
-  top: 50%;
-  transform: translateY(-50%);
 
   @media (max-width: 1300px) {
     width: 85vw;

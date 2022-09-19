@@ -47,3 +47,8 @@
     }
   }
 }
+
+@mixin sectionTheme($outerContainer: '', $innerContainer: '', $boxShadow: '') {
+  background-color: $innerContainer;
+  box-shadow: $boxShadow;
+}

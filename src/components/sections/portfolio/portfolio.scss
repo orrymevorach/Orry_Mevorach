@@ -1,16 +1,10 @@
 @import '@styles/global.scss';
 
 .portfolio {
-  &.outer-container {
+  &.section-container {
     background-color: $darkGreen;
     height: 100%;
     padding-top: 9vh;
-  }
-  h2 {
-    text-shadow: 3px 3px 3px $shadowGreen;
-  }
-
-  .inner-container {
     box-shadow: 15px 13px 45.5px 4.5px $shadowGreen;
     background-color: $lightGreen;
     background-image: url('https://orry-mevorach.s3.ca-central-1.amazonaws.com/backgrounds/green-dot-graphics.png');
@@ -24,6 +18,9 @@
     nav a {
       text-shadow: 3px 3px 3px $shadowGreen;
     }
+  }
+  h2 {
+    text-shadow: 3px 3px 3px $shadowGreen;
   }
 
   .see-projects {
@@ -59,7 +56,7 @@
     }
   }
   @media (max-width: 650px) {
-    &.outer-container {
+    &.section-container {
       padding: 0;
     }
   }

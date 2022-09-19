@@ -8,12 +8,10 @@ import clsx from 'clsx';
 export default function Section({ children, section, title }) {
   const { isMobile } = useContext(ScreenWidthContext);
   return (
-    <section className={clsx('outer-container', section)} id={section}>
-      <div className="inner-container">
-        {!isMobile && <Nav section={section} />}
-        {title && <h2 className="section-heading">{title}</h2>}
-        {children}
-      </div>
+    <section className={clsx(section, 'section-container')} id={section}>
+      {!isMobile && <Nav section={section} />}
+      {title && <h2 className="section-heading">{title}</h2>}
+      {children}
       <Sidebar section={section} />
     </section>
   );

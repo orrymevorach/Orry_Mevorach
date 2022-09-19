@@ -1,7 +1,13 @@
 @import '@styles/global.scss';
+@import '@styles/mixins.scss';
 
 .home {
-  .inner-container {
+  @include sectionTheme(
+    $innerContainer: $lightRed,
+    $boxShadow: 15px 13px 45.5px 4.5px rgba(182, 9, 46, 0.23)
+  );
+
+  &.section-container {
     @media (max-width: 650px) {
       background-image: url('https://orry-mevorach.s3.ca-central-1.amazonaws.com/backgrounds/red-dot-graphics-copy.png');
       box-shadow: none;
