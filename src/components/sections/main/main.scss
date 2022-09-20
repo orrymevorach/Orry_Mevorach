@@ -3,8 +3,6 @@
 @import '@styles/animations.scss';
 
 .home {
-  @include sectionTheme($innerContainer: $charcoal);
-
   &.section-container {
     @media (max-width: 650px) {
       box-shadow: none;

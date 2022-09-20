@@ -5,14 +5,27 @@ import './section.scss';
 import { ScreenWidthContext } from '@root/context/screenWidthContext';
 import clsx from 'clsx';
 
-export default function Section({ children, section, title }) {
+export default function Section({
+  children,
+  section,
+  title,
+  showSidebar = true,
+  isFullVerticalHeight = true,
+}) {
   const { isMobile } = useContext(ScreenWidthContext);
   return (
-    <section className={clsx(section, 'section-container')} id={section}>
+    <section
+      className={clsx(
+        section,
+        'section-container',
+        !isFullVerticalHeight && 'removeHeight'
+      )}
+      id={section}
+    >
       {!isMobile && <Nav section={section} />}
       {title && <h2 className="section-heading">{title}</h2>}
       {children}
-      <Sidebar section={section} />
+      {showSidebar && <Sidebar section={section} />}
     </section>
   );
 }

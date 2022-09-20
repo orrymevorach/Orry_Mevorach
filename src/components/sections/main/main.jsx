@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
 import Section from '@components/shared/section';
 import './main.scss';
-import Particles from './particles';
+import { sectionsList } from '@components/shared/nav';
 
 export default function Main() {
+  const nextSection = sectionsList[1];
   return (
     <Section section="home">
       <div className="content-container">
@@ -11,11 +12,9 @@ export default function Main() {
           <h1 className="heading">Orry Mevorach</h1>
           <h3 className="job-title">I create digital experiences</h3>
         </div>
-        <a href="#skills" className="chevron-link">
+        <a href={`#${nextSection}`} className="chevron-link">
           <i className="fas fa-chevron-down"></i>
         </a>
-        <Particles fullPage={true} color="#55d6ed" />
-        <Particles fullPage={true} color="#FE2AB5" />
       </div>
     </Section>
   );

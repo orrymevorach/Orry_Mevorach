@@ -4,13 +4,11 @@ import './particles.scss';
 
 export default function ParticlesContainer({
   opacity = 0.4,
-  fullPage = false,
   color = '#ffffff',
 }) {
   return (
     <Particles
-      className={fullPage ? 'full-page' : ''}
-      height="100vh"
+      className="full-page"
       params={{
         particles: {
           number: {

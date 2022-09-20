@@ -14,21 +14,7 @@
     text-decoration: none;
     color: black;
   }
-  &.home {
-    @include themedIcons($charcoal, $white);
-  }
-  &.about {
-    @include themedIcons($white, $charcoal);
-  }
-  &.skills {
-    @include themedIcons($darkPurple, $white);
-  }
-  &.portfolio {
-    @include themedIcons($darkGreen, $white);
-  }
-  &.contact {
-    @include themedIcons($darkBlue, $white);
-  }
+  @include themedIcons($charcoal, $white);
 }
 
 .linked-in-container,

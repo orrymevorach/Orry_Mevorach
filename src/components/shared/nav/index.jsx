@@ -1,1 +1,1 @@
-export { default } from './nav.jsx';
+export { default, sectionsList } from './nav.jsx';

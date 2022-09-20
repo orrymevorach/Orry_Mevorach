@@ -4,21 +4,25 @@ import clsx from 'clsx';
 import { ScreenWidthContext } from '@root/context/screenWidthContext';
 import { NavContext } from '@root/context/navContext';
 
+const sections = {
+  home: {
+    startingLeftPosition: '29px',
+  },
+  portfolio: {
+    startingLeftPosition: '95px',
+  },
+  skills: {
+    startingLeftPosition: '165px',
+  },
+  contact: {
+    startingLeftPosition: '165px',
+  },
+};
+export const sectionsList = Object.keys(sections);
+
 export default function Nav({ section }) {
   const { isMobile } = useContext(ScreenWidthContext);
   const { setIsNavShowing } = useContext(NavContext);
-  const sections = {
-    home: {
-      startingLeftPosition: '29px',
-    },
-    skills: {
-      startingLeftPosition: '95px',
-    },
-    contact: {
-      startingLeftPosition: '165px',
-    },
-  };
-  const sectionsList = Object.keys(sections);
 
   const navLineRef = useRef(section);
   function handleMouseOver(e) {
