@@ -9,12 +9,13 @@ export default function Main() {
       <div className="content-container">
         <div className="text-container">
           <h1 className="heading">Orry Mevorach</h1>
-          <h3 className="job-title">Front End Web Developer</h3>
+          <h3 className="job-title">I create digital experiences</h3>
         </div>
-        <a href="#about" className="chevron-link">
+        <a href="#skills" className="chevron-link">
           <i className="fas fa-chevron-down"></i>
         </a>
-        <Particles classNames="home-particles" />
+        <Particles fullPage={true} color="#55d6ed" />
+        <Particles fullPage={true} color="#FE2AB5" />
       </div>
     </Section>
   );

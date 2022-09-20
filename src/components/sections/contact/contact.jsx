@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Section from '@components/shared/section';
+import Particles from '@components/sections/main/particles';
 import './contact.scss';
 
 export default function Contact() {
@@ -11,6 +12,7 @@ export default function Contact() {
 
   return (
     <Section section="contact">
+      <Particles opacity={1} fullPage={true} />
       {hasSubmitted ? (
         <div className="footer-text content-container">
           <h2 className="heading">Thank You!</h2>

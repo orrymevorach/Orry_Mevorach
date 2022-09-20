@@ -2,15 +2,11 @@
 
 .skills {
   &.section-container {
-    background-color: $darkPurple;
-    background-image: url('https://orry-mevorach.s3.ca-central-1.amazonaws.com/backgrounds/purple-dot-graphics.png');
-    background-color: $lightPurple;
-    box-shadow: 15px 13px 45.5px 4.5px rgba(68, 11, 166, 0.23);
-    padding: 0 10px;
+    background-color: $charcoal;
   }
 
   h2 {
-    text-shadow: 3px 3px 3px rgb(47, 22, 90);
+    text-shadow: 3px 3px 1px rgb(47, 22, 90);
   }
 
   .icon {

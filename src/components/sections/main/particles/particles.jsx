@@ -1,22 +1,27 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Particles from 'react-particles-js';
+import './particles.scss';
 
-export default function ParticlesContainer({ opacity = 0.4, classNames = '' }) {
+export default function ParticlesContainer({
+  opacity = 0.4,
+  fullPage = false,
+  color = '#ffffff',
+}) {
   return (
     <Particles
-      className={classNames}
+      className={fullPage ? 'full-page' : ''}
       height="100vh"
       params={{
         particles: {
           number: {
-            value: 100,
+            value: 50,
             density: {
               enable: true,
               value_area: 700,
             },
           },
           color: {
-            value: '#ffffff',
+            value: color,
           },
           shape: {
             type: 'circle',

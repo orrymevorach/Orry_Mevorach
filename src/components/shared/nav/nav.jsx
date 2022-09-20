@@ -11,17 +11,11 @@ export default function Nav({ section }) {
     home: {
       startingLeftPosition: '29px',
     },
-    about: {
+    skills: {
       startingLeftPosition: '95px',
     },
-    skills: {
-      startingLeftPosition: '165px',
-    },
-    // portfolio: {
-    //   startingLeftPosition: '247px',
-    // },
     contact: {
-      startingLeftPosition: '237px',
+      startingLeftPosition: '165px',
     },
   };
   const sectionsList = Object.keys(sections);

@@ -84,14 +84,11 @@
     &.home {
       @include themedLine($left: 29px);
     }
-    &.about {
-      @include themedLine($charcoal, $left: 95px);
-    }
     &.skills {
-      @include themedLine($left: 165px);
+      @include themedLine($left: 95px);
     }
     &.contact {
-      @include themedLine($left: 244px);
+      @include themedLine($left: 165px);
     }
   }
 }
