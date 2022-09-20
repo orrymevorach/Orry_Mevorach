@@ -1,11 +1,10 @@
 import React, { useContext } from 'react';
 import Particles from 'react-particles-js';
-import { ScreenWidthContext } from '@root/context/screenWidthContext';
 
-export default function ParticlesContainer({ opacity = 0.4 }) {
-  const { isSectionMobile } = useContext(ScreenWidthContext);
+export default function ParticlesContainer({ opacity = 0.4, classNames = '' }) {
   return (
     <Particles
+      className={classNames}
       height="100vh"
       params={{
         particles: {

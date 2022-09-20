@@ -90,11 +90,8 @@
     &.skills {
       @include themedLine($left: 165px);
     }
-    &.portfolio {
-      @include themedLine($left: 247px);
-    }
     &.contact {
-      @include themedLine($left: 343px);
+      @include themedLine($left: 244px);
     }
   }
 }
