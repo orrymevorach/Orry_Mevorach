@@ -7,7 +7,7 @@ export default function ScreenWidthContextProvider({ children }) {
   const [windowSize, setWindowSize] = useState({
     width: undefined,
     height: undefined,
-    isMobile: false,
+    isMobile: undefined,
     isSectionMobile: false,
   });
 

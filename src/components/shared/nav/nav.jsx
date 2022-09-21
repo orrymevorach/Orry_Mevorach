@@ -6,18 +6,23 @@ import { NavContext } from '@root/context/navContext';
 
 const sections = {
   home: {
-    startingLeftPosition: '29px',
+    left: '19px',
+    width: '45px',
   },
   portfolio: {
-    startingLeftPosition: '95px',
+    left: '100px',
+    width: '84px',
   },
   skills: {
-    startingLeftPosition: '165px',
+    left: '221px',
+    width: '51px',
   },
   contact: {
-    startingLeftPosition: '165px',
+    left: '309px',
+    width: '69px',
   },
 };
+
 export const sectionsList = Object.keys(sections);
 
 export default function Nav({ section }) {
@@ -28,14 +33,13 @@ export default function Nav({ section }) {
   function handleMouseOver(e) {
     if (!isMobile) {
       const innerText = e.target.innerText.toLowerCase();
-      navLineRef.current.style.transform = 'rotate(90deg)';
-      navLineRef.current.style.left = sections[innerText]?.startingLeftPosition;
+      navLineRef.current.style.left = sections[innerText]?.left;
+      navLineRef.current.style.width = sections[innerText]?.width;
     }
   }
   function handleMouseLeave() {
     if (!isMobile) {
-      navLineRef.current.style.transform = 'rotate(0deg)';
-      navLineRef.current.style.left = sections[section].startingLeftPosition;
+      navLineRef.current.style.left = sections[section].left;
     }
   }
   function handleClick() {
@@ -44,7 +48,7 @@ export default function Nav({ section }) {
     }
   }
   const ListItem = ({ section }) => (
-    <li onMouseOver={e => handleMouseOver(e)} onMouseLeave={handleMouseLeave}>
+    <li onMouseOver={e => handleMouseOver(e)}>
       <a href={`#${section}`} onClick={handleClick}>
         {section}
       </a>
@@ -53,8 +57,8 @@ export default function Nav({ section }) {
 
   return (
     <nav className="navigation">
-      <div ref={navLineRef} className={clsx('nav-line', section)}></div>
       <ul>
+        <div ref={navLineRef} className={clsx('nav-line', section)}></div>
         {sectionsList.map(section => (
           <ListItem section={section} key={section} />
         ))}

@@ -22,7 +22,6 @@ export default function Section({
       )}
       id={section}
     >
-      {!isMobile && <Nav section={section} />}
       {title && <h2 className="section-heading">{title}</h2>}
       {children}
       {showSidebar && <Sidebar section={section} />}

@@ -9,8 +9,8 @@ import NavContextProvider from '@root/context/navContext';
 const App = () => {
   console.log('hey orry');
   return (
-    <NavContextProvider>
-      <ScreenWidthContextProvider>
+    <ScreenWidthContextProvider>
+      <NavContextProvider>
         <Router>
           <Switch>
             <Route exact path="/">
@@ -21,8 +21,8 @@ const App = () => {
             </Route>
           </Switch>
         </Router>
-      </ScreenWidthContextProvider>
-    </NavContextProvider>
+      </NavContextProvider>
+    </ScreenWidthContextProvider>
   );
 };
 

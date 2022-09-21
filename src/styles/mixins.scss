@@ -1,17 +1,5 @@
 @import '@styles/variables.scss';
 
-@mixin themedLine($lineColor: $white, $left: '0px') {
-  position: absolute;
-  left: $left;
-  height: 30px;
-  width: 2px;
-  background-color: $lineColor;
-  transition: all 0.2s;
-  &:hover {
-    transform: rotate(90deg);
-  }
-}
-
 @mixin themedIcons($primary, $secondary: $white) {
   .linked-in-icon,
   .email-icon {
