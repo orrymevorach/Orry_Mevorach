@@ -12,10 +12,10 @@ import ParticlesContainer from '../../components/shared/particles/particles';
 export default function Home() {
   const { isMobile } = useContext(ScreenWidthContext);
   const { isNavShowing } = useContext(NavContext);
-  const pink = '#FE2AB5';
-  const blue = '#55d6ed';
+  const pink = '#ff8fd8';
+  const blue = '#5CCCF8';
   return (
-    <div style={{ position: 'relative', backgroundColor: '#2f2f2f' }}>
+    <div style={{ position: 'relative', backgroundColor: '#140E1A' }}>
       {isMobile && <HamburgerMenu />}
       {isNavShowing && <Nav />}
       <ParticlesContainer color={blue} />

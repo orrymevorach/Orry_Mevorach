@@ -5,7 +5,7 @@
 .social-media-container {
   display: flex;
   flex-direction: column;
-  position: fixed;
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: 15px;
@@ -14,7 +14,7 @@
     text-decoration: none;
     color: black;
   }
-  @include themedIcons($charcoal, $white);
+  @include themedIcons($spacePurple, $white);
 }
 
 .linked-in-container,
