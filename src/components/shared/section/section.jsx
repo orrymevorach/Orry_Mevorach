@@ -1,8 +1,6 @@
 import React, { useContext } from 'react';
-import Nav from '@components/shared/nav';
 import Sidebar from '@components/shared/sidebar';
 import './section.scss';
-import { ScreenWidthContext } from '@root/context/screenWidthContext';
 import clsx from 'clsx';
 
 export default function Section({
@@ -12,7 +10,6 @@ export default function Section({
   showSidebar = true,
   isFullVerticalHeight = true,
 }) {
-  const { isMobile } = useContext(ScreenWidthContext);
   return (
     <section
       className={clsx(

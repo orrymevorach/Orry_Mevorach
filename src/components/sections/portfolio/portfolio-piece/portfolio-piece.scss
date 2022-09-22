@@ -1,15 +1,19 @@
 @import '@styles/variables.scss';
 
+$textContainerPositionOffset: -5%;
+
 .portfolio-piece {
   display: flex;
   margin-bottom: 110px;
   align-items: center;
   width: 100%;
-  &:nth-of-type(odd) {
+  overflow: hidden;
+  align-content: center;
+  height: 100vh;
+  &.odd {
     .text-container {
       order: 1;
-      position: relative;
-      right: -5%;
+      right: $textContainerPositionOffset;
       z-index: 2;
       border-top: 7px solid $blue;
     }
@@ -20,11 +24,10 @@
       order: 2;
     }
   }
-  &:nth-of-type(even) {
+  &.even {
     .text-container {
       order: 2;
-      position: relative;
-      left: -5%;
+      left: $textContainerPositionOffset;
       z-index: 2;
       padding-left: 50px;
       border-top: 7px solid $pink;
@@ -40,29 +43,30 @@
     width: 60%;
     background-color: $spacePurple;
     color: $white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     padding: 50px 0 50px 0;
+    position: relative;
   }
   .technology-container {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 20px;
     .technology {
-      text-transform: uppercase;
-      margin: 0 35px 20px 0;
+      margin: 0 30px 20px 0;
       position: relative;
       font-size: 22px;
       letter-spacing: -1px;
       &:after {
         content: '';
         position: absolute;
-        top: 11px;
-        right: -25px;
-        height: 4px;
-        width: 15px;
+        top: 10px;
+        right: -20px;
+        height: 7px;
+        width: 7px;
         color: $white;
         background-color: $white;
+        border-radius: 50%;
       }
       &:last-of-type:after {
         display: none;

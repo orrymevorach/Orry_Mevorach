@@ -31,7 +31,7 @@ const portfolioPieceData = [
       'Gatsby',
       'Netlify',
       'Google Analytics',
-      'Google Maps API',
+      'Google Maps',
     ],
     src: `${s3}/sdm.png`,
     alt: 'Shoppers Drug Mart',
@@ -104,6 +104,7 @@ export default function Portfolio() {
                 technology={technology}
                 description={description}
                 nextSectionHref={nextSectionHref}
+                index={index}
               />
             );
           }

@@ -13,6 +13,7 @@
     list-style: none;
     display: flex;
     position: relative;
+    font-family: 'Montserrat', sans-serif;
     li {
       font-size: 14px;
       margin: 0 20px;
@@ -54,25 +55,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        &:hover {
-          transition: none;
-          transform: rotate(0);
-        }
-        &:nth-of-type(1) {
-          background-color: $lightRed;
-        }
-        &:nth-of-type(2) {
-          background-color: $lightGrey;
-        }
-        &:nth-of-type(3) {
-          background-color: $lightPurple;
-        }
-        &:nth-of-type(4) {
-          background-color: $lightGreen;
-        }
-        &:nth-of-type(5) {
-          background-color: $lightBlue;
-        }
       }
     }
   }
