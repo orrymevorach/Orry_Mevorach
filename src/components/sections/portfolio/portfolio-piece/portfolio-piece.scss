@@ -4,7 +4,6 @@ $containerPositionOffset: 5%;
 
 .portfolio-piece {
   display: flex;
-  margin-bottom: 110px;
   align-items: center;
   width: 100%;
   overflow: hidden;
@@ -14,11 +13,10 @@ $containerPositionOffset: 5%;
     .text-container {
       order: 1;
       left: $containerPositionOffset;
-      z-index: 2;
-      border-top: 7px solid $blue;
+      border-top: 7px solid $pink;
     }
     .website-name {
-      color: $blue;
+      color: $pink;
     }
     .image-container {
       order: 2;
@@ -27,11 +25,10 @@ $containerPositionOffset: 5%;
   &.textContainerRight {
     .text-container {
       order: 2;
-      z-index: 2;
-      border-top: 7px solid $pink;
+      border-top: 7px solid $blue;
     }
     .website-name {
-      color: $pink;
+      color: $blue;
     }
     .image-container {
       left: $containerPositionOffset;
@@ -39,13 +36,14 @@ $containerPositionOffset: 5%;
     }
   }
   .text-container {
-    width: 60%;
+    width: 100%;
     background-color: $spacePurple;
     color: $white;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     padding: 50px;
     position: relative;
+    z-index: 2;
   }
   .technology-container {
     display: flex;
@@ -91,14 +89,8 @@ $containerPositionOffset: 5%;
     width: 55%;
     max-height: 450px;
     overflow: hidden;
-    // height: 350px;
     img {
       width: 100%;
-      // opacity: 0.75;
-      // filter: grayscale(100%) blur(1px);
-      // -webkit-filter: grayscale(100%) blur(1px); /* Safari 6.0 - 9.0
-      // */
-      // transition: all 0.3s;
     }
   }
 }

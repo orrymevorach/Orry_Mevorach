@@ -13,7 +13,7 @@ const sections = {
     left: '105px',
     width: '84px',
   },
-  skills: {
+  technology: {
     left: '229px',
     width: '51px',
   },

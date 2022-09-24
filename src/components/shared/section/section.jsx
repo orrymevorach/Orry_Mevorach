@@ -7,13 +7,15 @@ export default function Section({
   section,
   title,
   isFullVerticalHeight = true,
+  hasPaddingRight = true,
 }) {
   return (
     <section
       className={clsx(
         section,
         'section-container',
-        !isFullVerticalHeight && 'removeHeight'
+        !isFullVerticalHeight && 'removeHeight',
+        hasPaddingRight && 'padding-right'
       )}
       id={section}
     >

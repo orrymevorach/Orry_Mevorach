@@ -21,7 +21,6 @@ export default function Sidebar({ mainSectionRef }) {
   const [isSidebarShowing, setIsSidebarShowing] = useState(false);
   const { sectionInViewport } = useContext(VisibleSectionContext);
   showSidebarAfterMainSection({ mainSectionRef, setIsSidebarShowing });
-  console.log('sectionInViewport', sectionInViewport);
 
   const fadeAnimationClass = 'fade-right';
   return (

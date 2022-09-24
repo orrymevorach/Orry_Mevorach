@@ -1,6 +1,6 @@
 import React, { useContext, useRef, useEffect } from 'react';
 import Section from '@components/shared/section';
-import './skills.scss';
+import './technology.scss';
 import {
   AirtableIcon,
   ApolloIcon,
@@ -28,16 +28,16 @@ const Icon = ({ skill, icon }) => (
   </div>
 );
 
-export default function Skills() {
+export default function Technology() {
   const ref = useRef();
   const isVisible = useIsVisible(ref);
   const { setSectionInViewport } = useContext(VisibleSectionContext);
   useEffect(() => {
-    if (isVisible) setSectionInViewport('skills');
+    if (isVisible) setSectionInViewport('technology');
   }, [isVisible, setSectionInViewport]);
   return (
-    <Section section="skills" title="Skills">
-      <div className="skills-icon-container" ref={ref}>
+    <Section section="technology" title="Technology">
+      <div className="technology-icon-container" ref={ref}>
         <Icon skill="JavaScript" icon={() => <JavascriptIcon />} />
         <Icon skill="React.JS" icon={() => <ReactIcon />} />
         <Icon skill="Redux" icon={() => <ReduxIcon />} />
