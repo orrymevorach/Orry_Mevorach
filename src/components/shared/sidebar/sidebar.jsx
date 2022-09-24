@@ -1,9 +1,9 @@
 import React, { useState, useContext } from 'react';
 import { sectionsList } from '@components/shared/nav';
 import './sidebar.scss';
-import SocialMediaIcons from '@components/shared/social-media-icons';
 import { VisibleSectionContext } from '@root/context/visibleSectionContext';
 import PortfolioSection from './portfolio-section';
+import clsx from 'clsx';
 
 function showSidebarAfterMainSection({ mainSectionRef, setIsSidebarShowing }) {
   const bottomOfMainSection = mainSectionRef?.current?.clientHeight;
@@ -21,13 +21,13 @@ export default function Sidebar({ mainSectionRef }) {
   const [isSidebarShowing, setIsSidebarShowing] = useState(false);
   const { sectionInViewport } = useContext(VisibleSectionContext);
   showSidebarAfterMainSection({ mainSectionRef, setIsSidebarShowing });
+  console.log('sectionInViewport', sectionInViewport);
 
   const fadeAnimationClass = 'fade-right';
   return (
     <>
       {isSidebarShowing && (
         <nav className="sidebar" data-aos={fadeAnimationClass}>
-          {/* <SocialMediaIcons /> */}
           <ul className="sectionsList">
             {sectionsList.map(listItem => {
               const isPortfolioSection = listItem === 'portfolio';
@@ -36,7 +36,10 @@ export default function Sidebar({ mainSectionRef }) {
               return (
                 <li key={listItem}>
                   <a
-                    className={sectionInViewport === listItem ? 'active' : ''}
+                    className={clsx(
+                      'list-item',
+                      sectionInViewport === listItem ? 'active' : ''
+                    )}
                     href={`#${listItem}`}
                   >
                     {listItem}

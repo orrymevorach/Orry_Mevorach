@@ -26,7 +26,8 @@
     margin: 0;
     font-size: 16px;
   }
-  a {
+
+  .list-item {
     display: block;
     color: $white;
     padding: 15px;
@@ -35,6 +36,9 @@
     }
     &.active {
       @include hover;
+    }
+    &:active {
+      color: $white;
     }
   }
 }

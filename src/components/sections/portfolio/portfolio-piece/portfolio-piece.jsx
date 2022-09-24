@@ -34,7 +34,7 @@ export default function PortfolioPiece({
 
   useEffect(() => {
     if (isVisible) setSectionInViewport(title);
-  }, [isVisible]);
+  }, [isVisible, setSectionInViewport]);
 
   return (
     <Section section={title}>

@@ -18,7 +18,7 @@ export default function Contact() {
 
   useEffect(() => {
     if (isVisible) setSectionInViewport('contact');
-  }, [isVisible]);
+  }, [isVisible, setSectionInViewport]);
 
   return (
     <Section section="contact">

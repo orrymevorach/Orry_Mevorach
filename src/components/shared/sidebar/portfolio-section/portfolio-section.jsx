@@ -9,7 +9,9 @@ export default function PortfolioSection({ listItem }) {
   return (
     <div className="portfolio-container">
       <li>
-        <a href={`#${listItem}`}>{listItem}</a>
+        <a className="list-item" href={`#${listItem}`}>
+          {listItem}
+        </a>
       </li>
       <ul className="portfolioList">
         {portfolioPieceData.map(({ title, shortenedTitle }) => (
@@ -17,6 +19,7 @@ export default function PortfolioSection({ listItem }) {
             <a
               className={clsx(
                 'portfolio-link',
+                'list-item',
                 sectionInViewport === title ? 'active' : ''
               )}
               href={`#${title}`}

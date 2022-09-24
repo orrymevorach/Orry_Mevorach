@@ -34,7 +34,7 @@ export default function Skills() {
   const { setSectionInViewport } = useContext(VisibleSectionContext);
   useEffect(() => {
     if (isVisible) setSectionInViewport('skills');
-  }, [isVisible]);
+  }, [isVisible, setSectionInViewport]);
   return (
     <Section section="skills" title="Skills">
       <div className="skills-icon-container" ref={ref}>

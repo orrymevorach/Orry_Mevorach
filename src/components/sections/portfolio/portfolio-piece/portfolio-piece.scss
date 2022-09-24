@@ -1,6 +1,6 @@
 @import '@styles/variables.scss';
 
-$textContainerPositionOffset: -5%;
+$containerPositionOffset: 5%;
 
 .portfolio-piece {
   display: flex;
@@ -13,7 +13,7 @@ $textContainerPositionOffset: -5%;
   &.textContainerLeft {
     .text-container {
       order: 1;
-      right: $textContainerPositionOffset;
+      left: $containerPositionOffset;
       z-index: 2;
       border-top: 7px solid $blue;
     }
@@ -27,7 +27,6 @@ $textContainerPositionOffset: -5%;
   &.textContainerRight {
     .text-container {
       order: 2;
-      left: $textContainerPositionOffset;
       z-index: 2;
       border-top: 7px solid $pink;
     }
@@ -35,6 +34,7 @@ $textContainerPositionOffset: -5%;
       color: $pink;
     }
     .image-container {
+      left: $containerPositionOffset;
       order: 1;
     }
   }
