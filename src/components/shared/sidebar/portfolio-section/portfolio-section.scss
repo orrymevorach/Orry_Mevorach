@@ -1,0 +1,11 @@
+.portfolio-container {
+  margin: 30px 0;
+}
+
+.portfolioList {
+  font-size: 14px;
+  .portfolio-link {
+    text-transform: capitalize;
+    padding: 8px 20px 8px 25px;
+  }
+}

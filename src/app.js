@@ -5,22 +5,25 @@ import Home from '@pages/home';
 import Portfolio from '@pages/portfolio';
 import ScreenWidthContextProvider from '@root/context/screenWidthContext';
 import NavContextProvider from '@root/context/navContext';
+import VisibleSectionProvider from '@root/context/visibleSectionContext';
 
 const App = () => {
   console.log('hey orry');
   return (
     <ScreenWidthContextProvider>
       <NavContextProvider>
-        <Router>
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/portfolio">
-              <Portfolio />
-            </Route>
-          </Switch>
-        </Router>
+        <VisibleSectionProvider>
+          <Router>
+            <Switch>
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route path="/portfolio">
+                <Portfolio />
+              </Route>
+            </Switch>
+          </Router>
+        </VisibleSectionProvider>
       </NavContextProvider>
     </ScreenWidthContextProvider>
   );

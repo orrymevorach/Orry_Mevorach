@@ -1,95 +1,40 @@
 @import '@styles/variables.scss';
-@import '@styles/mixins.scss';
-@import '@styles/mixins.scss';
 
-.social-media-container {
+@mixin hover {
+  color: $spacePurple;
+  font-weight: 500;
+  transition: 0.1s;
+  background-color: $blue;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: rgba($spacePurple, 0.6);
+  border-right: 5px solid $pink;
   display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 15px;
-  z-index: 20;
+  align-items: center;
+  z-index: 10;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  .sectionsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+  }
   a {
-    text-decoration: none;
-    color: black;
-  }
-  @include themedIcons($spacePurple, $white);
-}
-
-.linked-in-container,
-.email-container {
-  position: relative;
-}
-
-.icon-circle {
-  height: 37px;
-  width: 37px;
-  border-radius: 50%;
-  position: relative;
-}
-
-.linked-in-icon svg {
-  padding: 0px 0 0 7px;
-  font-size: 35px;
-}
-
-.email-icon svg {
-  padding: 7px 0 0 6px;
-  font-size: 30px;
-}
-
-.git-icon svg {
-  font-size: 41px;
-  @media (max-width: 650px) {
-    font-size: 40px;
-  }
-}
-
-.git-icon:after {
-  content: '';
-  height: 37px;
-  width: 37px;
-  position: absolute;
-  top: 12px;
-  left: 1px;
-  border-radius: 50%;
-  z-index: -1;
-  @media (max-width: 750px) {
-    height: 37px;
-    width: 37px;
-    top: 6px;
-    left: 6px;
-  }
-}
-
-.git-hub-container,
-.linked-in-container,
-.email-container {
-  margin: 10px 0;
-}
-
-.icon-circle:hover {
-  transition: 0.3s;
-}
-
-.git-icon svg:hover,
-.linked-in-icon svg:hover,
-.email-icon svg:hover {
-  transition: 0.3s;
-}
-
-@media (max-width: 800px) {
-  .social-media-container {
-    display: flex;
-    flex-direction: row;
-    top: auto;
-    transform: none;
-    bottom: 5px;
-    .git-hub-container,
-    .linked-in-container,
-    .email-container {
-      margin: 5px;
+    display: block;
+    color: $white;
+    padding: 15px;
+    &:hover {
+      @include hover;
+    }
+    &.active {
+      @include hover;
     }
   }
 }

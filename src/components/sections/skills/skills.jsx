@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useRef, useEffect } from 'react';
 import Section from '@components/shared/section';
 import './skills.scss';
 import {
@@ -18,17 +18,26 @@ import {
   ReduxIcon,
   StorybookIcon,
 } from './icons';
+import useIsVisible from '@root/hooks/useIsVisible/useIsVisible';
+import { VisibleSectionContext } from '@root/context/visibleSectionContext';
+
+const Icon = ({ skill, icon }) => (
+  <div className="icon">
+    <h3>{skill}</h3>
+    {icon()}
+  </div>
+);
 
 export default function Skills() {
-  const Icon = ({ skill, icon }) => (
-    <div className="icon">
-      <h3>{skill}</h3>
-      {icon()}
-    </div>
-  );
+  const ref = useRef();
+  const isVisible = useIsVisible(ref);
+  const { setSectionInViewport } = useContext(VisibleSectionContext);
+  useEffect(() => {
+    if (isVisible) setSectionInViewport('skills');
+  }, [isVisible]);
   return (
     <Section section="skills" title="Skills">
-      <div className="skills-icon-container">
+      <div className="skills-icon-container" ref={ref}>
         <Icon skill="JavaScript" icon={() => <JavascriptIcon />} />
         <Icon skill="React.JS" icon={() => <ReactIcon />} />
         <Icon skill="Redux" icon={() => <ReduxIcon />} />

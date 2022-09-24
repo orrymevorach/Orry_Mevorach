@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useContext, useEffect } from 'react';
 import Section from '@components/shared/section';
 import Particles from '@components/shared/particles';
 import './contact.scss';
+import useIsVisible from '@root/hooks/useIsVisible/useIsVisible';
+import { VisibleSectionContext } from '@root/context/visibleSectionContext';
 
 export default function Contact() {
   const [hasSubmitted, setHasSubmitted] = useState(false);
@@ -10,11 +12,19 @@ export default function Contact() {
     setHasSubmitted(true);
   }
 
+  const ref = useRef();
+  const isVisible = useIsVisible(ref);
+  const { setSectionInViewport } = useContext(VisibleSectionContext);
+
+  useEffect(() => {
+    if (isVisible) setSectionInViewport('contact');
+  }, [isVisible]);
+
   return (
     <Section section="contact">
       <Particles opacity={1} />
       {hasSubmitted ? (
-        <div className="footer-text content-container">
+        <div className="footer-text content-container" ref={ref}>
           <h2 className="heading">Thank You!</h2>
           <p className="footer-email-sent-paragraph">
             I look forward to chatting with you.
@@ -23,7 +33,7 @@ export default function Contact() {
       ) : (
         <>
           <h2 className="heading">Let's Chat!</h2>
-          <div className="contact-form">
+          <div className="contact-form" ref={ref}>
             <form
               action="https://formspree.io/f/xjvppqdg"
               method="POST"

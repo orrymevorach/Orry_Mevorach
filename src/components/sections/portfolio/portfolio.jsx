@@ -5,7 +5,7 @@ import PortfolioPiece from './portfolio-piece';
 
 const s3 =
   'https://orry-mevorach.s3.ca-central-1.amazonaws.com/portfolio-pieces';
-const portfolioPieceData = [
+export const portfolioPieceData = [
   {
     title: 'Shoppers Drug Mart',
     technology: [
@@ -26,6 +26,7 @@ const portfolioPieceData = [
   },
   {
     title: 'Highlands Music Festival',
+    shortenedTitle: 'Highlands',
     technology: [
       'React',
       'Gatsby',
@@ -46,6 +47,7 @@ const portfolioPieceData = [
       'Ezee Reservation System',
     ],
     title: 'Casa Horizon Yoga & Surf Luxury Hostel',
+    shortenedTitle: 'Casa Horizon',
     src: `${s3}/casa.png`,
     alt: 'Casa Horizon Website',
     href: 'https://casahorizon.com',
@@ -64,29 +66,11 @@ const portfolioPieceData = [
     alt: 'Breadbox Bakery',
     href: 'https://breadboxbakery.ca',
   },
-  {
-    technology: ['jQuery'],
-    title: 'DJ Button Bash',
-    src: `${s3}/dj.png`,
-    alt: 'DJ Button Bash App',
-    href: 'https://dj-button-bash.netlify.app/',
-  },
-  {
-    technology: ['React', 'Node', 'Airtable DB', 'Cheerio'],
-    title: 'Fantasy Golf App',
-    src: `${s3}/fantasy.png`,
-    alt: 'Fantasy Golf App',
-    href: 'https://fantasy-golf.netlify.app/',
-  },
 ];
 
 export default function Portfolio() {
   return (
-    <Section
-      section="portfolio"
-      showSidebar={false}
-      isFullVerticalHeight={false}
-    >
+    <Section section="portfolio" isFullVerticalHeight={false}>
       <ul className="portfolio-container">
         {portfolioPieceData.map(
           ({ title, src, alt, href, technology, description }, index) => {

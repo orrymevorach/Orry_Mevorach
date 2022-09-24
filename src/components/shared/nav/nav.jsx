@@ -6,19 +6,19 @@ import { NavContext } from '@root/context/navContext';
 
 const sections = {
   home: {
-    left: '19px',
+    left: '20px',
     width: '45px',
   },
   portfolio: {
-    left: '100px',
+    left: '105px',
     width: '84px',
   },
   skills: {
-    left: '221px',
+    left: '229px',
     width: '51px',
   },
   contact: {
-    left: '309px',
+    left: '318px',
     width: '69px',
   },
 };
@@ -39,7 +39,8 @@ export default function Nav({ section }) {
   }
   function handleMouseLeave() {
     if (!isMobile) {
-      navLineRef.current.style.left = sections[section].left;
+      navLineRef.current.style.left = sections.home.left;
+      navLineRef.current.style.width = sections.home.width;
     }
   }
   function handleClick() {
@@ -48,7 +49,7 @@ export default function Nav({ section }) {
     }
   }
   const ListItem = ({ section }) => (
-    <li onMouseOver={e => handleMouseOver(e)}>
+    <li onMouseOver={e => handleMouseOver(e)} onMouseLeave={handleMouseLeave}>
       <a href={`#${section}`} onClick={handleClick}>
         {section}
       </a>

@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useRef, useContext, useEffect } from 'react';
 import './portfolio-piece.scss';
 import Button from '@components/shared/button';
 import BouncingArrow from '@components/shared/bouncing-arrow/bouncing-arrow';
 import Section from '../../../shared/section/section';
 import clsx from 'clsx';
+import useIsVisible from '@root/hooks/useIsVisible/useIsVisible';
+import { VisibleSectionContext } from '@root/context/visibleSectionContext';
 
 function checkIsOdd(num) {
   return num % 2;
@@ -19,14 +21,29 @@ export default function PortfolioPiece({
   nextSectionHref,
   index,
 }) {
+  const ref = useRef();
+  const isVisible = useIsVisible(ref);
+  const { setSectionInViewport } = useContext(VisibleSectionContext);
+
   const isOdd = checkIsOdd(index + 1);
-  const theme = isOdd ? 'odd' : 'even';
-  const textContainerAnimation = isOdd ? 'fade-right' : 'fade-left';
-  const imageContainerAnimation = isOdd ? 'fade-left' : 'fade-right';
+  const textContainerPositionClass = isOdd
+    ? 'textContainerLeft'
+    : 'textContainerRight';
+  const textContainerAnimationClass = isOdd ? 'fade-right' : 'fade-left';
+  const imageContainerAnimationClass = isOdd ? 'fade-left' : 'fade-right';
+
+  useEffect(() => {
+    if (isVisible) setSectionInViewport(title);
+  }, [isVisible]);
+
   return (
-    <Section section={title} showSidebar={false}>
-      <div className={clsx('portfolio-piece', theme)}>
-        <div className="text-container" data-aos={textContainerAnimation}>
+    <Section section={title}>
+      <div className={clsx('portfolio-piece', textContainerPositionClass)}>
+        <div
+          className="text-container"
+          data-aos={textContainerAnimationClass}
+          ref={ref}
+        >
           {technology.length !== 0 && (
             <div className="technology-container">
               {technology.map(tech => {
@@ -45,11 +62,14 @@ export default function PortfolioPiece({
             <Button href={href}>Live site</Button>
           </div>
         </div>
-        <div className="image-container" data-aos={imageContainerAnimation}>
+        <div
+          className="image-container"
+          data-aos={imageContainerAnimationClass}
+        >
           <img src={src} alt={alt} />
         </div>
       </div>
-      <BouncingArrow href={nextSectionHref} />
+      {nextSectionHref && <BouncingArrow href={nextSectionHref} />}
     </Section>
   );
 }

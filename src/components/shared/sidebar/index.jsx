@@ -1,1 +1,1 @@
-export { default } from './sidebar.jsx';
+export { default } from './sidebar';

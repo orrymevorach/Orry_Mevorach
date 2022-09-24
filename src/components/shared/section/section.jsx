@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-import Sidebar from '@components/shared/sidebar';
+import React from 'react';
 import './section.scss';
 import clsx from 'clsx';
 
@@ -7,7 +6,6 @@ export default function Section({
   children,
   section,
   title,
-  showSidebar = true,
   isFullVerticalHeight = true,
 }) {
   return (
@@ -21,7 +19,6 @@ export default function Section({
     >
       {title && <h2 className="section-heading">{title}</h2>}
       {children}
-      {showSidebar && <Sidebar section={section} />}
     </section>
   );
 }

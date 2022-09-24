@@ -2,7 +2,7 @@
 @import '@styles/variables.scss';
 
 .navigation {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 30px;
   z-index: 100;
@@ -16,8 +16,7 @@
     font-family: 'Montserrat', sans-serif;
     li {
       font-size: 14px;
-      margin: 0 20px;
-      padding: 10px 0;
+      padding: 10px 20px;
       transition: all 0.2s;
       &:hover {
         transition: all 0.2s;
@@ -60,7 +59,7 @@
   }
   .nav-line {
     position: absolute;
-    left: 19px;
+    left: 20px;
     top: 0;
     height: 2px;
     width: 45px;
