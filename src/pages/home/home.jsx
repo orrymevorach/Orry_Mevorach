@@ -7,14 +7,14 @@ import HamburgerMenu from '@components/shared/nav/hamburgerMenu';
 import Portfolio from '@components/sections/portfolio';
 import ParticlesContainer from '../../components/shared/particles/particles';
 import Sidebar from '@components/shared/sidebar';
+import { colors } from '@constants';
 
 export default function Home() {
   const { isMobile } = useContext(ScreenWidthContext);
-  const pink = '#ff8fd8';
-  const blue = '#5CCCF8';
+  const { pink, blue, spacePurple } = colors;
   const mainSectionRef = useRef(); // ref is used to hide sidebar on main section
   return (
-    <div style={{ position: 'relative', backgroundColor: '#140E1A' }}>
+    <div style={{ position: 'relative', backgroundColor: spacePurple }}>
       {isMobile && <HamburgerMenu />}
       <Sidebar mainSectionRef={mainSectionRef} />
       <ParticlesContainer color={blue} />

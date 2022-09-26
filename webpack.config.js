@@ -45,6 +45,7 @@ module.exports = {
       ['@constants']: path.resolve(__dirname, './src/constants.js'),
       ['@styles']: path.resolve(__dirname, './src/styles/'),
       ['@root']: path.resolve(__dirname, './src/'),
+      ['@constants']: path.resolve(__dirname, './src/utils/constants.js'),
     },
   },
   devtool: 'eval-source-map',
