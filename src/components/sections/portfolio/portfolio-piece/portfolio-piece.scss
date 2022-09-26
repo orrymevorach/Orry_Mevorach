@@ -9,10 +9,12 @@ $containerPositionOffset: 5%;
   overflow: hidden;
   align-content: center;
   height: 100vh;
+  margin-left: 15px;
+  position: relative;
+
   &.textContainerLeft {
     .text-container {
       order: 1;
-      left: $containerPositionOffset;
       border-top: 7px solid $pink;
     }
     .website-name {
@@ -20,18 +22,19 @@ $containerPositionOffset: 5%;
     }
     .image-container {
       order: 2;
+      right: $containerPositionOffset;
     }
   }
   &.textContainerRight {
     .text-container {
       order: 2;
       border-top: 7px solid $blue;
+      right: $containerPositionOffset;
     }
     .website-name {
       color: $blue;
     }
     .image-container {
-      left: $containerPositionOffset;
       order: 1;
     }
   }
@@ -91,6 +94,14 @@ $containerPositionOffset: 5%;
     overflow: hidden;
     img {
       width: 100%;
+    }
+  }
+  .pink-button.shrink-border {
+    &:hover {
+      color: $pink;
+    }
+    &::after {
+      border: 3px solid $pink;
     }
   }
 }

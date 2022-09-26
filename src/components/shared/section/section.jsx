@@ -7,7 +7,7 @@ export default function Section({
   section,
   title,
   isFullVerticalHeight = true,
-  hasPaddingRight = true,
+  hasSolidBackground = true,
 }) {
   return (
     <section
@@ -15,7 +15,7 @@ export default function Section({
         section,
         'section-container',
         !isFullVerticalHeight && 'removeHeight',
-        hasPaddingRight && 'padding-right'
+        hasSolidBackground && 'solid-background'
       )}
       id={section}
     >

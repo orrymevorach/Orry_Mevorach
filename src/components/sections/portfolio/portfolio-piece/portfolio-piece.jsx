@@ -31,6 +31,7 @@ export default function PortfolioPiece({
     : 'textContainerRight';
   const textContainerAnimationClass = isOdd ? 'fade-right' : 'fade-left';
   const imageContainerAnimationClass = isOdd ? 'fade-left' : 'fade-right';
+  const buttonColorClass = isOdd ? 'pink-button' : '';
 
   useEffect(() => {
     if (isVisible) setSectionInViewport(title);
@@ -58,8 +59,10 @@ export default function PortfolioPiece({
           <p className="website-name">{title}</p>
           <p className="website-description">{description}</p>
           <div className="buttonContainer">
-            <Button>Project details</Button>
-            <Button href={href}>Live site</Button>
+            {/* <Button>Project details</Button> */}
+            <Button href={href} classNames={buttonColorClass}>
+              Live site
+            </Button>
           </div>
         </div>
         <div

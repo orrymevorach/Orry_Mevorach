@@ -16,14 +16,15 @@ export default function Home() {
   return (
     <div style={{ position: 'relative', backgroundColor: '#140E1A' }}>
       {isMobile && <HamburgerMenu />}
-
       <Sidebar mainSectionRef={mainSectionRef} />
       <ParticlesContainer color={blue} />
       <ParticlesContainer color={pink} />
       <Main mainSectionRef={mainSectionRef} />
-      <Portfolio />
-      <Technology />
-      <Contact />
+      <div style={{ marginRight: '190px' }}>
+        <Portfolio />
+        <Technology />
+        <Contact />
+      </div>
     </div>
   );
 }

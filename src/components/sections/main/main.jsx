@@ -11,7 +11,7 @@ export default function Main({ mainSectionRef }) {
   const { isNavShowing } = useContext(NavContext);
   const nextSection = sectionsList[1];
   return (
-    <Section section="home" hasPaddingRight={false}>
+    <Section section="home" hasSolidBackground={false}>
       {isNavShowing && <Nav />}
       <SocialMediaIcons />
       <div className="content-container" ref={mainSectionRef}>
