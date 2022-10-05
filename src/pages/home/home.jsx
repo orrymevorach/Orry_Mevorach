@@ -23,7 +23,7 @@ export default function Home() {
       <div style={{ marginRight: '190px' }}>
         <Portfolio />
         <Technology />
-        <Contact />
+        {/* <Contact /> */}
       </div>
     </div>
   );

@@ -11,7 +11,7 @@ const sections = {
   },
   portfolio: {},
   technology: {},
-  contact: {},
+  // contact: {},
 };
 
 export const sectionsList = Object.keys(sections);
