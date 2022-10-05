@@ -36,7 +36,7 @@ export default function Technology() {
     if (isVisible) setSectionInViewport('technology');
   }, [isVisible, setSectionInViewport]);
   return (
-    <Section section="technology" title="Technology" hasSolidBackground={false}>
+    <Section section="technology" title="Technology">
       <div className="technology-icon-container" ref={ref}>
         <Icon skill="JavaScript" icon={() => <JavascriptIcon />} />
         <Icon skill="React" icon={() => <ReactIcon />} />

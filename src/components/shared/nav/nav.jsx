@@ -9,18 +9,9 @@ const sections = {
     left: '20px',
     width: '45px',
   },
-  portfolio: {
-    left: '105px',
-    width: '84px',
-  },
-  technology: {
-    left: '229px',
-    width: '51px',
-  },
-  contact: {
-    left: '318px',
-    width: '69px',
-  },
+  portfolio: {},
+  technology: {},
+  contact: {},
 };
 
 export const sectionsList = Object.keys(sections);
@@ -31,10 +22,10 @@ export default function Nav({ section }) {
 
   const navLineRef = useRef(section);
   function handleMouseOver(e) {
-    if (!isMobile) {
-      const innerText = e.target.innerText.toLowerCase();
-      navLineRef.current.style.left = sections[innerText]?.left;
-      navLineRef.current.style.width = sections[innerText]?.width;
+    const isAnchorElement = e?.target?.tagName === 'A';
+    if (!isMobile && isAnchorElement) {
+      navLineRef.current.style.left = `${e.target.offsetLeft}px`;
+      navLineRef.current.style.width = `${e.target.offsetWidth}px`;
     }
   }
   function handleMouseLeave() {

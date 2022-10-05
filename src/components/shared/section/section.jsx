@@ -7,15 +7,13 @@ export default function Section({
   section,
   title,
   isFullVerticalHeight = true,
-  hasSolidBackground = true,
 }) {
   return (
     <section
       className={clsx(
         section,
         'section-container',
-        !isFullVerticalHeight && 'removeHeight',
-        hasSolidBackground && 'solid-background'
+        !isFullVerticalHeight && 'removeHeight'
       )}
       id={section}
     >

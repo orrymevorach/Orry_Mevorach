@@ -43,6 +43,7 @@ export default function PortfolioPiece({
         <div
           className="text-container"
           data-aos={textContainerAnimationClass}
+          data-aos-easing="ease-in-sine"
           ref={ref}
         >
           {technology.length !== 0 && (
@@ -60,7 +61,7 @@ export default function PortfolioPiece({
           <p className="website-description">{description}</p>
           <div className="buttonContainer">
             {/* <Button>Project details</Button> */}
-            <Button href={href} classNames={buttonColorClass}>
+            <Button href={href} classNames={buttonColorClass} isNewPage={true}>
               Live site
             </Button>
           </div>
@@ -68,6 +69,7 @@ export default function PortfolioPiece({
         <div
           className="image-container"
           data-aos={imageContainerAnimationClass}
+          data-aos-easing="ease-in-sine"
         >
           <img src={src} alt={alt} />
         </div>
