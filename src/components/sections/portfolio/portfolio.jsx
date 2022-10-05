@@ -35,9 +35,9 @@ export const portfolioPieceData = [
       'Google Analytics',
       'Google Maps',
     ],
-    src: `${s3}/sdm.png`,
-    alt: 'Shoppers Drug Mart',
-    href: 'https://shop.shoppersdrugmart.ca/',
+    src: `${s3}/highlands.png`,
+    alt: 'Highlands Music Festival',
+    href: 'https://highlandsmusicfestival.ca/',
     description:
       'A freelance project for a music festival. The goal of this project was to provide information and drive traffic to the Eventbrite ticketing page. I worked together with the founding committee and a web designer to bring this project to life.',
   },
