@@ -8,6 +8,7 @@ import Portfolio from '@components/sections/portfolio';
 import ParticlesContainer from '../../components/shared/particles/particles';
 import Sidebar from '@components/shared/sidebar';
 import { colors } from '@constants';
+import Contact from '@components/sections/contact';
 
 export default function Home() {
   const { isMobile } = useContext(ScreenWidthContext);
@@ -24,7 +25,7 @@ export default function Home() {
         <About />
         <Portfolio />
         <Technology />
-        {/* <Contact /> */}
+        <Contact />
       </div>
     </div>
   );

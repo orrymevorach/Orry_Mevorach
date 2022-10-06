@@ -28,7 +28,7 @@ export default function About() {
           most notable role was with Loblaw Digital, where I spent 3.5 years
           working on the Shoppers Drug Mart e-commerce application.
         </p>
-        <p className="work-together">Let's work together!</p>
+        <p className="work-together">Let's build something together!</p>
         <Button>View Resume</Button>
         <Button href="#portfolio">View My Portfolio</Button>
       </div>

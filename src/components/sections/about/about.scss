@@ -7,7 +7,6 @@
   align-items: center;
   .image-container {
     width: 250px;
-    align-self: flex-start;
     margin-right: 100px;
     @include border($position: 'bottom', $color: $pink);
     img {
@@ -30,5 +29,6 @@
   .work-together {
     font-family: 'Noto Sans Mono', sans-serif;
     font-size: 28px;
+    margin: 55px 0;
   }
 }

@@ -50,7 +50,7 @@ export default function PortfolioPiece({
             <div className="technology-container">
               {technology.map(tech => {
                 return (
-                  <p key={tech} className="technology">
+                  <p key={tech} className="technology-item">
                     {tech}
                   </p>
                 );

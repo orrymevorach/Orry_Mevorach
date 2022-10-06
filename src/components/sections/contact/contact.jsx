@@ -22,7 +22,6 @@ export default function Contact() {
 
   return (
     <Section section="contact">
-      <Particles opacity={1} />
       {hasSubmitted ? (
         <div className="footer-text content-container" ref={ref}>
           <h2 className="heading">Thank You!</h2>
@@ -31,7 +30,7 @@ export default function Contact() {
           </p>
         </div>
       ) : (
-        <>
+        <div>
           <h2 className="heading">Let's Chat!</h2>
           <div className="contact-form" ref={ref}>
             <form
@@ -44,7 +43,7 @@ export default function Contact() {
                   <input
                     type="text"
                     name="name"
-                    placeholder="Enter name"
+                    placeholder="Your name"
                     required
                   />
                 </div>
@@ -52,18 +51,22 @@ export default function Contact() {
                   <input
                     type="email"
                     name="_replyto"
-                    placeholder="Enter email address"
+                    placeholder="Your email address"
                     required
                   />
                 </div>
               </div>
               <div className="form-bottom-row">
-                <textarea name="message" placeholder="Enter message" required />
+                <textarea
+                  name="message"
+                  placeholder="Project description"
+                  required
+                />
                 <input type="submit" value="Submit" />
               </div>
             </form>
           </div>
-        </>
+        </div>
       )}
     </Section>
   );

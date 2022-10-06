@@ -36,64 +36,67 @@ export default function Technology() {
     if (isVisible) setSectionInViewport('technology');
   }, [isVisible, setSectionInViewport]);
   return (
-    <Section section="technology" title="Technology">
-      <div className="technology-icon-container" ref={ref}>
-        <Icon skill="JavaScript" icon={() => <JavascriptIcon />} />
-        <Icon skill="React" icon={() => <ReactIcon />} />
-        <Icon skill="Gatsby" icon={() => <GatsbyIcon />} />
-        <Icon skill="Next" icon={() => <NextIcon />} />
-        <Icon skill="Redux" icon={() => <ReduxIcon />} />
-        <Icon skill="Apollo" icon={() => <ApolloIcon />} />
-        <Icon skill="GraphQL" icon={() => <GraphQLIcon />} />
-        <Icon
-          skill="Node"
-          icon={() => <i className="devicon-nodejs-plain-wordmark"></i>}
-        />
-        <Icon skill="Contentful" icon={() => <ContentfulIcon />} />
-        <Icon skill="Netlify" icon={() => <NetlifyIcon />} />
-        <Icon skill="Firebase" icon={() => <FirebaseIcon />} />
-        <Icon skill="Airtable" icon={() => <AirtableIcon />} />
-        <Icon skill="Storybook" icon={() => <StorybookIcon />} />
-        <Icon
-          skill="Webpack"
-          icon={() => <i className="devicon-webpack-plain"></i>}
-        />
-        <Icon skill="Git" icon={() => <GitIcon />} />
-        <Icon
-          skill="GitHub"
-          icon={() => <i className="devicon-github-plain"></i>}
-        />
-        <Icon
-          skill="HTML5"
-          icon={() => <i className="devicon-html5-plain"></i>}
-        />
-        <Icon
-          skill="CSS3"
-          icon={() => <i className="devicon-css3-plain"></i>}
-        />
-        <Icon
-          skill="Sass"
-          icon={() => <i className="devicon-sass-original"></i>}
-        />
-        <Icon
-          skill="jQuery"
-          icon={() => <i className="devicon-jquery-plain"></i>}
-        />
-        <Icon
-          skill="GULP"
-          icon={() => <i className="devicon-gulp-plain"></i>}
-        />
-        <Icon skill="Jest" icon={() => <JestIcon />} />
-        <Icon
-          skill="React Testing Library"
-          icon={() => (
-            <img
-              src="https://orry-mevorach.s3.ca-central-1.amazonaws.com/rtl.png"
-              alt="React Testing Library"
-            />
-          )}
-        />
-        <Icon skill="Puppeteer" icon={() => <PuppeteerIcon />} />
+    <Section section="technology">
+      <div>
+        <h3 className="heading">Technology</h3>
+        <div className="technology-icon-container" ref={ref}>
+          <Icon skill="JavaScript" icon={() => <JavascriptIcon />} />
+          <Icon skill="React" icon={() => <ReactIcon />} />
+          <Icon skill="Gatsby" icon={() => <GatsbyIcon />} />
+          <Icon skill="Next" icon={() => <NextIcon />} />
+          <Icon skill="Redux" icon={() => <ReduxIcon />} />
+          <Icon skill="Apollo" icon={() => <ApolloIcon />} />
+          <Icon skill="GraphQL" icon={() => <GraphQLIcon />} />
+          <Icon
+            skill="Node"
+            icon={() => <i className="devicon-nodejs-plain-wordmark"></i>}
+          />
+          <Icon skill="Contentful" icon={() => <ContentfulIcon />} />
+          <Icon skill="Netlify" icon={() => <NetlifyIcon />} />
+          <Icon skill="Firebase" icon={() => <FirebaseIcon />} />
+          <Icon skill="Airtable" icon={() => <AirtableIcon />} />
+          <Icon skill="Storybook" icon={() => <StorybookIcon />} />
+          <Icon
+            skill="Webpack"
+            icon={() => <i className="devicon-webpack-plain"></i>}
+          />
+          <Icon skill="Git" icon={() => <GitIcon />} />
+          <Icon
+            skill="GitHub"
+            icon={() => <i className="devicon-github-plain"></i>}
+          />
+          <Icon
+            skill="HTML5"
+            icon={() => <i className="devicon-html5-plain"></i>}
+          />
+          <Icon
+            skill="CSS3"
+            icon={() => <i className="devicon-css3-plain"></i>}
+          />
+          <Icon
+            skill="Sass"
+            icon={() => <i className="devicon-sass-original"></i>}
+          />
+          <Icon
+            skill="jQuery"
+            icon={() => <i className="devicon-jquery-plain"></i>}
+          />
+          <Icon
+            skill="GULP"
+            icon={() => <i className="devicon-gulp-plain"></i>}
+          />
+          <Icon skill="Jest" icon={() => <JestIcon />} />
+          <Icon
+            skill="React Testing Library"
+            icon={() => (
+              <img
+                src="https://orry-mevorach.s3.ca-central-1.amazonaws.com/rtl.png"
+                alt="React Testing Library"
+              />
+            )}
+          />
+          <Icon skill="Puppeteer" icon={() => <PuppeteerIcon />} />
+        </div>
       </div>
     </Section>
   );

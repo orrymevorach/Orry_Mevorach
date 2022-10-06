@@ -31,9 +31,7 @@
     display: block;
     color: $white;
     padding: 15px;
-    &:hover {
-      @include hover;
-    }
+    &:hover,
     &.active {
       @include hover;
     }
