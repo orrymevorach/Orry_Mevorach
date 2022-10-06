@@ -31,8 +31,12 @@ export default function About() {
           working on the Shoppers Drug Mart e-commerce application.
         </p>
         <p className="work-together">Let's build something together!</p>
-        <Button>View Resume</Button>
-        <Button href="#portfolio">View My Portfolio</Button>
+        <div className="button-container">
+          <Button classNames="about-buttons">View Resume</Button>
+          <Button classNames="about-buttons" href="#portfolio">
+            View My Portfolio
+          </Button>
+        </div>
       </div>
     </Section>
   );

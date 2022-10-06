@@ -19,7 +19,9 @@ export default function Button({
           {children}
         </a>
       ) : (
-        <button className="shrink-border">{children}</button>
+        <button className={clsx('shrink-border', classNames)}>
+          {children}
+        </button>
       )}
     </>
   );
