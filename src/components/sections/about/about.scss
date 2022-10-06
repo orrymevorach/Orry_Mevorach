@@ -9,9 +9,6 @@
     width: 250px;
     margin-right: 100px;
     @include border($position: 'bottom', $color: $pink);
-    img {
-      width: 100%;
-    }
   }
   .textContainer {
     background-color: $spacePurple;

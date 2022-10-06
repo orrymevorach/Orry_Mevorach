@@ -6,6 +6,7 @@ import Section from '../../../shared/section/section';
 import clsx from 'clsx';
 import useIsVisible from '@root/hooks/useIsVisible/useIsVisible';
 import { VisibleSectionContext } from '@root/context/visibleSectionContext';
+import { ScreenWidthContext } from '@root/context/screenWidthContext';
 
 function checkIsOdd(num) {
   return num % 2;
@@ -21,6 +22,7 @@ export default function PortfolioPiece({
   nextSectionHref,
   index,
 }) {
+  const { isMobile } = useContext(ScreenWidthContext);
   const ref = useRef();
   const isVisible = useIsVisible(ref);
   const { setSectionInViewport } = useContext(VisibleSectionContext);
@@ -32,17 +34,22 @@ export default function PortfolioPiece({
   const textContainerAnimationClass = isOdd ? 'fade-right' : 'fade-left';
   const imageContainerAnimationClass = isOdd ? 'fade-left' : 'fade-right';
   const buttonColorClass = isOdd ? 'pink-button' : '';
+  const mobileAnimationClass = 'fade-down';
 
   useEffect(() => {
     if (isVisible) setSectionInViewport(title);
   }, [isVisible, setSectionInViewport]);
 
   return (
-    <Section section={title}>
-      <div className={clsx('portfolio-piece', textContainerPositionClass)}>
+    <Section section={title} isFullVerticalHeight={!isMobile}>
+      <div
+        className={clsx('portfolio-piece', textContainerPositionClass)}
+        data-aos={isMobile && mobileAnimationClass}
+        data-aos-easing="ease-in-sine"
+      >
         <div
           className="text-container"
-          data-aos={textContainerAnimationClass}
+          data-aos={!isMobile && textContainerAnimationClass}
           data-aos-easing="ease-in-sine"
           ref={ref}
         >
@@ -60,7 +67,6 @@ export default function PortfolioPiece({
           <p className="website-name">{title}</p>
           <p className="website-description">{description}</p>
           <div className="buttonContainer">
-            {/* <Button>Project details</Button> */}
             <Button href={href} classNames={buttonColorClass} isNewPage={true}>
               Live site
             </Button>
@@ -68,13 +74,13 @@ export default function PortfolioPiece({
         </div>
         <div
           className="image-container"
-          data-aos={imageContainerAnimationClass}
+          data-aos={!isMobile && imageContainerAnimationClass}
           data-aos-easing="ease-in-sine"
         >
           <img src={src} alt={alt} />
         </div>
       </div>
-      {nextSectionHref && <BouncingArrow href={nextSectionHref} />}
+      {nextSectionHref && !isMobile && <BouncingArrow href={nextSectionHref} />}
     </Section>
   );
 }
