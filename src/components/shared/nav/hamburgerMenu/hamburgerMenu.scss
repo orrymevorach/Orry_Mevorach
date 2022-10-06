@@ -1,10 +1,10 @@
 .hamburger-menu {
-  width: 30px;
   transition: 0.1s;
   z-index: 300;
   padding: 7px 0 0 0px;
   position: fixed;
-  right: 35px;
+  top: 25px;
+  right: 25px;
   border: none;
   background: none;
   .fa-bars {
@@ -14,7 +14,7 @@
 }
 
 #nav-icon {
-  width: 60px;
+  width: 40px;
   height: 45px;
   position: relative;
   margin: 5px auto;
@@ -32,7 +32,7 @@
 #nav-icon span {
   display: block;
   position: absolute;
-  height: 5px;
+  height: 3px;
   width: 100%;
   background: #fff;
   border-radius: 9px;
@@ -49,18 +49,18 @@
 }
 
 /* Icon 3 */
-
+$spacingMultiple: 12;
 #nav-icon span:nth-child(1) {
   top: 0px;
 }
 
 #nav-icon span:nth-child(2),
 #nav-icon span:nth-child(3) {
-  top: 18px;
+  top: $spacingMultiple * 1px;
 }
 
 #nav-icon span:nth-child(4) {
-  top: 36px;
+  top: $spacingMultiple * 2px;
 }
 
 #nav-icon.open span:nth-child(1) {

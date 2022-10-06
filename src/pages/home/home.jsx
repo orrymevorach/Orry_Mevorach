@@ -17,11 +17,11 @@ export default function Home() {
   return (
     <div style={{ position: 'relative', backgroundColor: spacePurple }}>
       {isMobile && <HamburgerMenu />}
-      <Sidebar mainSectionRef={mainSectionRef} />
+      {!isMobile && <Sidebar mainSectionRef={mainSectionRef} />}
       <ParticlesContainer color={blue} />
       <ParticlesContainer color={pink} />
-      <Main mainSectionRef={mainSectionRef} />
-      <div style={{ marginRight: '190px' }}>
+      <Main mainSectionRef={mainSectionRef} />/
+      <div style={!isMobile ? { marginRight: '190px' } : {}}>
         <About />
         <Portfolio />
         <Technology />

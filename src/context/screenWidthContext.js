@@ -16,7 +16,7 @@ export default function ScreenWidthContextProvider({ children }) {
       setWindowSize({
         width: window.innerWidth,
         height: window.innerHeight,
-        isMobile: window.innerWidth <= 800,
+        isMobile: window.innerWidth <= 850,
         isSectionMobile: window.innerWidth <= 650,
       });
     }

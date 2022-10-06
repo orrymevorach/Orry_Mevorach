@@ -15,10 +15,8 @@ export default function Main({ mainSectionRef }) {
       {isNavShowing && <Nav />}
       <SocialMediaIcons />
       <div className="content-container" ref={mainSectionRef}>
-        <div className="text-container">
-          <h1 className="heading">Orry Mevorach</h1>
-          <h3 className="job-title">I create digital experiences</h3>
-        </div>
+        <h1 className="heading">Orry Mevorach</h1>
+        <h3 className="job-title">I create digital experiences</h3>
         <BouncingArrow href={`#${nextSection}`} />
       </div>
     </Section>

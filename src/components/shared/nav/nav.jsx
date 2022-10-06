@@ -51,7 +51,9 @@ export default function Nav({ section }) {
   return (
     <nav className="navigation">
       <ul>
-        <div ref={navLineRef} className={clsx('nav-line', section)}></div>
+        {!isMobile && (
+          <div ref={navLineRef} className={clsx('nav-line', section)}></div>
+        )}
         {sectionsList.map(section => (
           <ListItem section={section} key={section} />
         ))}
