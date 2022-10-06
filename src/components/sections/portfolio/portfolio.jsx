@@ -2,9 +2,8 @@ import React from 'react';
 import Section from '@components/shared/section';
 import './portfolio.scss';
 import PortfolioPiece from './portfolio-piece';
+import { s3 } from '@utils/constants';
 
-const s3 =
-  'https://orry-mevorach.s3.ca-central-1.amazonaws.com/portfolio-pieces';
 export const portfolioPieceData = [
   {
     title: 'Shoppers Drug Mart',
@@ -19,7 +18,7 @@ export const portfolioPieceData = [
       'Gitlab CI/CD',
       'React Testing Library',
     ],
-    src: `${s3}/sdm.png`,
+    src: `${s3}/portfolio-pieces/sdm.png`,
     alt: 'Shoppers Drug Mart',
     href: 'https://shop.shoppersdrugmart.ca/',
     description:
@@ -35,7 +34,7 @@ export const portfolioPieceData = [
       'Google Analytics',
       'Google Maps',
     ],
-    src: `${s3}/highlands.png`,
+    src: `${s3}/portfolio-pieces/highlands.png`,
     alt: 'Highlands Music Festival',
     href: 'https://highlandsmusicfestival.ca/',
     description:
@@ -50,7 +49,7 @@ export const portfolioPieceData = [
     ],
     title: 'Casa Horizon Yoga & Surf Luxury Hostel',
     shortenedTitle: 'Casa Horizon',
-    src: `${s3}/casa.png`,
+    src: `${s3}/portfolio-pieces/casa.png`,
     alt: 'Casa Horizon Website',
     href: 'https://casahorizon.com',
     description:
@@ -59,7 +58,7 @@ export const portfolioPieceData = [
   {
     technology: ['Shopify', 'Liquid'],
     title: 'Head & Heart SK',
-    src: `${s3}/headandheart.png`,
+    src: `${s3}/portfolio-pieces/headandheart.png`,
     alt: 'Head & Heart Website',
     href: 'https://headandheartsk.com/',
     description:
@@ -68,7 +67,7 @@ export const portfolioPieceData = [
   {
     technology: ['React', 'Firebase Auth + DB + Hosting', 'Next.JS', 'Paypal'],
     title: 'Breadbox Bakery',
-    src: `${s3}/breadbox.png`,
+    src: `${s3}/portfolio-pieces/breadbox.png`,
     alt: 'Breadbox Bakery',
     href: 'https://breadboxbakery.ca',
     description:

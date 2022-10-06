@@ -4,4 +4,6 @@ const colors = {
   spacePurple: '#140E1A',
 };
 
-export { colors };
+const s3 = 'https://orry-mevorach.s3.ca-central-1.amazonaws.com';
+
+export { colors, s3 };

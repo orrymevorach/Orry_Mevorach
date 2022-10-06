@@ -8,7 +8,8 @@ import clsx from 'clsx';
 function showSidebarAfterMainSection({ mainSectionRef, setIsSidebarShowing }) {
   const bottomOfMainSection = mainSectionRef?.current?.clientHeight;
   window.addEventListener('scroll', () => {
-    const hasScrolledPassedMainSection = window.scrollY > bottomOfMainSection;
+    const hasScrolledPassedMainSection =
+      window.scrollY > bottomOfMainSection - 1;
     if (!bottomOfMainSection || hasScrolledPassedMainSection) {
       setIsSidebarShowing(true);
     } else {

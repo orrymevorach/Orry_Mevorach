@@ -1,33 +1,36 @@
-import React from 'react';
+import React, { useRef, useEffect, useContext } from 'react';
 import Section from '@components/shared/section';
 import './about.scss';
-import Particles from '@components/sections/main/particles';
+import Button from '@components/shared/button';
+import useIsVisible from '@root/hooks/useIsVisible/useIsVisible';
+import { VisibleSectionContext } from '@root/context/visibleSectionContext';
+import { s3 } from '@utils/constants';
+
 export default function About() {
+  const ref = useRef();
+  const isVisible = useIsVisible(ref);
+  const { setSectionInViewport } = useContext(VisibleSectionContext);
+  useEffect(() => {
+    if (isVisible) setSectionInViewport('about');
+  }, [isVisible, setSectionInViewport]);
   return (
     <Section section="about">
-      <div className="content-container">
-        <Particles opacity={1} />
-        <div className="headshot-container">
-          {/* <img
-            // src="https://orry-mevorach.s3.ca-central-1.amazonaws.com/headshot.png"
-            src="https://orry-mevorach.s3.ca-central-1.amazonaws.com/or+and+cor-1.jpg"
-            alt="Orry Mevorach Headshot"
-          /> */}
-        </div>
-        <div className="text-container">
-          <h2>About Me</h2>
-          <p>
-            Hello! My name is Orry Mevorach and I am a front-end web developer.
-            I love tackling problems, and learning new ways to problem solve.
-          </p>
-          <p>
-            I have a a keen eye for colours and animations, and appreciate any
-            website that blends practicality, efficiency, and a strong
-            aesthetic. In other words, I appreciate a site that is easy to use,
-            nice to look at, fun to click on, and all-around
-            <span className="funky-fresh">Funky Fresh!</span>
-          </p>
-        </div>
+      <div className="image-container">
+        <img src={`${s3}/skateboard.png`} alt="" />
+      </div>
+      <div className="textContainer" ref={ref}>
+        <h2 className="title">Hey, I'm Orry!</h2>
+        <p>
+          I am a web developer based in Toronto, Canada. I have 4+ years of
+          experience in the industry, working in full-time, freelance, and team
+          lead roles. I enjoy building microsites from scratch as much as I
+          enjoy building large applications to scale in a team environment. My
+          most notable role was with Loblaw Digital, where I spent 3.5 years
+          working on the Shoppers Drug Mart e-commerce application.
+        </p>
+        <p className="work-together">Let's work together!</p>
+        <Button>View Resume</Button>
+        <Button href="#portfolio">View My Portfolio</Button>
       </div>
     </Section>
   );

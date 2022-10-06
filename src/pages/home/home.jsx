@@ -1,6 +1,6 @@
 import React, { useContext, useRef } from 'react';
 import Main from '@components/sections/main';
-import Contact from '@components/sections/contact';
+import About from '@components/sections/about';
 import Technology from '@components/sections/technology';
 import { ScreenWidthContext } from '@root/context/screenWidthContext';
 import HamburgerMenu from '@components/shared/nav/hamburgerMenu';
@@ -21,6 +21,7 @@ export default function Home() {
       <ParticlesContainer color={pink} />
       <Main mainSectionRef={mainSectionRef} />
       <div style={{ marginRight: '190px' }}>
+        <About />
         <Portfolio />
         <Technology />
         {/* <Contact /> */}

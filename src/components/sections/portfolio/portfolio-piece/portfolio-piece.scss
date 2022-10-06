@@ -1,4 +1,5 @@
 @import '@styles/variables.scss';
+@import '@styles/mixins.scss';
 
 $containerPositionOffset: 5%;
 
@@ -11,11 +12,12 @@ $containerPositionOffset: 5%;
   height: 100vh;
   margin-left: 15px;
   position: relative;
+  padding: 0 30px;
 
   &.textContainerLeft {
     .text-container {
       order: 1;
-      border-top: 7px solid $pink;
+      @include border($color: $pink);
     }
     .website-name {
       color: $pink;
@@ -28,7 +30,7 @@ $containerPositionOffset: 5%;
   &.textContainerRight {
     .text-container {
       order: 2;
-      border-top: 7px solid $blue;
+      @include border($color: $blue);
       right: $containerPositionOffset;
     }
     .website-name {

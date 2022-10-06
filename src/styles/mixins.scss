@@ -38,3 +38,7 @@
   background-color: $innerContainer;
   box-shadow: $boxShadow;
 }
+
+@mixin border($color: $blue, $position: 'top') {
+  border-#{$position}: 7px solid $color;
+}

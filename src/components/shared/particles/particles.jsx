@@ -3,7 +3,7 @@ import Particles from 'react-particles-js';
 import './particles.scss';
 
 export default function ParticlesContainer({
-  opacity = 0.4,
+  opacity = 0.5,
   color = '#ffffff',
 }) {
   return (

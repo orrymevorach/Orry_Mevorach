@@ -9,6 +9,7 @@ const sections = {
     left: '20px',
     width: '45px',
   },
+  about: {},
   portfolio: {},
   technology: {},
   // contact: {},

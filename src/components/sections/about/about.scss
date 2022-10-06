@@ -2,70 +2,33 @@
 @import '@styles/mixins.scss';
 
 .about {
-  &.section-container {
-    background-image: url('https://orry-mevorach.s3.ca-central-1.amazonaws.com/whistler-8.png');
-    background-size: cover;
-    background-position: center;
-    // Nav text to $charcoal
-    a {
-      color: $charcoal;
-    }
-  }
-
-  h2 {
-    color: $charcoal;
-    text-shadow: 3px 3px 3px $darkGrey;
-  }
-
-  .text-container {
-    position: absolute;
-    margin: 90px 0 0 50px;
-    padding: 30px;
-    right: 15%;
-    background-color: rgba(255, 255, 255, 0.6);
-    width: 500px;
-    // top: 80px;
-    bottom: 15%;
-    .funky-fresh {
-      font-family: 'Kaushan Script', cursive;
-      font-size: 18px;
-    }
-  }
-  @media screen and (max-width: 1200px) {
-    .text-container {
-      max-width: 45%;
-      right: 5%;
-    }
-  }
-  @media (max-width: 850px) {
-    .text-container {
-      top: 30px;
-      max-width: 50%;
-    }
-  }
-  @media (max-width: 760px) {
-    &.section-container {
-      height: 100%;
-      height: auto;
-      top: auto;
-      transform: translateY(0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .image-container {
+    width: 250px;
+    align-self: flex-start;
+    margin-right: 100px;
+    @include border($position: 'bottom', $color: $pink);
+    img {
       width: 100%;
-      min-height: 900px;
-      background-position: -150px -100px;
     }
-    .content-container {
-      flex-direction: column;
-    }
-    .text-container {
-      margin: 20px 0 0 50px;
-      background-color: $lightGrey;
-      top: auto;
-      bottom: 0;
-      left: 0;
-      margin: 0;
-      padding-bottom: 70px;
-      width: 100%;
-      max-width: 100%;
-    }
+  }
+  .textContainer {
+    background-color: $spacePurple;
+    color: $white;
+    width: 50%;
+    padding: 30px 60px;
+    @include border;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 30px;
+  }
+  .title {
+    padding: 30px 0 50px;
+  }
+  .work-together {
+    font-family: 'Noto Sans Mono', sans-serif;
+    font-size: 28px;
   }
 }
