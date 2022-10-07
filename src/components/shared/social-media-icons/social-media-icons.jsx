@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './social-media-icons.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { ScreenWidthContext } from '@root/context/screenWidthContext';
 
 export default function SocialMediaIcons() {
+  const { isMobile } = useContext(ScreenWidthContext);
+  const iconSize = isMobile ? 'lg' : 'xl';
   return (
     <div className="social-media-container">
       <div className="git-hub-container">
@@ -14,7 +17,7 @@ export default function SocialMediaIcons() {
           target="_blank"
           rel="noreferrer"
         >
-          <FontAwesomeIcon icon={faGithub} size="xl" />
+          <FontAwesomeIcon icon={faGithub} size={iconSize} />
         </a>
       </div>
 
@@ -26,7 +29,7 @@ export default function SocialMediaIcons() {
             className="linked-in-icon"
             rel="noreferrer"
           >
-            <FontAwesomeIcon icon={faLinkedinIn} size="xl" />
+            <FontAwesomeIcon icon={faLinkedinIn} size={iconSize} />
           </a>
         </div>
       </div>
@@ -34,7 +37,7 @@ export default function SocialMediaIcons() {
       <div className="email-container">
         <div className="icon-circle">
           <a href="#contact" className="email-icon">
-            <FontAwesomeIcon icon={faEnvelope} size="xl" />
+            <FontAwesomeIcon icon={faEnvelope} size={iconSize} />
           </a>
         </div>
       </div>

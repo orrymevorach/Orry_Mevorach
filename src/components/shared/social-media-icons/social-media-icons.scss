@@ -29,9 +29,6 @@
 
 .git-icon svg {
   font-size: 41px;
-  @media (max-width: 650px) {
-    font-size: 40px;
-  }
 }
 
 .git-icon:after {
@@ -67,7 +64,7 @@
   transition: 0.3s;
 }
 
-@media (max-width: 800px) {
+@media (max-width: $mobile) {
   .social-media-container {
     display: flex;
     flex-direction: row;
@@ -78,6 +75,19 @@
     .linked-in-container,
     .email-container {
       margin: 5px;
+    }
+  }
+  .icon-circle {
+    height: 30px;
+    width: 30px;
+  }
+  .git-icon {
+    svg {
+      font-size: 33px;
+    }
+    &:after {
+      height: 30px;
+      width: 30px;
     }
   }
 }
