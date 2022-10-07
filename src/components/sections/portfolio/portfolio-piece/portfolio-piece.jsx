@@ -45,7 +45,6 @@ export default function PortfolioPiece({
       <div
         className={clsx('portfolio-piece', textContainerPositionClass)}
         data-aos={!isDesktop ? mobileAnimationClass : ''}
-        data-aos-easing="ease-in-sine"
       >
         <div
           className="text-container"
