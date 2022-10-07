@@ -17,7 +17,10 @@ export default function Main({ mainSectionRef }) {
       <div className="content-container" ref={mainSectionRef}>
         <h1 className="heading">Orry Mevorach</h1>
         <h3 className="job-title">I create digital experiences</h3>
-        <BouncingArrow href={`#${nextSection}`} />
+        <BouncingArrow
+          href={`#${nextSection}`}
+          classNames="main-section-arrow"
+        />
       </div>
     </Section>
   );

@@ -33,7 +33,7 @@
     flex-direction: column;
     .textContainer {
       width: 100%;
-      padding: 30px 15px;
+      padding: 30px 25px;
     }
     .image-container {
       border-bottom: none;
@@ -48,6 +48,10 @@
           margin-bottom: 15px;
         }
       }
+    }
+    .work-together {
+      text-align: center;
+      line-height: 30px;
     }
   }
 }
