@@ -44,7 +44,7 @@ export default function PortfolioPiece({
     <Section section={title} isFullVerticalHeight={!!isDesktop}>
       <div
         className={clsx('portfolio-piece', textContainerPositionClass)}
-        data-aos="fade-up"
+        data-aos="fade-right"
       >
         <div className="text-container" ref={ref}>
           {technology.length !== 0 && (
