@@ -4,6 +4,18 @@ import './contact.scss';
 import useIsVisible from '@root/hooks/useIsVisible/useIsVisible';
 import { VisibleSectionContext } from '@root/context/visibleSectionContext';
 import { useForm } from '@formspree/react';
+import Loader from '@components/shared/loader';
+
+const SuccessMessage = ({ ref }) => {
+  return (
+    <div className="footer-text content-container" ref={ref}>
+      <h2 className="heading">Thank You!</h2>
+      <p className="footer-email-sent-paragraph">
+        I look forward to chatting about your upcoming project.
+      </p>
+    </div>
+  );
+};
 
 export default function Contact() {
   const ref = useRef();
@@ -18,12 +30,9 @@ export default function Contact() {
   return (
     <Section section="contact">
       {state.succeeded ? (
-        <div className="footer-text content-container" ref={ref}>
-          <h2 className="heading">Thank You!</h2>
-          <p className="footer-email-sent-paragraph">
-            I look forward to chatting with you.
-          </p>
-        </div>
+        <SuccessMessage />
+      ) : state.submitting ? (
+        <Loader />
       ) : (
         <div className="content-container">
           <h2 className="heading">Let's Chat!</h2>
@@ -52,12 +61,10 @@ export default function Contact() {
               <div className="form-bottom-row">
                 <textarea
                   name="message"
-                  placeholder="Project description"
+                  placeholder="Description of your project"
                   required
                 />
-                <button type="submit" disabled={state.submitting}>
-                  Submit
-                </button>
+                <button type="submit">Submit</button>
               </div>
             </form>
           </div>
