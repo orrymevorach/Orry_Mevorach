@@ -2,7 +2,6 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: `portfolio-site`,
     siteUrl: `https://www.orrymevorach.com`,
   },
   plugins: [
