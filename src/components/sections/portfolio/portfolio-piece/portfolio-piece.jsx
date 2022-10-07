@@ -41,7 +41,7 @@ export default function PortfolioPiece({
   }, [isVisible, setSectionInViewport, title]);
 
   return (
-    <Section section={title} isFullVerticalHeight={isDesktop}>
+    <Section section={title} isFullVerticalHeight={!!isDesktop}>
       <div
         className={clsx('portfolio-piece', textContainerPositionClass)}
         data-aos={!isDesktop ? mobileAnimationClass : ''}
