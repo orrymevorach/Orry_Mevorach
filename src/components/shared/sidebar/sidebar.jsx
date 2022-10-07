@@ -20,7 +20,7 @@ function useShowSidebar({ mainSectionRef, setIsSidebarShowing }) {
     handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [mainSectionRef, setIsSidebarShowing]);
 }
 
 export default function Sidebar({ mainSectionRef }) {

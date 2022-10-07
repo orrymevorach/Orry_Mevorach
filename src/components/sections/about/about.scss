@@ -65,4 +65,9 @@
       font-size: 45px;
     }
   }
+  @media screen and (max-width: $mobile) {
+    .image-container {
+      width: 150px;
+    }
+  }
 }
