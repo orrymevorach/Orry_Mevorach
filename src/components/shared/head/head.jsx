@@ -20,7 +20,7 @@ export default function Head() {
       />
 
       {/* Animation library stylesheet */}
-      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      {/* <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> */}
 
       {/* Icon library stylesheet */}
       <link
