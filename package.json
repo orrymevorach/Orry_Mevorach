@@ -5,6 +5,7 @@
   "main": "gulpfile.js",
   "dependencies": {
     "@babel/preset-react": "^7.12.10",
+    "@formspree/react": "^2.4.0",
     "babel-core": "^6.26.3",
     "browser-sync": "^2.24.4",
     "clsx": "^1.1.1",

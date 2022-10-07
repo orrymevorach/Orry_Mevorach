@@ -34,10 +34,15 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.mjs$/,
+        include: /node_modules/,
+        type: 'javascript/auto',
+      }, // fixes a problem with @formspree/react
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.mjs'],
     alias: {
       ['@pages']: path.resolve(__dirname, './src/pages/'),
       ['@components']: path.resolve(__dirname, './src/components/'),

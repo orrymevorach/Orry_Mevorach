@@ -14,7 +14,7 @@
     input[type='text'],
     input[type='email'],
     textarea,
-    input[type='submit'] {
+    button[type='submit'] {
       color: $white;
       font-weight: normal;
       background-color: $spacePurple;
@@ -51,7 +51,7 @@
       resize: none;
     }
 
-    input[type='submit'] {
+    button[type='submit'] {
       background-color: $white;
       color: $spacePurple;
       padding: 0 25px;
