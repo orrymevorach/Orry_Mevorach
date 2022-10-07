@@ -13,7 +13,7 @@ import PageProviders from '@components/shared/page-providers';
 import Head from '@components/shared/head';
 // Animation library init
 import AOS from 'aos';
-// import 'aos/dist/aos.css';
+import 'aos/dist/aos.css';
 
 const Home = () => {
   const { isMobile } = useContext(ScreenWidthContext);

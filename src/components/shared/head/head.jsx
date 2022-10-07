@@ -19,9 +19,6 @@ export default function Head() {
         href="https://orry-mevorach.s3.ca-central-1.amazonaws.com/smiley.png"
       />
 
-      {/* Animation library stylesheet */}
-      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
       {/* Icon library stylesheet */}
       <link
         rel="stylesheet"
