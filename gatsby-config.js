@@ -20,5 +20,33 @@ module.exports = {
         extensions: [],
       },
     },
+    {
+      resolve: `gatsby-omni-font-loader`,
+      options: {
+        enableListener: true,
+        preconnect: [
+          `https://fonts.googleapis.com`,
+          `https://fonts.gstatic.com`,
+        ],
+        web: [
+          {
+            name: `Kaushan Script`,
+            file: `https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap`,
+          },
+          {
+            name: `Montserrat`,
+            file: `https://fonts.googleapis.com/css2?family=Montserrat&display=swap`,
+          },
+          {
+            name: `Roboto`,
+            file: `https://fonts.googleapis.com/css2?family=Roboto&display=swap`,
+          },
+          {
+            name: `Noto Sans Mono`,
+            file: `https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap`,
+          },
+        ],
+      },
+    },
   ],
 };
