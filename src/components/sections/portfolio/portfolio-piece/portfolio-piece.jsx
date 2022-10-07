@@ -45,7 +45,6 @@ export default function PortfolioPiece({
       <div
         className={clsx('portfolio-piece', textContainerPositionClass)}
         data-aos="fade-up"
-        data-aos-easing="ease-in-sine"
       >
         <div className="text-container" ref={ref}>
           {technology.length !== 0 && (
