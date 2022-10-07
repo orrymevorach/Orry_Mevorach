@@ -41,39 +41,11 @@
     }
   }
 
-  @media (max-width: 965px) {
-    .icon {
-      height: 60px;
-      h3 {
-        font-size: 14px;
-        text-shadow: 1px 1px 1px rgb(47, 22, 90);
-      }
-    }
-    .technology-icon-container {
-      svg,
-      i,
-      img,
-      #firebase {
-        font-size: 30px;
-        width: 30px;
-        height: 30px;
-      }
-    }
-  }
-
-  @media (max-width: 550px) {
-    .icon {
-      height: 20px;
-    }
-    .technology-icon-container {
-      svg,
-      i,
-      img,
-      #firebase {
-        font-size: 20px;
-        width: 20px;
-        height: 20px;
-      }
+  @media screen and (max-width: $mobile) {
+    padding: 50px 0 0;
+    overflow: hidden;
+    .heading {
+      margin-left: 30px;
     }
   }
 }

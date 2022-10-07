@@ -30,7 +30,7 @@ export default function Contact() {
           </p>
         </div>
       ) : (
-        <div>
+        <div className="content-container">
           <h2 className="heading">Let's Chat!</h2>
           <div className="contact-form" ref={ref}>
             <form

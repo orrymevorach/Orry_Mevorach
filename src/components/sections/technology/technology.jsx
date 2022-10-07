@@ -20,6 +20,7 @@ import {
 } from './icons';
 import useIsVisible from '@root/hooks/useIsVisible/useIsVisible';
 import { VisibleSectionContext } from '@root/context/visibleSectionContext';
+import { ScreenWidthContext } from '@root/context/screenWidthContext';
 
 const Icon = ({ skill, icon }) => (
   <div className="icon">
@@ -29,6 +30,7 @@ const Icon = ({ skill, icon }) => (
 );
 
 export default function Technology() {
+  const { isMobile } = useContext(ScreenWidthContext);
   const ref = useRef();
   const isVisible = useIsVisible(ref);
   const { setSectionInViewport } = useContext(VisibleSectionContext);
@@ -36,7 +38,7 @@ export default function Technology() {
     if (isVisible) setSectionInViewport('technology');
   }, [isVisible, setSectionInViewport]);
   return (
-    <Section section="technology">
+    <Section section="technology" isFullVerticalHeight={!isMobile}>
       <div>
         <h3 className="heading">Technology</h3>
         <div className="technology-icon-container" ref={ref}>

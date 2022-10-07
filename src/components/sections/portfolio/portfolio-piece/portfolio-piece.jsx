@@ -34,7 +34,7 @@ export default function PortfolioPiece({
   const textContainerAnimationClass = isOdd ? 'fade-right' : 'fade-left';
   const imageContainerAnimationClass = isOdd ? 'fade-left' : 'fade-right';
   const buttonColorClass = isOdd ? 'pink-button' : '';
-  const mobileAnimationClass = 'fade-down';
+  const mobileAnimationClass = 'fade-up';
 
   useEffect(() => {
     if (isVisible) setSectionInViewport(title);
