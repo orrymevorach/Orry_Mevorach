@@ -8,7 +8,6 @@ export default function ScreenWidthContextProvider({ children }) {
     width: undefined,
     height: undefined,
     isMobile: undefined,
-    isSectionMobile: false,
   });
 
   useEffect(() => {
@@ -17,10 +16,8 @@ export default function ScreenWidthContextProvider({ children }) {
         width: window.innerWidth,
         height: window.innerHeight,
         isMobile: window.innerWidth <= 850,
-        isSectionMobile: window.innerWidth <= 650,
       });
     }
-
     window.addEventListener('resize', debounce(handleResize, 250));
     handleResize();
 

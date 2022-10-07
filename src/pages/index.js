@@ -5,21 +5,26 @@ import Technology from '@components/sections/technology';
 import { ScreenWidthContext } from '@root/context/screenWidthContext';
 import HamburgerMenu from '@components/shared/nav/hamburgerMenu';
 import Portfolio from '@components/sections/portfolio';
-import ParticlesContainer from '../../components/shared/particles/particles';
+import ParticlesContainer from '@components/shared/particles/particles';
 import Sidebar from '@components/shared/sidebar';
 import { colors } from '@constants';
 import Contact from '@components/sections/contact';
+import PageProviders from '@components/shared/page-providers';
+import Head from '@components/shared/head';
+// Animation library init
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
-export default function Home() {
+const Home = () => {
   const { isMobile } = useContext(ScreenWidthContext);
-  const { pink, blue, spacePurple } = colors;
+  const { spacePurple } = colors;
   const mainSectionRef = useRef(); // ref is used to hide sidebar on main section
   return (
     <div style={{ position: 'relative', backgroundColor: spacePurple }}>
       {isMobile && <HamburgerMenu />}
       {!isMobile && <Sidebar mainSectionRef={mainSectionRef} />}
-      <ParticlesContainer color={blue} />
-      <ParticlesContainer color={pink} />
+      <ParticlesContainer />
       <Main mainSectionRef={mainSectionRef} />/
       <div style={!isMobile ? { marginRight: '190px' } : {}}>
         <About />
@@ -28,5 +33,14 @@ export default function Home() {
         <Contact />
       </div>
     </div>
+  );
+};
+
+export default function App() {
+  return (
+    <PageProviders>
+      <Head />
+      <Home />
+    </PageProviders>
   );
 }

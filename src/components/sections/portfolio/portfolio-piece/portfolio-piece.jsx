@@ -38,14 +38,14 @@ export default function PortfolioPiece({
 
   useEffect(() => {
     if (isVisible) setSectionInViewport(title);
-  }, [isVisible, setSectionInViewport]);
+  }, [isVisible, setSectionInViewport, title]);
 
   return (
     <Section section={title} isFullVerticalHeight={!isMobile}>
       <div
         className={clsx('portfolio-piece', textContainerPositionClass)}
-        data-aos={isMobile && mobileAnimationClass}
-        data-aos-easing="ease-in-sine"
+        // data-aos={isMobile ? mobileAnimationClass : ''}
+        // data-aos-easing="ease-in-sine"
       >
         <div
           className="text-container"

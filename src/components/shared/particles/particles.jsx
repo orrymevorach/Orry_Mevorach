@@ -1,35 +1,55 @@
-import React from 'react';
-import Particles from 'react-particles-js';
+import React, { useCallback } from 'react';
+import Particles from 'react-tsparticles';
 import './particles.scss';
+import { loadFull } from 'tsparticles';
+import { colors } from '@constants';
 
 export default function ParticlesContainer({
   opacity = 0.5,
   color = '#ffffff',
 }) {
+  const { pink, blue } = colors;
+  const particlesInit = useCallback(async engine => {
+    await loadFull(engine);
+  }, []);
+
+  const particlesLoaded = useCallback(async container => {}, []);
   return (
     <Particles
+      id="tsparticles"
+      init={particlesInit}
+      loaded={particlesLoaded}
       className="full-page"
-      params={{
+      options={{
         particles: {
+          links: {
+            enable: false,
+          },
+          collisions: {
+            enable: true,
+          },
+          move: {
+            directions: 'none',
+            enable: true,
+            outModes: {
+              default: 'bounce',
+            },
+            random: false,
+            speed: 1,
+            straight: false,
+          },
+          shape: {
+            type: 'circle',
+          },
           number: {
-            value: 50,
+            value: 60,
             density: {
               enable: true,
               value_area: 700,
             },
           },
           color: {
-            value: color,
-          },
-          shape: {
-            type: 'circle',
-            stroke: {
-              width: 0,
-              color: '#ffffff',
-            },
-            polygon: {
-              nb_sides: 5,
-            },
+            value: [pink, blue],
           },
           opacity: {
             value: opacity,
@@ -48,7 +68,6 @@ export default function ParticlesContainer({
           },
         },
         interactivity: {
-          detect_on: 'canvas',
           events: {
             onclick: {
               enable: true,

@@ -15,6 +15,7 @@ export default function Button({
           href={href}
           target={isNewPage ? '_blank' : ''}
           className={clsx('shrink-border', classNames)}
+          rel="noreferrer"
         >
           {children}
         </a>

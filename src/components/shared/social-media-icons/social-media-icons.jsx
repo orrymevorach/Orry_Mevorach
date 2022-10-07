@@ -1,5 +1,8 @@
 import React from 'react';
 import './social-media-icons.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 export default function SocialMediaIcons() {
   return (
@@ -9,8 +12,9 @@ export default function SocialMediaIcons() {
           href="https://github.com/orrymevorach"
           className="git-icon"
           target="_blank"
+          rel="noreferrer"
         >
-          <i className="fab fa-github"></i>
+          <FontAwesomeIcon icon={faGithub} size="xl" />
         </a>
       </div>
 
@@ -20,8 +24,9 @@ export default function SocialMediaIcons() {
             href="https://www.linkedin.com/in/orrymevorach/"
             target="_blank"
             className="linked-in-icon"
+            rel="noreferrer"
           >
-            <i className="fab fa-linkedin-in"></i>
+            <FontAwesomeIcon icon={faLinkedinIn} size="xl" />
           </a>
         </div>
       </div>
@@ -29,7 +34,7 @@ export default function SocialMediaIcons() {
       <div className="email-container">
         <div className="icon-circle">
           <a href="#contact" className="email-icon">
-            <i className="fas fa-envelope"></i>
+            <FontAwesomeIcon icon={faEnvelope} size="xl" />
           </a>
         </div>
       </div>

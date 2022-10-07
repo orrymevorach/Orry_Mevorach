@@ -17,26 +17,14 @@
   @include themedIcons($spacePurple, $white);
 }
 
-.linked-in-container,
-.email-container {
-  position: relative;
-}
-
 .icon-circle {
   height: 37px;
   width: 37px;
   border-radius: 50%;
   position: relative;
-}
-
-.linked-in-icon svg {
-  padding: 0px 0 0 7px;
-  font-size: 35px;
-}
-
-.email-icon svg {
-  padding: 7px 0 0 6px;
-  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .git-icon svg {
