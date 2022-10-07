@@ -8,6 +8,7 @@ export default function ScreenWidthContextProvider({ children }) {
     width: undefined,
     height: undefined,
     isMobile: undefined,
+    isDesktop: undefined,
   });
 
   useEffect(() => {
@@ -16,6 +17,7 @@ export default function ScreenWidthContextProvider({ children }) {
         width: window.innerWidth,
         height: window.innerHeight,
         isMobile: window.innerWidth <= 850,
+        isDesktop: window.innerWidth >= 1000,
       });
     }
     window.addEventListener('resize', debounce(handleResize, 250));
