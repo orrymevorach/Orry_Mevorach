@@ -20,9 +20,7 @@ const Home = () => {
   const { spacePurple } = colors;
   const mainSectionRef = useRef(); // ref is used to hide sidebar on main section
   useEffect(() => {
-    AOS.init({
-      disable: false,
-    });
+    AOS.init();
   }, []);
   return (
     <div style={{ position: 'relative', backgroundColor: spacePurple }}>

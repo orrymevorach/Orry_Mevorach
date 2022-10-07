@@ -44,9 +44,15 @@ export default function PortfolioPiece({
     <Section section={title} isFullVerticalHeight={!!isDesktop}>
       <div
         className={clsx('portfolio-piece', textContainerPositionClass)}
-        data-aos="fade-right"
+        data-aos={!isDesktop ? mobileAnimationClass : ''}
+        data-aos-easing="ease-in-sine"
       >
-        <div className="text-container" ref={ref}>
+        <div
+          className="text-container"
+          data-aos={isDesktop && textContainerAnimationClass}
+          data-aos-easing="ease-in-sine"
+          ref={ref}
+        >
           {technology.length !== 0 && (
             <div className="technology-container">
               {technology.map(tech => {
@@ -66,7 +72,11 @@ export default function PortfolioPiece({
             </Button>
           </div>
         </div>
-        <div className="image-container">
+        <div
+          className="image-container"
+          data-aos={isDesktop && imageContainerAnimationClass}
+          data-aos-easing="ease-in-sine"
+        >
           <img src={src} alt={alt} />
         </div>
       </div>
