@@ -34,7 +34,7 @@ export default function PortfolioPiece({
   const textContainerAnimationClass = isOdd ? 'fade-right' : 'fade-left';
   const imageContainerAnimationClass = isOdd ? 'fade-left' : 'fade-right';
   const buttonColorClass = isOdd ? 'pink-button' : '';
-  // const mobileAnimationClass = 'fade-up';
+  const mobileAnimationClass = 'fade-up';
 
   useEffect(() => {
     if (isVisible) setSectionInViewport(title);
@@ -42,13 +42,12 @@ export default function PortfolioPiece({
 
   return (
     <Section section={title} isFullVerticalHeight={!!isDesktop}>
-      <div className={clsx('portfolio-piece', textContainerPositionClass)}>
-        <div
-          className="text-container"
-          data-aos={isDesktop && textContainerAnimationClass}
-          data-aos-easing="ease-in-sine"
-          ref={ref}
-        >
+      <div
+        className={clsx('portfolio-piece', textContainerPositionClass)}
+        data-aos="fade-up"
+        data-aos-easing="ease-in-sine"
+      >
+        <div className="text-container" ref={ref}>
           {technology.length !== 0 && (
             <div className="technology-container">
               {technology.map(tech => {
@@ -68,11 +67,7 @@ export default function PortfolioPiece({
             </Button>
           </div>
         </div>
-        <div
-          className="image-container"
-          data-aos={isDesktop && imageContainerAnimationClass}
-          data-aos-easing="ease-in-sine"
-        >
+        <div className="image-container">
           <img src={src} alt={alt} />
         </div>
       </div>
