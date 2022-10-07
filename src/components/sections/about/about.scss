@@ -28,12 +28,20 @@
     font-size: 28px;
     margin: 55px 0;
   }
-
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: 1200px) {
+    .textContainer {
+      width: 100%;
+      margin-right: 25px;
+    }
+    .image-container {
+      margin: 0 25px;
+    }
+  }
+  @media screen and (max-width: $tablet) {
     flex-direction: column;
     .textContainer {
       width: 100%;
-      padding: 30px 25px;
+      padding: 30px 40px;
     }
     .image-container {
       border-bottom: none;

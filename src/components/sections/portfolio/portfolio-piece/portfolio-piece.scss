@@ -106,7 +106,7 @@ $containerPositionOffset: 5%;
       border: 3px solid $pink;
     }
   }
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: $tablet) {
     background-color: $spacePurple;
     flex-direction: column;
     margin: 40px 0;

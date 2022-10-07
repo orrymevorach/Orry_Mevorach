@@ -22,7 +22,7 @@ export default function PortfolioPiece({
   nextSectionHref,
   index,
 }) {
-  const { isMobile } = useContext(ScreenWidthContext);
+  const { isDesktop } = useContext(ScreenWidthContext);
   const ref = useRef();
   const isVisible = useIsVisible(ref);
   const { setSectionInViewport } = useContext(VisibleSectionContext);
@@ -41,15 +41,15 @@ export default function PortfolioPiece({
   }, [isVisible, setSectionInViewport, title]);
 
   return (
-    <Section section={title} isFullVerticalHeight={!isMobile}>
+    <Section section={title} isFullVerticalHeight={isDesktop}>
       <div
         className={clsx('portfolio-piece', textContainerPositionClass)}
-        // data-aos={isMobile ? mobileAnimationClass : ''}
-        // data-aos-easing="ease-in-sine"
+        data-aos={!isDesktop ? mobileAnimationClass : ''}
+        data-aos-easing="ease-in-sine"
       >
         <div
           className="text-container"
-          data-aos={!isMobile && textContainerAnimationClass}
+          data-aos={isDesktop && textContainerAnimationClass}
           data-aos-easing="ease-in-sine"
           ref={ref}
         >
@@ -74,13 +74,13 @@ export default function PortfolioPiece({
         </div>
         <div
           className="image-container"
-          data-aos={!isMobile && imageContainerAnimationClass}
+          data-aos={isDesktop && imageContainerAnimationClass}
           data-aos-easing="ease-in-sine"
         >
           <img src={src} alt={alt} />
         </div>
       </div>
-      {nextSectionHref && !isMobile && <BouncingArrow href={nextSectionHref} />}
+      {nextSectionHref && isDesktop && <BouncingArrow href={nextSectionHref} />}
     </Section>
   );
 }

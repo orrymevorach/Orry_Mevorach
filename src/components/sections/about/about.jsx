@@ -8,7 +8,7 @@ import { s3 } from '@utils/constants';
 import { ScreenWidthContext } from '@root/context/screenWidthContext';
 
 export default function About() {
-  const { isMobile } = useContext(ScreenWidthContext);
+  const { isDesktop } = useContext(ScreenWidthContext);
   const ref = useRef();
   const isVisible = useIsVisible(ref);
   const { setSectionInViewport } = useContext(VisibleSectionContext);
@@ -16,7 +16,7 @@ export default function About() {
     if (isVisible) setSectionInViewport('about');
   }, [isVisible, setSectionInViewport]);
   return (
-    <Section section="about" isFullVerticalHeight={isMobile ? false : true}>
+    <Section section="about" isFullVerticalHeight={!isDesktop ? false : true}>
       <div className="image-container">
         <img src={`${s3}/skateboard.png`} alt="" />
       </div>
