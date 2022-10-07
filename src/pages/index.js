@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from 'react';
+import React, { useContext, useRef, useEffect } from 'react';
 import Main from '@components/sections/main';
 import About from '@components/sections/about';
 import Technology from '@components/sections/technology';
@@ -14,12 +14,14 @@ import Head from '@components/shared/head';
 // Animation library init
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-AOS.init();
 
 const Home = () => {
   const { isMobile } = useContext(ScreenWidthContext);
   const { spacePurple } = colors;
   const mainSectionRef = useRef(); // ref is used to hide sidebar on main section
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div style={{ position: 'relative', backgroundColor: spacePurple }}>
       {isMobile && <HamburgerMenu />}
