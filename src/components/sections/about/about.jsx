@@ -32,9 +32,15 @@ export default function About() {
         </p>
         <p className="work-together">Let's build something together!</p>
         <div className="button-container">
-          <Button classNames="about-buttons">View Resume</Button>
+          <Button
+            classNames="about-buttons"
+            href="https://docs.google.com/document/d/e/2PACX-1vQjM71HCH6g5ZGMHnZ2SIchVeEmmWPXI37GkfFVSvw2xBPJrXoM98vV1Xe-n86rt8Gdgezsjdh_jJ4X/pub"
+            isNewPage
+          >
+            View Resume
+          </Button>
           <Button classNames="about-buttons" href="#portfolio">
-            View My Portfolio
+            View Portfolio
           </Button>
         </div>
       </div>
