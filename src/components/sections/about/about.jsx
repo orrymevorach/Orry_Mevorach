@@ -25,10 +25,13 @@ export default function About() {
         <p>
           I am a web developer based in Toronto, Canada. I have 4+ years of
           experience in the industry, working in full-time, freelance, and team
-          lead roles. I enjoy building microsites from scratch as much as I
-          enjoy building large applications to scale in a team environment. My
-          most notable role was with Loblaw Digital, where I spent 3.5 years
-          working on the Shoppers Drug Mart e-commerce application.
+          lead roles. I enjoy working on large applications within a team
+          environment as much as I enjoy owning the entire development cycle of
+          a freelance project. My goal as a developer is to to deliver fast,
+          attractive, and accessible websites, with clean code, ZERO bugs, and
+          to always build on my skills in the process. I primarily build
+          hand-coded websites using Javascript, but I love the power of CMS
+          platforms and will leverage with them whenever an opportunity arises.
         </p>
         <p className="work-together">Let's build something together!</p>
         <div className="button-container">

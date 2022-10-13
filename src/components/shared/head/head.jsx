@@ -11,6 +11,10 @@ export default function Head() {
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <meta
+        name="description"
+        content="Orry Mevorach's Portfolio Website. Orry is a Web Developer who specializes with JavaScript, specifically React. His preferred frameworks to work with are Gatsby and Next.js, and his preferred CMS platform is Contentful."
+      />
       <title>Orry Mevorach</title>
 
       {/* Icon */}

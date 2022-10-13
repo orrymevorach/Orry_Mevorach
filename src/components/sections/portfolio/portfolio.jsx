@@ -22,7 +22,7 @@ export const portfolioPieceData = [
     alt: 'Shoppers Drug Mart',
     href: 'https://shop.shoppersdrugmart.ca/',
     description:
-      'I worked at Loblaw Digital full time for 3.5 years. My highlights in that time include rebuilding the checkout, product listing, and landing pages, integrating Contentful into our CMS pages, and building an order tracker. Rebuilding our pages meant modernizing our technology stack from one that was built on JSP pages and jQuery, to one built on React and GraphQL.',
+      'I worked at Loblaw Digital full time for 3.5 years, where I grew from a Dev I (junior developer) to a Senior Developer. I was fortunate to work with a talented team that taught me the importance of clean and scaleable code, performance, testing, and accessibility, and eventually I took the reigns of being a tecnical team lead. My feature highlights in that time include rebuilding the checkout, product listing, and landing pages, integrating Contentful into our CMS pages, and building an order tracker.',
   },
   {
     title: 'Highlands Music Festival',
@@ -38,7 +38,7 @@ export const portfolioPieceData = [
     alt: 'Highlands Music Festival',
     href: 'https://highlandsmusicfestival.ca/',
     description:
-      'A freelance project for a music festival. The goal of this project was to provide information and drive traffic to the Eventbrite ticketing page. I worked together with the founding committee and a web designer to bring this project to life.',
+      'This project was extra special because I was a member of the co-founding committee of this musical festival. I worked with the marketing team and a graphic designer to build a website that aimed to provide information about the festival and to drive traffic to the Eventbrite ticketing page. I owned the entire development cycle which included hosting, domain configuration, site development, deployments, and email alias setup. I would also track user engagement during times of heavy traffic, specifically when we launched ticket sale prices.',
   },
   {
     technology: [
@@ -53,7 +53,7 @@ export const portfolioPieceData = [
     alt: 'Casa Horizon Website',
     href: 'https://casahorizon.com',
     description:
-      'An ongoing freelance project for a hostel in Nicargua. The goal of this project is to provide information and to enable guests the ability to make bookings online. We have worked with various booking platform over the last few years.',
+      'An ongoing freelance project for a hostel in Nicargua. On this project I collaborated with the hostel founder and a freelance designer. The goal was to build an attractive website that provides information about the hostel, and to allow guests the ability to make bookings online. We have worked with various booking platform over the last few years.',
   },
   {
     technology: ['Shopify', 'Liquid'],
@@ -71,7 +71,7 @@ export const portfolioPieceData = [
     alt: 'Breadbox Bakery',
     href: 'https://breadboxbakery.ca',
     description:
-      'A freelance project for a bakery. This website allowed customers to create an account, schedule weekly deliveries, and make payments online. *This website is no longer running since the bakery has shut down.',
+      'A freelance project for a specialty bakery that delivers fresh Challah bread to customers on Friday afternoons. This website allowed customers to create an account, schedule weekly deliveries, and make payments online. *This website is no longer running since the bakery has shut down.',
   },
 ];
 

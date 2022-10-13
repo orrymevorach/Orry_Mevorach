@@ -3,9 +3,9 @@ import React from 'react';
 const AirtableIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 1.865999999999996 690.6474357837582 146.96900000000002"
+    viewBox="-10 40 200 100"
     shapeRendering="geometricPrecision"
-    style={{ transform: 'scale(4)', marginLeft: '62px' }}
+    // style={{ transform: 'scale(2)' }}
   >
     <path
       fill="#FFF"

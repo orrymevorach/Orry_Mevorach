@@ -1,6 +1,7 @@
 import React, { useContext, useRef, useEffect } from 'react';
 import Section from '@components/shared/section';
 import './technology.scss';
+import clsx from 'clsx';
 import {
   AirtableIcon,
   ApolloIcon,
@@ -22,12 +23,17 @@ import useIsVisible from '@root/hooks/useIsVisible/useIsVisible';
 import { VisibleSectionContext } from '@root/context/visibleSectionContext';
 import { ScreenWidthContext } from '@root/context/screenWidthContext';
 
-const Icon = ({ skill, icon }) => (
-  <div className="icon">
-    <h3>{skill}</h3>
-    {icon()}
-  </div>
-);
+const Icon = ({ skill, Svg }) => {
+  const className = skill.replace(/ /g, '');
+  return (
+    <div className={clsx('icon', className)}>
+      <h3>{skill}</h3>
+      <div className="svg-container">
+        <Svg />
+      </div>
+    </div>
+  );
+};
 
 export default function Technology() {
   const { isMobile } = useContext(ScreenWidthContext);
@@ -42,62 +48,62 @@ export default function Technology() {
       <div>
         <h3 className="heading">Technology</h3>
         <div className="technology-icon-container" ref={ref}>
-          <Icon skill="JavaScript" icon={() => <JavascriptIcon />} />
-          <Icon skill="React" icon={() => <ReactIcon />} />
-          <Icon skill="Gatsby" icon={() => <GatsbyIcon />} />
-          <Icon skill="Next" icon={() => <NextIcon />} />
-          <Icon skill="Redux" icon={() => <ReduxIcon />} />
-          <Icon skill="Apollo" icon={() => <ApolloIcon />} />
-          <Icon skill="GraphQL" icon={() => <GraphQLIcon />} />
+          <Icon skill="JavaScript" Svg={() => <JavascriptIcon />} />
+          <Icon skill="React" Svg={() => <ReactIcon />} />
+          <Icon skill="Gatsby" Svg={() => <GatsbyIcon />} />
+          <Icon skill="Next" Svg={() => <NextIcon />} />
+          <Icon skill="Redux" Svg={() => <ReduxIcon />} />
+          <Icon skill="Apollo" Svg={() => <ApolloIcon />} />
+          <Icon skill="GraphQL" Svg={() => <GraphQLIcon />} />
           <Icon
             skill="Node"
-            icon={() => <i className="devicon-nodejs-plain-wordmark"></i>}
+            Svg={() => <i className="devicon-nodejs-plain-wordmark"></i>}
           />
-          <Icon skill="Contentful" icon={() => <ContentfulIcon />} />
-          <Icon skill="Netlify" icon={() => <NetlifyIcon />} />
-          <Icon skill="Firebase" icon={() => <FirebaseIcon />} />
-          <Icon skill="Airtable" icon={() => <AirtableIcon />} />
-          <Icon skill="Storybook" icon={() => <StorybookIcon />} />
+          <Icon skill="Contentful" Svg={() => <ContentfulIcon />} />
+          <Icon skill="Netlify" Svg={() => <NetlifyIcon />} />
+          <Icon skill="Firebase" Svg={() => <FirebaseIcon />} />
+          <Icon skill="Airtable" Svg={() => <AirtableIcon />} />
+          <Icon skill="Storybook" Svg={() => <StorybookIcon />} />
           <Icon
             skill="Webpack"
-            icon={() => <i className="devicon-webpack-plain"></i>}
+            Svg={() => <i className="devicon-webpack-plain"></i>}
           />
-          <Icon skill="Git" icon={() => <GitIcon />} />
+          <Icon skill="Git" Svg={() => <GitIcon />} />
           <Icon
             skill="GitHub"
-            icon={() => <i className="devicon-github-plain"></i>}
+            Svg={() => <i className="devicon-github-plain"></i>}
           />
           <Icon
             skill="HTML5"
-            icon={() => <i className="devicon-html5-plain"></i>}
+            Svg={() => <i className="devicon-html5-plain"></i>}
           />
           <Icon
             skill="CSS3"
-            icon={() => <i className="devicon-css3-plain"></i>}
+            Svg={() => <i className="devicon-css3-plain"></i>}
           />
           <Icon
             skill="Sass"
-            icon={() => <i className="devicon-sass-original"></i>}
+            Svg={() => <i className="devicon-sass-original"></i>}
           />
           <Icon
             skill="jQuery"
-            icon={() => <i className="devicon-jquery-plain"></i>}
+            Svg={() => <i className="devicon-jquery-plain"></i>}
           />
           <Icon
             skill="GULP"
-            icon={() => <i className="devicon-gulp-plain"></i>}
+            Svg={() => <i className="devicon-gulp-plain"></i>}
           />
-          <Icon skill="Jest" icon={() => <JestIcon />} />
+          <Icon skill="Jest" Svg={() => <JestIcon />} />
           <Icon
             skill="React Testing Library"
-            icon={() => (
+            Svg={() => (
               <img
                 src="https://orry-mevorach.s3.ca-central-1.amazonaws.com/rtl.png"
                 alt="React Testing Library"
               />
             )}
           />
-          <Icon skill="Puppeteer" icon={() => <PuppeteerIcon />} />
+          <Icon skill="Puppeteer" Svg={() => <PuppeteerIcon />} />
         </div>
       </div>
     </Section>

@@ -18,6 +18,18 @@
       margin-bottom: 13px;
     }
   }
+  .svg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .JavaScript .svg-container,
+  .Storybook .svg-container,
+  .Contentful .svg-container {
+    padding-left: 22px;
+  }
 
   .technology-icon-container {
     display: flex;
