@@ -25,6 +25,22 @@ export const portfolioPieceData = [
       'I worked at Loblaw Digital full time for 3.5 years, where I grew from a Dev I (junior developer) to a Senior Developer. I was fortunate to work with a talented team that taught me the importance of clean and scaleable code, performance, testing, and accessibility, and eventually I took the reigns of being a tecnical team lead. My feature highlights in that time include rebuilding the checkout, product listing, and landing pages, integrating Contentful into our CMS pages, and building an order tracker.',
   },
   {
+    title: 'Midnight Cookie',
+    technology: [
+      'React',
+      'GraphQL',
+      'Apollo',
+      'Contentful',
+      'Next.JS',
+      'Netlify',
+    ],
+    src: `${s3}/portfolio-pieces/midnight-cookie.png`,
+    alt: 'Midnight Cookie',
+    href: 'https://midnightcookie.ca/',
+    description:
+      'A freelance project for a late night cookie bakery in Toronto. When I took over this project it was built on Wordpress, however the client had switched to a different e-commerce platform and deemed Wordpress was no longer required. Additionaly, WP was causing performance issues and bugs from some of the plugins being used. I rebuilt the pages using React + Next.JS, and integrated Contentful as a headless CMS while using their GraphQL API in conjunction with Apollo to fetch data.',
+  },
+  {
     title: 'Highlands Music Festival',
     shortenedTitle: 'Highlands',
     technology: [
