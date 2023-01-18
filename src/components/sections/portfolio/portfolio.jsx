@@ -38,7 +38,7 @@ export const portfolioPieceData = [
     alt: 'Midnight Cookie',
     href: 'https://midnightcookie.ca/',
     description:
-      'A freelance project for a late night cookie bakery in Toronto. When I took over this project it was built on Wordpress, however the client had switched to a different e-commerce platform and deemed Wordpress was no longer required. Additionaly, WP was causing performance issues and bugs from some of the plugins being used. I rebuilt the pages using React + Next.JS, and integrated Contentful as a headless CMS while using their GraphQL API in conjunction with Apollo to fetch data.',
+      'A freelance project for a late night cookie bakery in Toronto. When I took over this project it was built on Wordpress, however the client had switched to a different e-commerce platform and deemed Wordpress was no longer required. Additionaly, there were performance issues and minor bugs coming from some of the plugins. I rebuilt the pages using React + Next.JS, and integrated Contentful as a headless CMS while using their GraphQL API in conjunction with Apollo to fetch data.',
   },
   {
     title: 'Highlands Music Festival',
