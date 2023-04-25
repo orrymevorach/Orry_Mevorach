@@ -27,7 +27,12 @@ export default function SocialMediaIcons() {
 
       <div className="instagram-container">
         <div className="icon-circle">
-          <a href="https://www.instagram.com/mev.dev.o/" className="email-icon">
+          <a
+            href="https://www.instagram.com/mev.dev.o/"
+            className="email-icon"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FontAwesomeIcon icon={faInstagram} size={iconSize} />
           </a>
         </div>
