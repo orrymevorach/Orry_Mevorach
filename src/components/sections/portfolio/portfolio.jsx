@@ -13,7 +13,7 @@ export const portfolioPieceData = [
     alt: 'Music Festival Cabin Reservation Platform',
     href: 'https://reservations.highlandsmusicfestival.ca',
     description:
-      'The team at Highlands Music Festival recognized a blocker in the music festival ticket purchase process, where potential festival attendees were hesitant to buy a ticket without know if they would be in the same cabin as their friends/partners. Within hours of launching the platform, ticket sales increased and 90% of attendees had made cabin reservations, deeming the project a huge success. The solution was to build a platform that allows attendees to log in, and reserve a specific bed in a specific cabin for everyone in their group. The biggest technology highlight in the project is Airtabl, which we use as both a CMS and as a database.',
+      'The team at Highlands Music Festival recognized a blocker in the music festival ticket purchase process, where potential festival attendees were hesitant to buy a ticket without know if they would be in the same cabin as their friends/partners. Within hours of launching the platform, ticket sales increased and 90% of attendees had made cabin reservations, deeming the project a huge success. The solution was to build a platform that allows attendees to log in, and reserve a specific bed in a specific cabin for everyone in their group. The biggest technology highlight in the project is Airtable, which we use as both a CMS and as a database.',
   },
   {
     title: 'Shoppers Drug Mart',
