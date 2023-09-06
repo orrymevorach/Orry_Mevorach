@@ -16,6 +16,15 @@ export const portfolioPieceData = [
       'The team at Highlands Music Festival recognized a blocker in the music festival ticket purchase process, where potential festival attendees were hesitant to buy a ticket without know if they would be in the same cabin as their friends/partners. Within hours of launching the platform, ticket sales increased and 90% of attendees had made cabin reservations, deeming the project a huge success. The solution was to build a platform that allows attendees to log in, and reserve a specific bed in a specific cabin for everyone in their group. The biggest technology highlight in the project is Airtable, which we use as both a CMS and as a database.',
   },
   {
+    title: 'Checkout Page',
+    technology: ['React', 'Next.JS', 'Stripe', 'Contentful'],
+    src: `${s3}/portfolio-pieces/checkout.png`,
+    alt: 'Checkout Page',
+    href: 'https://highlandsmusicfestival.ca/buy-tickets',
+    description:
+      'My client recognized that potential attendees would be more inclinced to purchase a ticket to their event if payments were spread out over a few months. The request was to use Stripe, and to provide customers with two payment options on the checkout page: To pay for a ticket in full, or to pay for a ticket in 4 instalments over a three month period. Using the Stripe API, I built the checkout page from scratch to allow for the two payment options. I used Contentful CMS to schedule changes to price as the festival grew nearer.',
+  },
+  {
     title: 'Shoppers Drug Mart',
     technology: [
       'React',
@@ -33,6 +42,23 @@ export const portfolioPieceData = [
     href: 'https://shop.shoppersdrugmart.ca/',
     description:
       'I worked at Loblaw Digital full time for 3.5 years, where I grew from a Dev I (junior developer) to a Senior Developer. I was fortunate to work with a talented team that taught me the importance of clean and scaleable code, performance, testing, and accessibility, and eventually I took the reigns of being a tecnical team lead. My feature highlights in that time include rebuilding the checkout, product listing, and landing pages, integrating Contentful into our CMS pages, and building an order tracker.',
+  },
+
+  {
+    title: 'Nora Camps',
+    technology: [
+      'Next.JS',
+      'Contentful',
+      'Netlify',
+      'GraphQL',
+      'Apollo',
+      'SSG',
+    ],
+    src: `${s3}/portfolio-pieces/Screenshot+2023-09-06+at+2.50.12+PM.png`,
+    alt: 'Nora Camps',
+    href: 'https://noracamps.com/',
+    description:
+      'A project for a freelance client, Nora Camps, who is an artist selling her paintings online. On this project, I operated as the tech lead with one other developer. We built this website from scratch, including landing pages, product listing pages, product display pages, search bar functionality, contact form, and newsletter sign ups.',
   },
   {
     title: 'Pashion Pilates',
