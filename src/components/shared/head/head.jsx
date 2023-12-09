@@ -13,9 +13,13 @@ export default function Head() {
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
       <meta
         name="description"
-        content="Orry Mevorach's Portfolio Website. Orry is a Web Developer who specializes with JavaScript, specifically React. His preferred frameworks to work with are Gatsby and Next.js, and his preferred CMS platform is Contentful."
+        content="Orry is a freelance web developer, who specializes with JavaScript and React, located in Toronto, ON."
       />
-      <title>Orry Mevorach</title>
+      <meta
+        name="keywords"
+        content="Freelance web developer, web developer, toronto, frontend developer, senior frontend developer, react, contentful, next.js, contractor"
+      />
+      <title>Orry Mevorach | Freelance Web Developer</title>
 
       {/* Icon */}
       <link

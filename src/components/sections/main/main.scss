@@ -4,6 +4,9 @@
 @import '@styles/variables.scss';
 
 .home {
+  .hide {
+    display: none;
+  }
   .content-container {
     display: flex;
     flex-direction: column;
