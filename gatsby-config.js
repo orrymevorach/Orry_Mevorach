@@ -48,5 +48,13 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          "G-JM6DR1VR5E ", // Google Analytics / GA
+        ],
+      },
+    },
   ],
 };
