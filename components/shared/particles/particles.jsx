@@ -29,79 +29,80 @@ export default function ParticlesContainer({
   const particlesLoaded = container => {
     // console.log(container);
   };
-  if(init) return (
-    <Particles
-      id="tsparticles"
-      particlesLoaded={particlesLoaded}
-      className={styles['full-page']}
-      options={{
-        particles: {
-          links: {
-            enable: false,
-          },
-          collisions: {
-            enable: true,
-          },
-          move: {
-            directions: 'none',
-            enable: true,
-            outModes: {
-              default: 'bounce',
+  if (init)
+    return (
+      <Particles
+        id="tsparticles"
+        particlesLoaded={particlesLoaded}
+        className={styles['full-page']}
+        options={{
+          particles: {
+            links: {
+              enable: false,
             },
-            random: false,
-            speed: 1,
-            straight: false,
-          },
-          shape: {
-            type: 'circle',
-          },
-          number: {
-            value: 60,
-            density: {
+            collisions: {
               enable: true,
-              value_area: 700,
             },
-          },
-          color: {
-            value: [pink, blue],
-          },
-          opacity: {
-            value: opacity,
-            random: true,
-          },
-          size: {
-            value: 4,
-            random: true,
-          },
-          line_linked: {
-            enable: false,
-            distance: 200,
-            color: '#ffffff',
-            opacity: 0.6,
-            width: 1,
-          },
-        },
-        interactivity: {
-          events: {
-            onclick: {
+            move: {
+              directions: 'none',
               enable: true,
-              mode: 'push',
+              outModes: {
+                default: 'bounce',
+              },
+              random: false,
+              speed: 1,
+              straight: false,
             },
-            onhover: {
-              enable: true,
-              mode: 'repulse',
+            shape: {
+              type: 'circle',
             },
-            resize: true,
+            number: {
+              value: 120,
+            },
+            color: {
+              value: [pink, blue],
+            },
+            opacity: {
+              value: {
+                min: 0.3,
+                max: 0.5,
+              },
+            },
+            size: {
+              value: {
+                min: 0.3,
+                max: 5,
+              },
+            },
+            line_linked: {
+              enable: false,
+              distance: 200,
+              color: '#ffffff',
+              opacity: 0.6,
+              width: 1,
+            },
           },
-          modes: {
-            repulse: {
-              distance: 50,
-              duration: 0.4,
+          interactivity: {
+            events: {
+              onclick: {
+                enable: true,
+                mode: 'push',
+              },
+              onhover: {
+                enable: true,
+                mode: 'repulse',
+              },
+              resize: true,
+            },
+            modes: {
+              repulse: {
+                distance: 50,
+                duration: 0.4,
+              },
             },
           },
-        },
-        retina_detect: true,
-      }}
-    />
-  );
+          retina_detect: true,
+        }}
+      />
+    );
 }
