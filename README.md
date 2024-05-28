@@ -1,5 +1,5 @@
 <h1 align="center">
- Highlands Music Festival
+ Orry Mevorach Portfolio
 </h1>
 
 This site was built using Next.JS
