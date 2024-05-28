@@ -1,0 +1,65 @@
+@use '@variables' as variables;
+
+.technology {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 30px 0;
+}
+.heading {
+  font-size: 50px;
+  margin-bottom: 80px;
+  margin-left: 40px;
+  font-family: variables.$fontPrimary;
+}
+.icon {
+  margin: 0 20px 40px;
+  width: 60px;
+  h3 {
+    margin-bottom: 13px;
+  }
+}
+.svg-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.JavaScript .svg-container,
+.Storybook .svg-container,
+.Contentful .svg-container {
+  padding-left: 22px;
+}
+
+.technology-icon-container {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  svg,
+  i,
+  img {
+    font-size: 35px;
+    width: 35px;
+    height: 35px;
+  }
+  .bottom-row-icon {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: variables.$mobile) {
+  .technology {
+    padding: 50px 0 0;
+    overflow: hidden;
+  }
+  .heading {
+    margin-left: 30px;
+  }
+}

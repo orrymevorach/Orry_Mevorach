@@ -1,0 +1,46 @@
+@use '@mixins' as mixins;
+@use '@variables' as variables;
+
+.hide {
+  display: none;
+}
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.heading {
+  color: variables.$white;
+  font-family: variables.$fontPrimary;
+  font-size: 70px;
+  text-shadow: 4px 8px 1px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  @media (max-width: variables.$mobile) {
+    text-shadow: none;
+  }
+  @media (max-width: 650px) {
+    font-size: 55px;
+  }
+  @media (max-width: 400px) {
+    font-size: 40px;
+  }
+}
+
+.job-title {
+  text-transform: uppercase;
+  text-align: center;
+  color: variables.$white;
+  font-size: 18px;
+  padding-top: 80px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@media screen and (max-width: variables.$mobile) {
+  .main-section-arrow {
+    bottom: 110px;
+    left: auto;
+  }
+}

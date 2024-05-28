@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Kaushan Script';
+  src: url('../asset/Kaushan_Script/KaushanScript-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../asset/Roboto/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../asset/Montserrat/static/Montserrat-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Noto Sans Mono';
+  src: url('../asset/Noto_Sans_Mono/static/NotoSansMono-Regular.ttf');
+}

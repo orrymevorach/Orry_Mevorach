@@ -1,54 +1,65 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
 <h1 align="center">
-  Gatsby minimal starter
+ Highlands Music Festival
 </h1>
 
-## 🚀 Quick start
+This site was built using Next.JS
 
-1.  **Create a Gatsby site.**
-
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
-
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
-
-2.  **Start developing.**
+1.  **Start dev server**
 
     Navigate into your new site’s directory and start it up.
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
+    ```
+    npm run dev
     ```
 
-3.  **Open the code and start customizing!**
+2.  **Open the code and start customizing!**
 
-    Your site is now running at http://localhost:8000!
+    Your site is now running at http://localhost:3000!
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+3.  **Deployments**
 
-4.  **Learn more**
+To deploy code to production, create a PR and merge it into master
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+Contentful workflow:
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+1. Do all development work in the `staging` branch
+2. Add/edit content models
+3. When you are finished making change, create a new environment called `master-<todays data>` off of master. For example: `master-2023-04-20`
+4. Use the "Merge" extension to merge in any content model changes. Set the target branch to `staging` and the source branch to the new one you just created
+5. Add/edit any content entries that you would like to test
+6. Go to API keys and give your new environment access to the production API key
+7. Change the NEXT_PUBLIC_CONTENTFUL_ENVIRONMENT variable to the name of your new environment
+8. Test your changes
+9. IMPORTANT: Before you deploy, make sure to change all the content entries to the state you want them in when you deploy.
+10. When you are ready to deploy, change the `master` alias to the new environment you created. (This will not trigger a deployment)
+11. Merge your PR into master. This will trigger a netlify deployment with the latest code and latest content entries
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+Staging Branch:
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+- The staging branch is called "staging"
+- This branch is pointing at the "staging" environment in Contentful
+- To easily create a replica of master in Contentful called staging, run:
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+```
+npm run createContentfulEnvironment
+```
 
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+- This will delete the existing `staging` environment, and create a new one off of master
+- To deply the `staging` git branch:
 
-## 🚀 Quick start (Gatsby Cloud)
+1. Make sure you are on the current branch you wish wish to deploy,
+2. make sure all your changes are committed to the branch
+3. Run:
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+```
+npm run deployStaging
+```
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+- This command will delete the current preview-environment branch locally and upstream, create a new branch off of your current branch and push it to a new preview-environment branch
+
+Another staging environment you can use is called `preview-environment`
+To deploy code to this environment, either push code to it, or run:
+
+```
+npm run deployPreview
+```

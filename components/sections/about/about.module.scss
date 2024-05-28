@@ -1,0 +1,77 @@
+@use '@variables' as variables;
+@use '@mixins' as mixins;
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  width: 250px;
+  margin-right: 100px;
+  @include mixins.border($position: 'bottom', $color: variables.$pink);
+}
+.textContainer {
+  background-color: variables.$spacePurple;
+  color: variables.$white;
+  width: 750px;
+  padding: 30px 60px;
+  @include mixins.border;
+  font-family: variables.$fontSecondary;
+  font-weight: 300;
+  line-height: 30px;
+}
+.title {
+  padding: 30px 0 50px;
+}
+.work-together {
+  font-family: 'Noto Sans Mono', sans-serif;
+  font-size: 28px;
+  margin: 55px 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .textContainer {
+    width: 100%;
+    margin-right: 25px;
+  }
+  .image-container {
+    margin: 0 25px;
+  }
+}
+@media screen and (max-width: variables.$tablet) {
+  .about {
+    flex-direction: column;
+  }
+  .textContainer {
+    width: 100%;
+    padding: 30px 40px;
+  }
+  .image-container {
+    border-bottom: none;
+  }
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .about-buttons {
+      width: 250px;
+      &:first-of-type {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .work-together {
+    text-align: center;
+    line-height: 30px;
+  }
+  .title {
+    font-size: 45px;
+  }
+}
+@media screen and (max-width: variables.$mobile) {
+  .image-container {
+    width: 150px;
+  }
+}

@@ -1,0 +1,14 @@
+@use '@variables' as variables;
+
+.chevron-link {
+  position: absolute;
+  bottom: 40px;
+  z-index: 101;
+  animation: bounce 0.8s infinite ease;
+  left: 50%;
+  transform: translateX(-50%);
+  .fa-chevron-down {
+    font-size: 60px;
+    color: variables.$white;
+  }
+}

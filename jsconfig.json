@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "pages": ["pages/"],
+      "components": ["components/"],
+      "utils": ["utils/"],
+      "styles": ["styles/"],
+      "lib": ["lib/"],
+      "public": ["public/"],
+      "@variables": ["styles/variables.module.scss"],
+      "@mixins": ["styles/mixins.module.scss"],
+    }
+  }
+}

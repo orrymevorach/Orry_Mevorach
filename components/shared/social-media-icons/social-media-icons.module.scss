@@ -1,0 +1,93 @@
+@use '@variables' as variables;
+@use '@mixins' as mixins;
+
+.social-media-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+  z-index: 20;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  @include mixins.themedIcons(variables.$spacePurple, variables.$white);
+}
+
+.icon-circle {
+  height: 37px;
+  width: 37px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.git-icon svg {
+  font-size: 41px;
+}
+
+.git-icon:after {
+  content: '';
+  height: 37px;
+  width: 37px;
+  position: absolute;
+  top: 12px;
+  left: 1px;
+  border-radius: 50%;
+  z-index: -1;
+  @media (max-width: 750px) {
+    height: 37px;
+    width: 37px;
+    top: 6px;
+    left: 6px;
+  }
+}
+
+.git-hub-container,
+.linked-in-container,
+.email-container,
+.instagram-container {
+  margin: 10px 0;
+}
+
+.icon-circle:hover {
+  transition: 0.3s;
+}
+
+.git-icon svg:hover,
+.linked-in-icon svg:hover,
+.email-icon svg:hover {
+  transition: 0.3s;
+}
+
+@media (max-width: variables.$mobile) {
+  .social-media-container {
+    display: flex;
+    flex-direction: row;
+    top: auto;
+    transform: none;
+    top: 31px;
+    .git-hub-container,
+    .linked-in-container,
+    .email-container {
+      margin: 5px;
+    }
+  }
+  .icon-circle {
+    height: 30px;
+    width: 30px;
+  }
+  .git-icon {
+    svg {
+      font-size: 33px;
+    }
+    &:after {
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
