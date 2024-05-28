@@ -12,7 +12,16 @@ const Home = () => {
     <div style={{ position: 'relative', backgroundColor: colors.spacePurple }}>
       {isMobile && <HamburgerMenu />}
       <ParticlesContainer />
-      <h1>Sorry, this page could not be found.</h1>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '100vh',
+        }}
+      >
+        <h1>Sorry, this page could not be found.</h1>
+      </div>
     </div>
   );
 };
