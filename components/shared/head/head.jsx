@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-export default function Head() {
+export default function Head({ title = '' }) {
   return (
     <Helmet
       htmlAttributes={{
@@ -19,7 +19,7 @@ export default function Head() {
         name="keywords"
         content="Freelance web developer, web developer, toronto, frontend developer, senior frontend developer, react, contentful, next.js, contractor"
       />
-      <title>Orry Mevorach | Freelance Web Developer</title>
+      <title>Orry Mevorach | {title || 'Freelance Web Developer'}</title>
 
       {/* Icon */}
       <link
