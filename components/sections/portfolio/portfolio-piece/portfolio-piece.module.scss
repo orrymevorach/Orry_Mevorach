@@ -40,6 +40,7 @@ $containerPositionOffset: 5%;
     }
   }
 }
+
 .text-container {
   width: 100%;
   background-color: variables.$spacePurple;
@@ -97,7 +98,7 @@ $containerPositionOffset: 5%;
   width: 55%;
   max-height: 450px;
 }
-.pink-button.shrink-border {
+.pink-button {
   &:hover {
     color: variables.$pink;
   }
@@ -113,6 +114,11 @@ $containerPositionOffset: 5%;
 .ongoing {
   color: rgb(244, 244, 133);
 }
+
+.buttonContainer {
+  margin-left: -3px;
+}
+
 @media screen and (max-width: variables.$tablet) {
   .portfolio-piece {
     background-color: variables.$spacePurple;

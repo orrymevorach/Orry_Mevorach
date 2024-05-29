@@ -32,7 +32,7 @@ export default function PortfolioPiece({
     : styles.textContainerRight;
   const textContainerAnimationClass = isOdd ? 'fade-right' : 'fade-left';
   const imageContainerAnimationClass = isOdd ? 'fade-left' : 'fade-right';
-  const buttonColorClass = isOdd ? 'pink-button' : '';
+  const buttonColorClass = isOdd ? styles['pink-button'] : '';
   const mobileAnimationClass = 'fade-up';
 
   useEffect(() => {
@@ -87,11 +87,7 @@ export default function PortfolioPiece({
             )}
           </div>
           <div className={styles.buttonContainer}>
-            <Button
-              href={url}
-              classNames={styles.buttonColorClass}
-              isNewPage={true}
-            >
+            <Button href={url} classNames={buttonColorClass} isNewPage={true}>
               Live site
             </Button>
           </div>
