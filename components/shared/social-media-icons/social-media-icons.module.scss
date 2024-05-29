@@ -60,7 +60,8 @@
 
 .git-icon svg:hover,
 .linked-in-icon svg:hover,
-.email-icon svg:hover {
+.email-icon svg:hover,
+.instagram-icon svg:hover {
   transition: 0.3s;
 }
 
@@ -68,12 +69,12 @@
   .social-media-container {
     display: flex;
     flex-direction: row;
-    top: auto;
     transform: none;
     top: 31px;
     .git-hub-container,
     .linked-in-container,
-    .email-container {
+    .email-container,
+    .instagram-container {
       margin: 5px;
     }
   }
@@ -83,7 +84,7 @@
   }
   .git-icon {
     svg {
-      font-size: 33px;
+      font-size: 31px;
     }
     &:after {
       height: 30px;
