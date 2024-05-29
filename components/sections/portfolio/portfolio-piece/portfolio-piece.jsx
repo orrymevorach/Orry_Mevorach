@@ -9,10 +9,7 @@ import { VisibleSectionContext } from 'context/visibleSectionContext';
 import { ScreenWidthContext } from 'context/screenWidthContext';
 import RichText from 'components/shared/rich-text/rich-text';
 import Image from 'next/image';
-
-function checkIsOdd(num) {
-  return num % 2;
-}
+import { checkIsOdd, mapIndexToMonth } from 'utils/utils';
 
 export default function PortfolioPiece({
   url,
@@ -22,6 +19,7 @@ export default function PortfolioPiece({
   nextSectionHref,
   index,
   image,
+  lastUpdate,
 }) {
   const { isDesktop } = useContext(ScreenWidthContext);
   const ref = useRef();
@@ -40,6 +38,12 @@ export default function PortfolioPiece({
   useEffect(() => {
     if (isVisible) setSectionInViewport(title);
   }, [isVisible, setSectionInViewport, title]);
+
+  const projectStatus = lastUpdate ? 'Complete' : 'In Progress';
+  const dateOfLastUpdate = new Date(lastUpdate);
+  const month = mapIndexToMonth[dateOfLastUpdate.getMonth()];
+  const day = dateOfLastUpdate.getDate();
+  const year = dateOfLastUpdate.getFullYear();
 
   return (
     <Section section={title} isFullVerticalHeight={!!isDesktop}>
@@ -68,6 +72,19 @@ export default function PortfolioPiece({
           <p className={styles['website-name']}>{title}</p>
           <div className={styles['website-description']}>
             <RichText json={description} />
+          </div>
+          <div style={{ marginBottom: '50px' }}>
+            <p>
+              Project Status:{' '}
+              <span className={lastUpdate ? styles.complete : styles.ongoing}>
+                {projectStatus}
+              </span>
+            </p>
+            {lastUpdate && (
+              <p>
+                Date of Last Update: {month} {day}, {year}
+              </p>
+            )}
           </div>
           <div className={styles.buttonContainer}>
             <Button

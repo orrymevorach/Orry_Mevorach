@@ -57,7 +57,7 @@ export default function ParticlesContainer({
               type: 'circle',
             },
             number: {
-              value: 120,
+              value: 100,
             },
             color: {
               value: [pink, blue],

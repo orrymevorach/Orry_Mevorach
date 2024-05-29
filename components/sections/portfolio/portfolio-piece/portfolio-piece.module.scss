@@ -105,6 +105,14 @@ $containerPositionOffset: 5%;
     border: 3px solid variables.$pink;
   }
 }
+
+.complete {
+  color: rgb(124, 218, 124);
+}
+
+.ongoing {
+  color: rgb(244, 244, 133);
+}
 @media screen and (max-width: variables.$tablet) {
   .portfolio-piece {
     background-color: variables.$spacePurple;
