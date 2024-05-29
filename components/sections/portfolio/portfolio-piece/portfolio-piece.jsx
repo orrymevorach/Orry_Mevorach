@@ -7,20 +7,21 @@ import clsx from 'clsx';
 import useIsVisible from 'hooks/useIsVisible/useIsVisible';
 import { VisibleSectionContext } from 'context/visibleSectionContext';
 import { ScreenWidthContext } from 'context/screenWidthContext';
+import RichText from 'components/shared/rich-text/rich-text';
+import Image from 'next/image';
 
 function checkIsOdd(num) {
   return num % 2;
 }
 
 export default function PortfolioPiece({
-  src,
-  alt,
-  href,
+  url,
   title,
   description = '',
-  technology = [],
+  technologyList = [],
   nextSectionHref,
   index,
+  image,
 }) {
   const { isDesktop } = useContext(ScreenWidthContext);
   const ref = useRef();
@@ -53,9 +54,9 @@ export default function PortfolioPiece({
           data-aos-easing="ease-in-sine"
           ref={ref}
         >
-          {technology.length !== 0 && (
+          {technologyList.length !== 0 && (
             <div className={styles['technology-container']}>
-              {technology.map(tech => {
+              {technologyList.map(tech => {
                 return (
                   <p key={tech} className={styles['technology-item']}>
                     {tech}
@@ -65,10 +66,12 @@ export default function PortfolioPiece({
             </div>
           )}
           <p className={styles['website-name']}>{title}</p>
-          <p className={styles['website-description']}>{description}</p>
+          <div className={styles['website-description']}>
+            <RichText json={description} />
+          </div>
           <div className={styles.buttonContainer}>
             <Button
-              href={href}
+              href={url}
               classNames={styles.buttonColorClass}
               isNewPage={true}
             >
@@ -81,7 +84,12 @@ export default function PortfolioPiece({
           data-aos={isDesktop && imageContainerAnimationClass}
           data-aos-easing="ease-in-sine"
         >
-          <img src={src} alt={alt} />
+          <Image
+            src={`https:${image.fields.file.url}`}
+            alt={image.fields.file.title}
+            width={image.fields.file.details.image.width}
+            height={image.fields.file.details.image.height}
+          />
         </div>
       </div>
       {nextSectionHref && isDesktop && <BouncingArrow href={nextSectionHref} />}

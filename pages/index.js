@@ -14,8 +14,9 @@ import Head from 'components/shared/head';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { colors } from 'utils/constants';
+import { getPortfolioPieces } from 'lib/contentful-lib';
 
-const Home = () => {
+const Home = ({ portfolioPieces }) => {
   const { isMobile } = useContext(ScreenWidthContext);
   const mainSectionRef = useRef(); // ref is used to hide sidebar on main section
   useEffect(() => {
@@ -24,12 +25,17 @@ const Home = () => {
   return (
     <div style={{ position: 'relative', backgroundColor: colors.spacePurple }}>
       {isMobile && <HamburgerMenu />}
-      {!isMobile && <Sidebar mainSectionRef={mainSectionRef} />}
+      {!isMobile && (
+        <Sidebar
+          mainSectionRef={mainSectionRef}
+          portfolioPieces={portfolioPieces}
+        />
+      )}
       <ParticlesContainer />
       <Main mainSectionRef={mainSectionRef} />/
       <div style={!isMobile ? { marginRight: '190px' } : {}}>
         <About />
-        <Portfolio />
+        <Portfolio portfolioPieces={portfolioPieces} />
         {/* <Technology /> */}
         <Contact />
       </div>
@@ -37,11 +43,20 @@ const Home = () => {
   );
 };
 
-export default function App() {
+export default function App({ portfolioPieces }) {
   return (
     <PageProviders>
       <Head />
-      <Home />
+      <Home portfolioPieces={portfolioPieces} />
     </PageProviders>
   );
+}
+
+export async function getStaticProps() {
+  const portfolioPieces = await getPortfolioPieces();
+  return {
+    props: {
+      portfolioPieces,
+    },
+  };
 }

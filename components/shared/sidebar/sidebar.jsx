@@ -23,7 +23,7 @@ function useShowSidebar({ mainSectionRef, setIsSidebarShowing }) {
   }, [mainSectionRef, setIsSidebarShowing]);
 }
 
-export default function Sidebar({ mainSectionRef }) {
+export default function Sidebar({ mainSectionRef, portfolioPieces }) {
   const [isSidebarShowing, setIsSidebarShowing] = useState(false);
   const { sectionInViewport } = useContext(VisibleSectionContext);
   useShowSidebar({ mainSectionRef, setIsSidebarShowing });
@@ -37,7 +37,13 @@ export default function Sidebar({ mainSectionRef }) {
             {sectionsList.map(listItem => {
               const isPortfolioSection = listItem === 'portfolio';
               if (isPortfolioSection)
-                return <PortfolioSection listItem={listItem} key={listItem} />;
+                return (
+                  <PortfolioSection
+                    listItem={listItem}
+                    key={listItem}
+                    portfolioPieces={portfolioPieces}
+                  />
+                );
               return (
                 <li key={listItem}>
                   <a

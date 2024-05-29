@@ -1,11 +1,10 @@
 import React, { useContext } from 'react';
-import { portfolioPieceData } from 'components/sections/portfolio/portfolio';
 import { VisibleSectionContext } from 'context/visibleSectionContext';
 import clsx from 'clsx';
 import styles from './portfolio-section.module.scss';
 import sidebarStyles from '../sidebar.module.scss';
 
-export default function PortfolioSection({ listItem }) {
+export default function PortfolioSection({ listItem, portfolioPieces = [] }) {
   const { sectionInViewport } = useContext(VisibleSectionContext);
   return (
     <div className={styles['portfolio-container']}>
@@ -15,7 +14,7 @@ export default function PortfolioSection({ listItem }) {
         </a>
       </li>
       <ul className={styles.portfolioList}>
-        {portfolioPieceData.map(({ title, shortenedTitle }) => (
+        {portfolioPieces.map(({ title, shortenedTitle = '' }) => (
           <li key={shortenedTitle || title}>
             <a
               className={clsx(

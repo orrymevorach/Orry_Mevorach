@@ -37,7 +37,7 @@ export default function About() {
           hand-coded websites using Javascript, which means every website I
           build is 100% customizable.
         </p>
-        <p className={styles['work-together']}>Let's work together!</p>
+        <p className={styles['work-together']}>Let's work together.</p>
         <div className={styles['button-container']}>
           <Button
             classNames={styles['about-buttons']}
