@@ -1,5 +1,13 @@
 @use '@variables' as variables;
 
+@mixin fontPrimary {
+  font-family: variables.$fontPrimary;
+}
+
+@mixin fontSecondary {
+  font-family: variables.$fontSecondary;
+}
+
 @mixin themedIcons($primary, $secondary: $white) {
   .linked-in-icon,
   .email-icon {

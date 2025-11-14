@@ -7,22 +7,24 @@ export default function Button({
   href,
   classNames,
   isNewPage = false,
+  isSecondary = false,
 }) {
+  const className = clsx(styles.button, styles['shrink-border'], classNames, {
+    [styles.secondary]: isSecondary,
+  });
   return (
     <>
       {href ? (
         <a
           href={href}
           target={isNewPage ? '_blank' : ''}
-          className={clsx(styles['shrink-border'], classNames)}
+          className={className}
           rel="noreferrer"
         >
           {children}
         </a>
       ) : (
-        <button className={clsx(styles['shrink-border'], classNames)}>
-          {children}
-        </button>
+        <button className={className}>{children}</button>
       )}
     </>
   );
