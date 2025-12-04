@@ -15,6 +15,10 @@ export default function About() {
   useEffect(() => {
     if (isVisible) setSectionInViewport('about');
   }, [isVisible, setSectionInViewport]);
+
+  const currentYear = new Date().getFullYear();
+  const startYear = 2018;
+  const yearsOfExperience = currentYear - startYear;
   return (
     <Section
       section="about"
@@ -27,15 +31,15 @@ export default function About() {
       <div className={styles.textContainer} ref={ref}>
         <h2 className={styles.title}>Hey, I'm Orry!</h2>
         <p>
-          I am a web developer based in Toronto, Canada. I have 5+ years of
-          experience in the industry, working in full-time, freelance, and team
-          lead roles. I enjoy working on large applications within a team
-          environment as much as I enjoy owning the entire development cycle of
-          a freelance project. My goal as a developer is to to deliver fast,
-          attractive, and accessible websites, with clean and scalable code, no
-          bugs, and to always build on my skills in the process. I build
-          hand-coded websites using Javascript, which means every website I
-          build is 100% customizable.
+          I am a web developer based in Toronto, Canada. I have{' '}
+          {yearsOfExperience}+ years of experience in the industry, working in
+          full-time, freelance, and team lead roles. I enjoy working on large
+          applications within a team environment as much as I enjoy owning the
+          entire development cycle of a freelance project. My goal as a
+          developer is to to deliver fast, attractive, and accessible websites,
+          with clean and scalable code, no bugs, and to always build on my
+          skills in the process. I build hand-coded websites using Javascript,
+          which means every website I build is 100% customizable.
         </p>
         <p className={styles['work-together']}>Let's work together.</p>
         <div className={styles['button-container']}>

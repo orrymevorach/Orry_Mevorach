@@ -4,11 +4,29 @@
   position: absolute;
   bottom: 40px;
   z-index: 101;
-  animation: bounce 0.8s infinite ease;
+  animation: bounce 2s infinite ease-in-out;
   left: 50%;
   transform: translateX(-50%);
   .fa-chevron-down {
     font-size: 60px;
     color: variables.$white;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  50% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
   }
 }
